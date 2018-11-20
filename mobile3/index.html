@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>BC카드</title>
+     <meta name="viewport" content="width=device-width, initial-scale-1.0, user-scalable=no">
+    <!--폰트-->
+    <link rel="stylesheet" href="">
+    <meta name="application-name" content="BCcard">
+    <meta name="author" content="">
+    <meta name="keywords" content="BC">
+    <meta name="description" content="mobile5">
+    <link rel="icon" href="image/icon_dlC_icon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+<style>
+    * {margin: 0; padding: 0;}
+    ul, li { list-style: none;}
+    a {text-decoration: none;}
+    body, html {
+        width: 100%;
+        height: 100%;
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+    
+    /*헤더영역*/
+    
+    .container {
+        width: 100%;
+        height: 100%;
+        
+    }
+    .hd {
+        width: 100%;
+        height: 60px;
+        background-color: white;
+    }
+    .hd li a {
+        float: left;
+    }
+    .hd li { 
+      padding-top: 10px;
+        
+    }
+    
+    .menu {
+        width: 35px;
+        height: 35px;
+        float: left;
+        position: absolute;
+        margin-left: 10px;
+    }
+    .menu li a img {
+        margin: 0 auto;
+        width: 50px;
+        height: 50px;
+    }
+    .logo {
+        width: 150px;
+        height: 30px;
+        margin: 0 auto;
+    }
+    .logo a {
+        width: 150px;
+        height: 30px;
+    }
+    .logo img {
+        width: 150px;
+        height: 30px;
+    }
+    /*내비게이션*/
+    
+    .gnb {
+        width: 100%;
+        height: 50px;
+        background-color: #F04651;
+    }
+    .gnb ul li {
+        float: left;
+        margin-left: 7%;
+        margin-top: 3%;
+    }
+    .gnb ul li a {
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+</style>
+<style>
+    /*비주얼 배너영역*/
+    .visual {
+       width: 100%;
+        height: 220px;
+         overflow: hidden;
+    }
+    .imgBox {
+      width: 400%;
+     
+       
+    }
+    .imgBox li {
+        width: 25%;
+        float: left;
+        
+    }
+    .imgBox li a {
+       display: block;
+        width: 100%;
+       
+    }
+    .imgBox img {
+        width: 100%;
+        height: 220px;
+         
+    }
+</style>
+<style>
+    .contents {
+        width: 100%;
+        height: 264px;
+    }    
+    .quick.icon {
+        width: 100%;
+        height: 264px;
+        padding: 30px 0;
+    }
+    .quick.Box {
+        width: 100%;
+        border: 1px solid #dde2d6;
+        margin-top: 20px;
+        border-bottom: none;
+    }
+    tr, td {
+        text-align: center;
+        width: 20%;
+        line-height: 15px;
+        padding: 8px 0;
+    }
+    .quick.Box a {
+        font-size: 11px;
+        text-align: center;
+        color: #333;
+        font-weight: bold;
+        display: block;
+    }
+    td {
+        border-bottom: 1px solid #dde2d6;
+        border-left: 1px solid #dde2d6;
+    }
+    td:first-child {
+        border-left: none;
+    }
+    
+    .quickT {
+        color: #F04651;
+        margin-left: 10px;
+    }
+    .quickT:before {
+        content:url("image/finger-of-a-hand-pointing-to-right-direction.png"); 
+       
+        padding-right: 8px;
+    }
+</style>
+<style>
+    .boxFrame {
+        display: none;
+    }
+    /*공지사항*/
+    .mainBorderd {
+        width: 100%;
+        height: 280px;
+        display: block;
+    }
+    .tit {
+        color:#F04651; 
+        font-size: 15px;
+        font-weight: bold;
+        width: 90%;
+        margin-left: 5%;
+        padding-top: 9px;
+    }
+    .noti1 {
+        width: 100%;
+        height: 136px;    
+        border-top: 2px solid #eee;
+        border-bottom: 2px solid #eee;
+        background-color: #f6f6f6;
+    }
+    .noti2 {
+        width: 100%;
+        height: 138px;
+        border-bottom: 2px solid #eee;
+    }
+    .news1 {
+          
+       
+        width: 90%;
+        height: 100px;
+        margin: 0 auto;
+    }
+    
+    .news1 li {
+      
+        line-height: 25px;
+        overflow: hidden
+    }
+    .news1 li a {
+        color: #777777;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 13px;
+       width: 250px;
+        overflow: hidden;
+        display: inline-block;
+       
+    }
+    .news1 li a:before {
+        content: "ㆍ";
+        color: #777777;
+    }
+    
+</style>
+
+<style>
+        /*푸터*/
+    .ft {
+        display: block;
+        width: 100%;
+        height: 100px;
+        clear: both;
+         
+    }
+    .fnb {
+        padding-top: 10px;
+        background-color: #F04651;
+        
+    }
+    .fnb li {
+        float: left;
+        
+    }
+    .ftlink {
+        width: 100%;
+        height: 30px;
+        margin: 0 auto;
+        
+    }
+    .ftlink li a {
+        font-size: 13px;
+        color: #fff;
+        margin-left: 8px;
+        font-weight: bold;
+    }
+    .copyright {
+        
+        display: block;
+        width: 100%;
+        height: 60px;
+        font-size: 12px;
+        color: #919191;
+        padding-top: 3px;
+        background-color: #eee;
+    }
+    .copyright p {
+        width: 100%;
+        height: 60px;
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+</style>
+<style>
+    
+ 
+        .gnb_wrap {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            height: 100%;
+            z-index: 500;
+           
+            z-index: 9999;
+        }
+
+        .gnb_wrap .gnb_top {
+            position: relative;
+            background-color: white;
+            padding: 18px;
+        }
+
+        .gnb_wrap .gnb_top h1 {
+            position: absolute;
+            top: 15px;
+            padding: 0;
+        }
+        #menu_close a img {
+            width: 25px;
+            height: 25px;
+            display: block;
+        }
+      
+        .gnb_wrap .gnb_top h1 img {
+            width: 100px;
+        }
+
+        .gnb_wrap .gnb_top p 
+        {
+            margin-left: 92%;
+            
+            width: 30px;
+            height: 30px;
+            display: block;
+            
+        }
+
+        .gnb_wrap .gnb_list {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep1 {
+            padding: 20px;
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            border-bottom: solid 1px #e6e6e6;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep1 span {
+            background: url("image/off.png") center right no-repeat;
+            display: block;
+            color: #5a5a5e;
+            background-size: 24px 12px;
+            font-weight: 800;
+        }
+
+        .gnb_wrap .gnb_list li.on .gnb_dep1 span {
+            background:url("image/on.png") center right no-repeat; 
+            display: block;
+            color: #EF4651;
+            text-decoration: underline;
+             background-size: 24px 12px;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep2 {
+            display: none;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep2 li {
+            background-color: #f1f1f1;
+            border-bottom: solid 1px #cacaca;
+            color: #6c6c6c;
+            font-weight: 400;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep2 li a {
+            color: #6c6c6c !important;
+            padding: 20px 20px 20px 30px;
+            display: block;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep2 li.on {
+            background-color: #4f8ec3;
+            border-bottom: solid 1px #cacaca;
+            color: #fff !important;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep2 li.on a {
+            color: #fff !important;
+            padding: 20px 20px 20px 30px;
+            display: block;
+        }
+
+        
+    .gnb_overlay {
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.6;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        
+    }
+    
+    
+</style>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function(){   //사용자 효과14
+        var wd=parseInt($(".imgBox li").width());
+       console.log(wd);
+    function sl() {
+        $(".imgBox").not(":animated").animate({"margin-left":wd * -1 + "px"}, 800, function(){
+            $(".imgBox li").eq(0).appendTo($(".imgBox"));
+            $(".imgBox").css("margin-left", "0px");
+        });
+    };
+    var intv = setInterval(function(){ sl(); }, 4000);
+});
+</script>
+<script>
+     $(document).ready(function() {
+	//메뉴패널
+	$("#menu_close").click(function(){
+		$(".gnb_wrap").animate({left:"-100%"}, 500);
+		$(".gnb_overlay").animate({right:"-100%"}, 500);
+        
+	});
+	$(".menu a img").click(function(){
+		$(".gnb_wrap").animate({left:"0"}, 300);
+		$(".gnb_overlay").animate({right:"0"}, 300);
+	});
+	
+	//메뉴패널 하위메뉴 펼치기/접기
+	$(".gnb_li_list > a").on("click", function() {
+		var index = $(".gnb_li_list > a").index(this);
+		var prevIndex = $(".gnb_li_list").index($('.gnb_li_list[class="gnb_li_list on"]'));
+		if (prevIndex != -1) {
+			$(".gnb_li_list").eq(prevIndex).find('ul').slideUp(250);
+			$(".gnb_li_list").eq(prevIndex).removeClass('on');
+		}
+		if (prevIndex != index) {
+			$(".gnb_li_list").eq(index).find('ul').slideDown(250);
+			$(".gnb_li_list").eq(index).addClass('on');
+		}
+	});
+});
+    
+</script>
+</head>
+<body>
+    <div class="container">
+        <header class="hd">
+            <li class="menu">
+            <a href="#gnb_wrap"><img src="image/menu-options.png" alt="메뉴"></a>
+            </li>
+            <li class="logo">
+            <a href="#"><img src="image/logo.png" alt="로고"></a>
+            </li>
+        </header>
+        <nav class="gnb">
+            <ul>
+                <li><a href="">마이BC</a></li>
+                <li><a href="">카드상품</a></li>
+                <li><a href="">카드서비스</a></li>
+                <li><a href="">이벤트</a></li>
+            </ul>
+        </nav>
+        <section class="visual">
+            <ul class="imgBox">
+                <li><a href=""><img src="image/visual1.png" alt="비주얼1"></a></li>
+                <li><a href=""><img src="image/visual2.png" alt="비주얼2"></a></li>
+                <li><a href=""><img src="image/visual3.png" alt="비주얼3"></a></li>
+                <li><a href=""><img src="image/visual4.png" alt="비주얼4"></a></li>
+            </ul>        
+        </section>
+        <div class="contents">
+            <ul class="quick icon">
+           <h3 class="quickT">Quick Link</h3>
+           <table class="quick Box">
+               <tbody>
+                   <tr>
+                       <td><img src="image/server.png" alt="인터넷금융"><a href="">인터넷<br>금융</a></td>
+                       <td><img src="image/atm.png" alt="자동화코너찾기"><a href="">자동화<br>코너찾기</a></td>
+                       <td><img src="image/piggy-bank-with-dollar-coin.png" alt="예금자보호제도"><a href="">예금자<br>보호제도</a></td>
+                       
+                   </tr>
+                   <tr>
+                       <td><img src="image/credit-card1.png" alt="카드승인내역"><a href="">카드승인<br>내역</a></td>
+                       <td><img src="image/credit-card-with-check-symbol.png" alt="카드이용한도"><a href="">카드이용<br>한도</a></td>
+                       <td><img src="image/russia-ruble.png" alt="포인트마일리지"><a href="">포인트<br>마일리지</a></td>
+                   </tr>
+               </tbody>
+           </table>
+            </ul>
+            </div>
+            <div class="boxFrame">
+                <ul>
+                    <li class="box1">
+                        <h3 class="title">STFE BC 서비스</h3>
+                        <a href=""><img src="" alt=""></a>
+                    </li>
+                       <li class="box2">
+                        <h3 class="title">9월 특가전!</h3>
+                        <a href=""><img src="" alt=""></a>
+                        </li>
+                     
+                </ul>
+            </div>
+           <div class="mainBorderd">
+               <div class="noti1">
+                   <h3 class="tit">
+                       BC뉴스
+                   </h3>
+                   <ul class="news1">
+                       <li><a href="">BC바로카드 체크카드 개인회원 약관 개정 안내</a></li>
+                       <li><a href="">신용카드 개인회원 약관(그린하이브리드/하이브리드) 개정 안내</a></li>
+                       <li><a href="">해외원화결제서비스(DCC) 사전차단 신청 서비스 개시 안내</a></li>
+                   </ul>
+               </div>
+               
+                  <div class="noti2">
+                   <h3 class="tit">
+                       공지사항
+                   </h3>
+                   <ul class="news1">
+                       <li><a href="" title="">추석연휴 우편 명세서 지연 수령 안내</a></li>
+                       <li><a href="">서비스 안정화를 위한 시스템 점검 안내</a></li>
+                       <li><a href="">2018 평생교육 바우처 시행 안내</a></li>
+                   </ul>
+               </div>
+           </div>
+     
+        <footer class="ft">
+            <nav class="fnb">
+               <ul class="ftlink">
+                   <li><a href="">개인정보처리방침</a></li>
+                   <li><a href="">고객권리안내문</a></li>
+                   <li><a href="">상품공시실</a></li>
+                   <li><a href="">이용약관</a></li>
+               </ul>
+                <ul class="ftlogo">
+                    <li><a href=""><img src="" alt=""></a></li>
+                </ul>
+                
+            </nav>
+          <ul class="copyright">
+              <p>서울시 서초구 효령로 275 비씨카드(주) 대표이사 이문환<br>
+              사업자번호 214-81-37726<br>
+              통신판매업 신고번호 제1996-서울서초-0011호</p>
+          </ul>
+        </footer>
+        <div class="gnb_wrap">
+            <div class="gnb_top">
+                <p id="menu_close"><a href="#"><img src="image/cross.png" alt="닫기버튼"></a></p>
+                <h1><a href=""><img src="image/logo.png" alt="로고"></a></h1>
+            </div>
+            <div class="gnb_list">
+                <ul>
+                    <li class="gnb_li_list">
+                    <a href="#" class="gnb_dep1">
+                    <span>마이BC</span>
+                    </a>
+                    <ul class="gnb_dep2">
+                        <li><a href="#">이용대금명세서</a></li>
+                        <li><a href="#">결제예정금액</a></li>
+                        <li><a href="#">카드이용분석</a></li>
+                        <li><a href="#">실적충족현황</a></li>
+                    </ul>
+                    </li>
+                     <li class="gnb_li_list">
+                    <a href="#" class="gnb_dep1">
+                    <span>카드상품</span>
+                    </a>
+                    <ul class="gnb_dep2">
+                        <li><a href="#">신용카드</a></li>
+                        <li><a href="#">체크카드</a></li>
+                        <li><a href="#">기프트카드</a></li>
+                        <li><a href="#">카드발급신청</a></li>
+                    </ul>
+                    </li>
+                    <li class="gnb_li_list">
+                    <a href="#" class="gnb_dep1">
+                    <span>카드서비스</span>
+                    </a>
+                    <ul class="gnb_dep2">
+                        <li><a href="#">단기카드대출</a></li>
+                        <li><a href="#">장기카드대출</a></li>
+                        <li><a href="#">금리인하요구권</a></li>
+                        <li><a href="#">Light할부</a></li>
+                    </ul>
+                    </li>
+                <li class="gnb_li_list">
+                    <a href="#" class="gnb_dep1">
+                    <span>고객센터</span>
+                    </a>
+                    <ul class="gnb_dep2">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">자주찾는질문FAQ</a></li>
+                        <li><a href="#">전화예약</a></li>
+                        <li><a href="#">상담전화안내</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="gnb_overlay"></div>
+    </div>
+</body>
+</html>
