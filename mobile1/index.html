@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>환경부</title>
+    <meta name="viewport" content="width=device-width, initial-scale-1.0, user-scalable=no">
+    <!--폰트-->
+    <link rel="stylesheet" href="">
+    <meta name="application-name" content="환경부">
+    <meta name="author" content="">
+    <meta name="keywords" content="환경,환경부">
+    <meta name="description" content="mobile4">
+    <link rel="icon" href="image/icon.ico">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .hd {
+            width: 100%;
+            height: 61px;
+            border-top: 4px solid #0c3381;
+
+            left: 0;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #0c3381;
+            background-color: white;
+
+        }
+
+        .hd li {
+            float: left;
+            padding: 11px;
+        }
+
+        .gps {
+            width: 35px;
+            height: 35px;
+
+        }
+
+        .gps img {
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
+        }
+
+        .menu {
+            width: 35px;
+            height: 35px;
+            margin-left: 44px;
+        }
+
+        .menu a {
+            float: right;
+        }
+
+        .menu img {
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 110px;
+            height: 35px;
+            margin-left: 52px;
+        }
+
+        .logo img {
+            width: 110px;
+            height: 35px;
+        }
+
+    </style>
+    <style>
+        /*비주얼부분*/
+        .visual {
+            width: 100%;
+            height: 240px;
+
+            overflow: hidden;
+        }
+
+        .imgBox {
+            width: 400%;
+            height: 230px;
+            margin-top: 10px;
+
+        }
+
+        .imgBox li {
+            width: 25%;
+            height: 250px;
+            float: left;
+
+
+        }
+
+        .imgBox li a {
+            display: block;
+        }
+
+        .imgBox li a img {
+            width: 100%;
+            height: 230px;
+        }
+
+        /*퀵링크*/
+        .quicklink {
+            width: 100%;
+            height: 60px;
+            text-align: center;
+
+        }
+
+        .linkBox {
+            width: 100%;
+            height: 60px;
+            border-bottom: 1px solid #0c3381;
+        }
+
+        .linkBox li {
+            float: left;
+
+        }
+
+        .linkBox li a {
+
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .recycle {
+            width: 50%;
+            height: 60px;
+            background-color: white;
+            vertical-align: middle;
+        }
+
+        .resycle a {
+
+            display: block;
+
+        }
+
+        .recycle a strong {
+            display: block;
+            font-size: 13px;
+            letter-spacing: -0.03em;
+            margin-top: 10px;
+            color: #0c3381;
+
+        }
+
+        .recycle a strong:before {
+            background: url(image/recycleb.png);
+            background-size: 100%;
+            width: 35px;
+            height: 35px;
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .mask {
+            width: 50%;
+            height: 60px;
+            background-color: #4f8ec3;
+        }
+
+        .mask a strong {
+            display: block;
+            font-size: 13px;
+            letter-spacing: -0.03em;
+            margin-top: 10px;
+            color: white;
+        }
+
+        .mask a strong:before {
+            background: url(image/maskw.png);
+            background-size: 100%;
+            width: 37px;
+            height: 37px;
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 3px;
+        }
+
+    </style>
+    <style>
+        /*환경뉴스*/
+        .contents {
+            width: 95%;
+            height: 400px;
+            padding-top: 10px;
+            display: block;
+            margin-top: 10px;
+            margin: 0 auto;
+            border: 1.5px solid #0c3381;
+            margin-top: 20px;
+        }
+
+        .e-news {
+            width: 95%;
+            height: 380px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        .newstitle {
+            text-align: center;
+
+        }
+
+        .newImg {
+            width: 95%;
+            height: 200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .newImg li {
+            width: 85%;
+            height: 200px;
+            margin: 0 auto;
+            margin-left: 19%;
+
+        }
+
+        .newImg li a img {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .newP {
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            position: absolute;
+            float: right;
+            color: #0c3381;
+            right: 10px;
+            margin-top: -42px;
+        }
+
+        .news {
+            width: 95%;
+            height: 110px;
+            margin: 0 auto;
+            display: block;
+            margin-top: 30px;
+        }
+
+        .news li {
+            border-bottom: 1px solid #eee;
+            line-height: 40px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 220px;
+        }
+
+        .news li:before {
+            content: 'ㆍ';
+        }
+
+        .news li a {
+            color: black;
+            font-size: 14px;
+
+        }
+
+        .news span {
+            font-size: 14px;
+            width: 77px;
+            height: 20px;
+            float: right;
+            margin-top: -27px;
+        }
+
+    </style>
+    <style>
+        /*공지사항*/
+
+        #noti {
+            width: 95%;
+            height: 200px;
+            margin: 0 auto;
+            border: 1.5px solid #0c3381;
+            display: block;
+            margin-top: 20px;
+        }
+
+        .title {
+            text-align: center;
+            width: 150px;
+            height: 30px;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+
+        .title:before {
+            content: '';
+            background: url(image/megaphone.png);
+            background-size: 100%;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+
+        }
+
+        .notiP a {
+
+            font-size: 40px;
+            color: #0c3381;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+        }
+
+        .notiP {
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            float: right;
+            color: #0c3381;
+            margin-top: -50px;
+        }
+
+        .noti1 {
+            width: 85%;
+            height: 130px;
+            margin: 0 auto;
+            padding-top: 15px;
+        }
+
+        .noti1 li {
+            line-height: 30px;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+            color: #777777;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 14px;
+            width: 250px;
+            overflow: hidden;
+            display: inline-block;
+
+        }
+
+        .noti1 li a {
+            color: #777;
+
+        }
+
+        .noti1 li a:before {
+            content: 'ㆍ';
+            color: #777
+        }
+
+    </style>
+    <style>
+        /*퀵아이콘*/
+        .quickmenu {
+            width: 100%;
+            height: 320px;
+            display: block;
+            margin: 0 auto;
+            background-color: #eee;
+        }
+
+        .quickicon {
+            width: 95%;
+            height: 250px;
+            margin: 0 auto;
+            padding-top: 50px;
+            margin-top: 20px;
+
+        }
+
+        .quickicon li {
+            float: left;
+            width: 110px;
+            margin: 0 auto;
+            margin-left: 44px;
+        }
+
+        .quickicon li a {
+            width: 130px;
+            height: 130px;
+
+        }
+
+        .quicktitle {
+            text-align: center;
+            width: 90px;
+            line-height: 30px;
+        }
+
+    </style>
+    <style>
+        /*푸터부분*/
+        .ft {
+            width: 100%;
+            height: 150px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .fnb {
+            width: 100%;
+            height: 50px;
+            display: block;
+            background-color: #4c5a69;
+            margin-top: 10px;
+            border-bottom: 1.5px solid #5b6978;
+        }
+
+        .fnb li {
+            float: left;
+            margin-left: 5px;
+            margin-top: 14px;
+
+        }
+
+        .fnb li a {
+            color: white;
+            font-size: 12px;
+        }
+
+        .copyright {
+            width: 100%;
+            background-color: #5b6978;
+            height: 100px;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            vertical-align: middle;
+            padding-top: 20px;
+        }
+
+        .copyright p {
+            color: white;
+            font-size: 13px;
+            margin-left: 5px;
+
+        }
+
+    </style>
+    <style>
+        .gnb_wrap {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100%;
+            z-index: 500;
+        }
+
+        .gnb_wrap .gnb_top {
+            position: relative;
+            background-color: #0c3381;
+            padding: 18px;
+        }
+
+        .gnb_wrap .gnb_top h1 {
+            position: absolute;
+            top: 15px;
+            padding: 0;
+        }
+        #menu_close a img {
+            width: 30px;
+            height: 30px;
+            display: block;
+        }
+      
+        .gnb_wrap .gnb_top h1 img {
+            width: 100px;
+        }
+
+        .gnb_wrap .gnb_top p 
+        {
+            margin-left: 92%;
+            
+            width: 30px;
+            height: 30px;
+            display: block;
+            
+        }
+
+        .gnb_wrap .gnb_list {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep1 {
+            padding: 20px;
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            border-bottom: solid 1px #e6e6e6;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep1 span {
+            background: url("image/icon_gnb1Off.png") center right no-repeat;
+            display: block;
+            color: #5a5a5e;
+        }
+
+        .gnb_wrap .gnb_list li.on .gnb_dep1 span {
+            background:url("image/icon_gnb1On.png") center right no-repeat; 
+            display: block;
+            color: #3381c0;
+            text-decoration: underline;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep2 {
+            display: none;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep2 li {
+            background-color: #f1f1f1;
+            border-bottom: solid 1px #cacaca;
+            color: #6c6c6c;
+            font-weight: 400;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep2 li a {
+            color: #6c6c6c !important;
+            padding: 20px 20px 20px 30px;
+            display: block;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep2 li.on {
+            background-color: #4f8ec3;
+            border-bottom: solid 1px #cacaca;
+            color: #fff !important;
+        }
+
+        .gnb_wrap .gnb_list .gnb_dep2 li.on a {
+            color: #fff !important;
+            padding: 20px 20px 20px 30px;
+            display: block;
+        }
+ 
+    
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        
+    $(document).ready(function() {
+	//메뉴패널
+	$("#menu_close").click(function(){
+		$(".full_bg").hide();
+		$(".gnb_wrap").animate({right:"-100%"}, 500);
+	});
+	$(".menu").click(function(){
+		$(".gnb_wrap").animate({right:"0"}, 300);
+		
+	});
+	
+	//메뉴패널 하위메뉴 펼치기/접기
+	$(".gnb_li_list > a").on("click", function() {
+		var index = $(".gnb_li_list > a").index(this);
+		var prevIndex = $(".gnb_li_list").index($('.gnb_li_list[class="gnb_li_list on"]'));
+		if (prevIndex != -1) {
+			$(".gnb_li_list").eq(prevIndex).find('ul').slideUp(250);
+			$(".gnb_li_list").eq(prevIndex).removeClass('on');
+		}
+		if (prevIndex != index) {
+			$(".gnb_li_list").eq(index).find('ul').slideDown(250);
+			$(".gnb_li_list").eq(index).addClass('on');
+		}
+	});
+});
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="hd">
+            <li class="gps"><a href=""><img src="image/location-pinb.png" alt="위치"></a></li>
+            <li class="logo"><a href=""><img src="image/logow.png" alt="로고"></a></li>
+            <li class="menu"><a href="#gnb_wrap"><img src="image/menu-options.png" alt="메뉴"></a></li>
+        </header>
+        <div class="visual">
+            <ul class="imgBox">
+                <li><a href=""><img src="image/visual1.png" alt=""></a></li>
+                <li><a href=""><img src="image/slider3.png" alt=""></a></li>
+                <li><a href=""><img src="image/slider1.jpg" alt=""></a></li>
+                <li><a href=""><img src="image/slider2.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="quicklink">
+            <ul class="linkBox">
+                <li class="recycle">
+                    <a href="http://www.me.go.kr/issue/recycle/">
+                        <strong>재활용 분리배출</strong>
+                    </a>
+                <li class="mask">
+                    <a href="http://www.me.go.kr/issue/finedust4/intro.html">
+                        <strong>미세먼지</strong>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="contents">
+            <ul class="e-news">
+                <h3 class="newstitle">e-환경뉴스
+                </h3>
+                <span class="newP">&#43;</span>
+                <ul class="newImg">
+                    <li>
+                        <a href="">
+                            <img src="image/enews.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="news">
+                    <li><a href="">추석 연휴 앞두고 과대포장 집중 점검한다</a>
+                    </li><span>2018-09-10</span>
+                    <li><a href="">한국수자원공사, 공공부문 정규직 전환 앞장섰다</a>
+                    </li><span>2018-09-03</span>
+                </ul>
+            </ul>
+        </div>
+        <div id="noti">
+            <h3 class="title">공지사항</h3>
+            <span class="notiP">
+                <a href="">&#43;</a>
+            </span>
+            <ul class="noti1">
+                <li><a href="">2018년 제14회 대한민국환경교육한마당 장관표창 후보자 공개검증(환경교육)</a></li>
+                <li><a href="">물관리기술 발전 및 물산업 진흥 기본계획 수립 연구</a></li>
+                <li><a href="">환경경제 및 환경복지 통계체계 마련 연구</a></li>
+            </ul>
+        </div>
+        <div class="quickmenu">
+            <ul class="quickicon">
+                <li>
+                    <a href=""><img src="image/bottom_ban01.png" alt=""></a>
+                    <h5 class="quicktitle">열린장관실</h5>
+                </li>
+                <li>
+                    <a href=""><img src="image/bottom_ban02.png" alt=""></a>
+                    <h5 class="quicktitle">2018 업무계획</h5>
+                </li>
+                <li>
+                    <a href=""><img src="image/bottom_ban03.png" alt=""></a>
+                    <h5 class="quicktitle">전화번호안내</h5>
+                </li>
+                <li>
+                    <a href=""><img src="image/bottom_ban04.png" alt=""></a>
+                    <h5 class="quicktitle">채용공고</h5>
+                </li>
+            </ul>
+        </div>
+
+        <footer class="ft">
+            <nav class="fnb">
+                <li><a href="">홈페이지 이용안내</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">저작권정책</a></li>
+                <li><a href="">뷰어다운로드</a></li>
+            </nav>
+            <ul class="copyright">
+                <p>(우)30103 세종특별자치시 도움6로 11 정부세종청사 6동
+                    <br>고객지원센터(민원실) : 1577-8866
+                    <br> 홈페이지 시스템문의 : 044-201-6481</p>
+            </ul>
+        </footer>
+        <div class="gnb_wrap">
+
+            <div class="gnb_top">
+                <p id="menu_close"><a href="#"><img alt="닫기버튼" src="image/close.png" /></a></p>
+                <h1><a href=""><img alt="환경부로고" src="image/gnb_logo.png" /></a></h1>
+            </div>
+
+            <div class="gnb_list">
+                <ul>
+
+                    <li class="gnb_li_list">
+                        <a href="#" class="gnb_dep1"><span>정보공개</span></a>
+
+                        <ul class="gnb_dep2">
+
+                            <li><a href="#">주요문서목록</a></li>
+
+                            <li><a href="#">회의자료</a></li>
+
+                            <li><a href="#">국회관련정보</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="gnb_li_list">
+                        <a href="#" class="gnb_dep1"><span>뉴스/공지</span></a>
+
+                        <ul class="gnb_dep2">
+
+                            <li><a href="/m/mob/index.do?menuId=10">E-환경뉴스</a></li>
+
+                            <li><a href="/m/mob/index.do?menuId=11">보도·해명</a></li>
+
+                            <li><a href="/m/mob/index.do?menuId=71">채용공고</a></li>
+
+                            <li><a href="/m/mob/index.do?menuId=12">공지·공고</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="gnb_li_list">
+                        <a href="#" class="gnb_dep1"><span>법령정보</span></a>
+
+                        <ul class="gnb_dep2">
+
+                            <li><a href="/m/mob/index.do?menuId=14" target="_blank" title="새창으로 열기">최근 제·개정법령</a></li>
+
+                            <li><a href="/m/mob/index.do?menuId=15">현행법령</a></li>
+
+                            <li><a href="/m/mob/index.do?menuId=16">고시/훈령/예규</a></li>
+
+                            <li><a href="/m/mob/index.do?menuId=70">서식자료</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="gnb_li_list">
+                        <a href="#" class="gnb_dep1"><span>환경정책</span></a>
+
+                        <ul class="gnb_dep2">
+
+                            <li><a href="/m/mob/index.do?menuId=32">환경정책</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="gnb_li_list">
+                        <a href="#" class="gnb_dep1"><span>발행물/홍보</span></a>
+
+                        <ul class="gnb_dep2">
+
+                            <li><a href="/m/mob/index.do?menuId=33">소책자</a></li>
+
+                            <li><a href="/m/mob/index.do?menuId=49">자료관</a></li>
+
+                            <li><a href="/m/mob/index.do?menuId=50">영상관</a></li>
+
+                            <li><a href="/m/mob/index.do?menuId=69">환경동화</a></li>
+
+                            <li><a href="/m/mob/index.do?menuId=62">e-book</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="gnb_li_list">
+                        <a href="#" class="gnb_dep1"><span>기관소개</span></a>
+
+                        <ul class="gnb_dep2">
+
+                            <li><a href="/m/mob/index.do?menuId=18">인사말</a></li>
+
+                            <li><a href="/m/mob/index.do?menuId=20">조직/직원안내</a></li>
+
+                            <li><a href="/m/mob/index.do?menuId=22">찾아오시는길</a></li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="overlay"></div>
+		
+    </div>
+    </div>
+</body>
+
+</html>
