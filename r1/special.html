@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale-1.0,minimum-scale=1,maximum-scale=1, user-scalable=no target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="keywords" content="미니소, 미니소 온라인, 인형">
+    <meta name="Description" content="미니소 코리아 공식 온라인몰">
+    <!--[if-IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="logoicon_23v_icon.ico" type="image/x-icon">
+   <link rel="icon" sizes="16X16 32X32 48X48 64X64 72X72 96X96 114X114 128X128" href="logoicon_23v_icon.ico" type="image/x-icon">
+   <link rel="apple-touch-icon-precomposed" href="image/logoicon.png"> 
+    <link rel="icon" href="logoicon_23v_icon.ico">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+     <meta rel="msapplication-TileImage" content="./image/logoicon.png">
+    <title>MINISO</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+   
+    <style>
+    
+        *{margin: 0; padding: 0;}
+        
+        html,body{
+            width: 100%;
+            height: 100%;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        ul,li {list-style: none;}
+        a {text-decoration: none;}
+        input, button, label, a{ outline: 0; border: 0;}
+        .ckItem {display: none;}
+        /*헤더부분*/
+        .hd{
+            width: 100%;
+            height: 50px;
+            display: block;
+            background-color: #fff;
+            
+            z-index: 999;
+        }
+   
+        .hd ul li {float: left;}
+        .logo_m {
+            width: 120px;
+            height: 30px;
+            margin: 0 auto;
+            margin-top: -35px;
+        }
+        .logo_m img {
+            width: 120px;
+            height: 30px;
+           
+        }
+        .menu { 
+            width: 32px;
+            height: 32px;
+            padding: 5px;
+            margin-top: 3px;
+            margin-left: 5px;
+        }
+        .menu img {
+            width: 30px;
+            height: 30px;
+        }
+        .search {
+            width: 32px;
+            height: 32px;
+            float: right;
+            margin-top: -35px;
+            padding: 4px;
+            clear: both;
+            margin-right: -110px;
+        }
+        .search img {
+            width: 25px;
+            height: 25px;
+        }
+       
+        .desk {
+            width: 100%;
+            height: 80px;
+            display: block;
+            background-color: white;
+        }
+        .logo_d {
+            width: 200px;
+            height: 58px;
+        }
+        .logo_d li {
+            width: 200px;
+            height: 58px;
+            margin-left: 18%;
+        }
+        .logo_d li img {
+            width: 200px;
+            height: 58px;
+            margin-top: 2%;    
+        }
+        .d_menu {
+            width: 50%;
+            margin: 0 auto;
+            float: left;
+            padding: 16px;
+            margin-left: 20%;
+            margin-top: -4%;
+        }
+        .d_menu li {
+            padding: 34px;
+            padding-left: 16px;
+        }
+        .d_menu li a {
+            color: black;
+            font-size: 1vw;
+        }
+    </style>
+   
+    <style>
+    
+    /*드라마*/
+        .drama {
+            padding: 1rem 0rem;
+            background-color: #f96653;
+            text-align: center;
+            color: #fff;
+            font-size: 1rem;
+            letter-spacing: -.2pt;
+        }
+        .visual {
+            width: 100%;
+        }
+        .visual ul li img {
+            width: 100%;
+            
+        }
+        .con1, .con2 {
+            padding-top: 1rem;
+            display: block;
+            
+        }
+        .con1 h3, .con2 h3, .con3 h3 {
+            padding: 1.2rem;
+            border-top: 1px solid #e1e1e1;
+            background-color: #fff;
+            color: black;
+            font-size: 0.8rem;
+            letter-spacing: -.9pt;
+            line-height: 1.7rem;
+            text-align: center;
+            
+        }
+        .con1 h3 strong, .con2 h3 strong, .con3 h3 strong {
+            display: inline-block;
+            padding: 0 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .itemList {
+            width: 100%;
+            height: 150px;
+        }
+        .itemBox {
+            width: 100%;
+            height: 150px;
+        }
+        .con1_visualImg, .con2_visualImg, .con3_visualImg {
+            width: 100%;
+            display: block;
+        }
+        .con1_visualImg li a img, .con2_visualImg li a img, .con3_visualImg li a img {
+            width:100%;
+        }
+        .con1_item1, .con1_item2, .con1_item3 {
+            float: left;
+            width: 120px;
+            height: 148px;
+            box-sizing: border-box;
+            
+        }
+        
+        .con1_item1 a {
+            
+        }
+        .con1_item1 a img, .con1_item2 a img, .con1_item3 a img {
+         margin: 0 auto;
+            margin-left: 5%;
+            width: 90%;
+            background-color: #f8f8f8;
+        }
+        
+        .protitle {
+            color: #333;
+            font-size: 0.7rem;
+            margin-left: 8%;
+        }
+              .con2_item1, .con2_item2, .con2_item3 {
+            float: left;
+            width: 120px;
+            height: 148px;
+            
+        }
+        
+        .con1_item1 a {
+            
+        }
+        .con2_item1 a img, .con2_item2 a img, .con2_item3 a img {
+         margin: 0 auto;
+            margin-left: 5%;
+            width: 90%;
+            background-color: #f8f8f8;
+        }
+    </style>
+   
+        <style>
+    /*ft*/
+    
+           .ft {
+               width: 100%;
+               height: 100px;
+               display: block;
+               clear: both;
+                background-color: #f0f0f0;
+           }
+          .fnb {
+              width: 100%;
+              height: 30px;
+          }
+          .fnb li { 
+              float: left;
+              padding: 1%;
+              margin: 0 auto;
+               padding-top: 5%;
+          }
+          .fnb li a {
+              color: #6f6f6f;
+              font-size: 4vw;
+          }
+          .snsLogo {
+              width: 20%;
+              display: block;
+              clear: both;
+              height: 20px;
+               margin: 0 auto;
+          }
+          .snsLogo li {
+              float: left;
+             padding: 3px;
+          }
+          .snsLogo li a img {
+              width: 15px;
+              height: 15px;
+              
+          } 
+          .copyright {
+              clear: both;
+              display: block;
+              width: 80%;
+              height: 20px;
+              padding-left: 2%;
+          }
+          .copyright p {
+              font-size: 1vw;
+              color: #6f6f6f;
+          }
+    </style>
+   
+    <style>
+         @media screen and (max-width:767px){
+            /*모바일기준*/
+             .desk { display: none;}
+             
+             .visual_d { display: none;}
+             
+        }
+       @media screen and (min-width:768px) and (max-width:959px){
+           /*태블릿기준*/
+           
+           .desk {
+               display: none;
+           }
+           .search { margin-right: -250%;}
+           .visual_d{display: none;}
+           .visual_m {
+               height: 550px;
+           }
+           .imgBox_m {
+               height: 550px;
+           }
+           .imgBox_m li {
+               height: 550px;
+           }
+           .imgBox_m li a img {
+               height: 550px;   
+           }
+            .snsList {
+                padding: 0px 70px;
+            }
+           
+            .prodSort li a {
+                font-size: 2vw;
+            }
+            .eventBox1, .eventBox2 {
+                 width: 44%;
+             }
+            .eventList ul {
+                 float: left;
+                 margin-left: 5%;
+             }
+             .txtBox p, strong{
+                 font-size: 1.7vw;
+             }
+             .txtBox {
+                 width: 84%;
+                 padding-left: 0px;
+                 padding-top: 2px 0;
+             }
+            .con2 {
+                 height: 660px;
+             }
+             .eventList {
+                 height: 660px;
+             }
+           .ft {
+               height: 80px;
+           }
+            .fnb {
+                 width: 51%;
+                 margin: 0 auto;
+             }
+             .fnb li {
+                 padding: 3%;
+             }
+             .fnb li a {
+                 font-size: 1.5vw;
+             }
+        }
+        @media screen and (min-width:1200px){
+            /* 고해상도 데스크탑기준*/
+            .mo {display: none;}
+            .desk {
+                z-index: 999;
+                position: fixed;
+                display: block
+            };
+            .hd {
+                display: flex;
+                height: 0px;    
+            }
+            .drama {
+                padding: 2rem 0rem;
+                 margin-top: 1%;   
+            }
+            .visual {
+                display: none;
+                
+            }
+           .con1_visualImg, .con2_visualImg, .con3_visualImg {
+               width: 50%;
+               padding: 1rem;
+               margin-left: 2rem;
+               margin: auto;
+            
+            }
+            .con1 h3, .con2 h3, .con3 h3 {
+                font-size: 1rem;
+                line-height: 2rem;
+            }
+            .con1 h3 strong, .con2 h3 strong, .con3 h3 strong {
+                font-size: 2rem;
+            }
+            .itemList {
+                width: 47%;   
+                height: 300px;
+                margin: 0 auto;
+            }
+            .con1_item1, .con1_item2, .con1_item3{
+                width: 300px;
+                height: 300px;
+            }
+            .itemBox {
+                height: 320px;
+            }
+            .protitle {
+                font-size: 1.4rem;
+            }
+            .ft {
+                height: 145px;
+            }
+            .fnb {
+                 width: 51%;
+                 margin: 0 auto;
+             }
+             .fnb li {
+                 padding: 3%;
+             }
+             .fnb li a {
+                 font-size: 1vw;
+             }
+            .copyright p {
+                font-size: 0.8vw;
+            }
+            #pnb {display: none;}
+        }
+        
+         @media screen and (min-width:960px) and (max-width:1199px){
+            /*저해상도 데스크탑기준*/
+            .desk {display: block;}
+            .mo { display: none;}
+            .imgBox_m{display: none;} 
+            .visual_m{display: none;} 
+             .d_menu {
+                margin-top: -8%;
+                 width: 75%;
+                 margin-left: 25%;
+             }
+             .d_menu li a {
+                 font-size: 1.3vw;
+             }
+            .prodSort li {width: 16%; margin: 0 auto;}
+            .prodSort {
+                padding-left: 7%;
+                padding-top: 2%;
+            }
+             .prodSort li a{
+                 font-size: 1.1vw;
+             }
+             .visual_d{
+                 height: 400px;
+             }
+             .imgBox_d {
+                 height: 400px;
+             }
+             .imgBox_d li img {
+                height: 400px;
+             }
+              .snsList {
+                padding: 0 85px;
+            }
+             .con2 {
+                 height: 660px;
+             }
+             .eventList {
+                 height: 660px;
+             }
+             .eventBox1, .eventBox2 {
+                 width: 35%;
+             }
+             .eventList ul {
+                 float: left;
+                 margin-left: 11%;
+             }
+             .txtBox p, strong{
+                 font-size: 1.3vw;
+             }
+             .txtBox {
+                 width: 84%;
+                 padding-left: 0px;
+                 padding-top: 2px 0;
+             }
+             .fnb {
+                 width: 51%;
+                 margin: 0 auto;
+             }
+             .fnb li {
+                 padding: 3%;
+                
+             }
+             .fnb li a {
+                 font-size: 1.5vw;
+             }
+             #pnb {display: none;}
+        }
+       
+        
+    </style>
+ 
+  
+   
+</head>
+<body>
+    
+    <div class="wrap">
+        <header class="hd">
+        <nav class="mo">
+              <ul class="menu">
+              <li>
+              <a href="#"><img src="image/menu-options.png" alt="모바일_메뉴"></a>
+              </li>
+              </ul>
+             <ul class="logo_m">
+                 <li><a href=""><img src="image/logoF.png" alt="모바일로고"></a></li>
+                <ul class="search">
+                    <li><a href=""><img src="image/search.png" alt="모바일 검색"></a></li>
+                </ul>
+             </ul>
+        </nav>
+        
+ 
+         <nav class="desk">
+          <ul class="logo_d">
+              <li><a href=""><img src="image/logoF.png" alt="데스크탑 로고"></a></li>
+          </ul>
+            <ul class="d_menu">
+             <li><a href="">TV속미니소</a></li>
+             <li><a href="">엑소피규어</a></li>
+             <li><a href="">당신이잠든사이에</a></li>
+             <li><a href="">워너원</a></li>
+             <li><a href="">SPECIAL</a></li>
+             <li><a href="">베스트/신상</a></li>        
+        </ul>
+         </nav>
+     
+         
+      
+        </header>
+           <h2 class="drama">
+               <span>TV속 미니소</span>
+               <br>
+               "당신이 찾던 TV속 미니소 아이템"
+           </h2>
+        
+        <section class="visual">
+            <ul class="imgBox">
+                <li><a href=""><img src="image/drama_con1.jpg" alt=""></a></li>
+            </ul>
+        </section>
+        <section class="con1">
+               <h3>
+                   <strong>"로봇이 아니야"</strong>
+                   <br>
+                   <p>컬러풀한아이템이돋보이는컬러풀방</p>
+               </h3>
+            <ul class="con1_visualImg">
+                <li>
+                <a href="">
+                <img src="image/drama_con1Img.jpg" alt=""></a>
+                </li>
+            </ul>
+            <div class="itemBox">
+                <ul class="itemList">
+                    <li class="con1_item1">
+                    <a href="">
+                    <img src="image/con1_item1.png" alt="">
+                    <span class="protitle">빅스탠딩 래빗 핑크</span>
+                    </a>
+                    </li>
+
+                    <li class="con1_item2">
+                    <a href="">
+                    <img src="image/con1_item2.png" alt=""><span class="protitle">빅스탠딩 래빗 핑크</span>
+                    </a>
+                    </li>
+                    
+                    <li class="con1_item3">
+                    <a href="">
+                    <img src="image/con1_item3.png" alt=""><span class="protitle">빅스탠딩 래빗 핑크</span>
+                    </a>
+                    </li>        
+                    
+                </ul>
+            </div>
+        </section>
+          <section class="con2">
+                <h3>
+                   <strong>"당신이 잠든 사이에"</strong>
+                   <br>
+                   <p>꿈에서 당신을 보았습니다.</p>
+               </h3>
+            <ul class="con2_visualImg">
+                <li>
+                <a href="">
+                <img src="image/con2Img.jpg" alt=""></a>
+                </li>
+            </ul>
+            <div class="itemBox">
+                <ul class="itemList">
+                    <li class="con2_item1">
+                    <a href="">
+                    <img src="image/con2_item1.jpg" alt=""><span class="protitle">레인보우라운딩탁상시계블랙</span>
+                    </a>
+                    </li>
+
+                    <li class="con2_item2">
+                    <a href="">
+                    <img src="image/con2_item2.jpg" alt=""><span class="protitle">레인보우라운딩탁상시계화이트</span>
+                    </a>
+                    </li>
+                    
+                    <li class="con2_item3">
+                    <a href="">
+                    <img src="image/con2_item3.jpg" alt=""><span class="protitle">공룡캐릭터안마기</span>
+                    </a>
+                    </li>        
+                    
+                </ul>
+            </div>
+        </section>
+          <section class="con3">
+                <ul class="txtBox">
+                    <span class="con3_title"><strong>"도깨비"</strong></span>
+                    <p class="con3_subtitle">도깨비는 무엇을 골랐을까?</p>
+                </ul>
+            <ul class="con3_visualImg">
+                <li>
+                <a href="">
+                <img src="image/con3Img.jpg" alt=""></a>
+                </li>
+            </ul>
+            <div class="itemBox">
+                <ul class="itemList">
+                    <li class="con3_item1">
+                    <a href="">
+                    <img src="http://placehold.it/106X106/333/fff" alt=""><span class="protitle">포이팟_키링</span>
+                    </a>
+                    </li>
+
+                    <li class="con3_item2">
+                    <a href="">
+                    <img src="http://placehold.it/106X106/333/fff" alt=""><span class="protitle">보글젤_키링</span>
+                    </a>
+                    </li>
+                    
+                    <li class="con3_item3">
+                    <a href="">
+                    <img src="http://placehold.it/106X106/333/fff" alt=""><span class="protitle">빅보글젤</span>
+                    </a>
+                    </li>        
+                    
+                </ul>
+            </div>
+        </section>
+        <footer class="ft">
+            
+            <nav class="fnb">
+                <li><a href="">로그인</a></li>
+                <li><a href="">공지사항</a></li>
+                <li><a href="">고객센터</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+            </nav>
+            <ul class="snsLogo">
+                <li><a href=""><img src="image/icon_footer_sns_facebook.png" alt="페이스북"></a></li>
+                <li><a href=""><img src="image/icon_footer_sns_insta.png" alt="인스타"></a></li>
+            </ul>
+            <ul class="copyright">
+                <p>COPYRIGHT © MINISOMALL CO., LTD. ALL RIGHTS RESERVED.</p>
+            </ul>
+        </footer>
+    </div>
+  
+</body>
+</html>

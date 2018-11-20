@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale-1.0,minimum-scale=1,maximum-scale=1, user-scalable=no target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="keywords" content="미니소, 미니소 온라인, 인형">
+    <meta name="Description" content="미니소 코리아 공식 온라인몰">
+    <!--[if-IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="logoicon_23v_icon.ico" type="image/x-icon">
+   <link rel="icon" sizes="16X16 32X32 48X48 64X64 72X72 96X96 114X114 128X128" href="logoicon_23v_icon.ico" type="image/x-icon">
+   <link rel="apple-touch-icon-precomposed" href="image/logoicon.png"> 
+    <link rel="icon" href="logoicon_23v_icon.ico">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+     <meta rel="msapplication-TileImage" content="./image/logoicon.png">
+    <title>MINISO</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+   
+    <style>
+    
+        *{margin: 0; padding: 0;}
+        
+        html,body{
+            width: 100%;
+            height: 100%;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        ul,li {list-style: none;}
+        a {text-decoration: none;}
+        input, button, label, a{ outline: 0; border: 0;}
+        .ckItem {display: none;}
+        /*헤더부분*/
+        .hd{
+            width: 100%;
+            height: 50px;
+            display: block;
+            background-color: #fff;
+            position: fixed;
+            z-index: 999;
+        }
+   
+        .hd ul li {float: left;}
+        .logo_m {
+            width: 120px;
+            height: 30px;
+            margin: 0 auto;
+            margin-top: -35px;
+        }
+        .logo_m img {
+            width: 120px;
+            height: 30px;
+           
+        }
+        .menu { 
+            width: 32px;
+            height: 32px;
+            padding: 5px;
+            margin-top: 3px;
+            margin-left: 5px;
+        }
+        .menu img {
+            width: 30px;
+            height: 30px;
+        }
+        .search {
+            width: 32px;
+            height: 32px;
+            float: right;
+            margin-top: -35px;
+            padding: 4px;
+            clear: both;
+            margin-right: -110px;
+        }
+        .search img {
+            width: 25px;
+            height: 25px;
+        }
+       
+        .desk {
+            width: 100%;
+            height: 80px;
+            display: block;
+            background-color: white;
+        }
+        .logo_d {
+            width: 200px;
+            height: 58px;
+        }
+        .logo_d li {
+            width: 180px;
+            height: 49px;
+            margin-left: 6%;
+        }
+        .logo_d li img {
+            width: 150px;
+            height: 45px;
+            margin-top: 8%;    
+        }
+        .d_menu {
+            width: 50%;
+            margin: 0 auto;
+            float: left;
+            padding: 16px;
+            margin-left: 20%;
+            margin-top: -4%;
+        }
+        .d_menu li {
+            padding: 34px;
+            padding-left: 16px;
+        }
+        .d_menu li a {
+            color: black;
+            font-size: 1em;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+    </style>
+    <style>
+    /*배너부분*/
+        .visual_m {
+            width: 100%;
+            height: 330px;
+            overflow: hidden;
+        }
+        .imgBox_m {
+            width: 400%;
+            height: 330px;
+            overflow: hidden;
+            
+        }
+        .imgBox_m li {
+            float: left;
+            overflow: hidden;
+            width: 25%;
+            height: 330px;
+        }
+        .imgBox_m li img {
+            width: 100%;
+            height: 330px;
+        }
+        .visual_d{
+            width: 100%;
+            height: 550px;
+            overflow: hidden;
+        }
+        .imgBox_d {
+            width: 300%;
+            height: 550px;
+            overflow: hidden;   
+        }
+        .imgBox_d li {
+            float: left;
+            overflow: hidden;
+            width: 33.333%;
+            height: 550px;
+        }
+        .imgBox_d li img {
+            width: 100%;
+            height: 550px;
+        }
+    </style>
+    <style>
+    /*콘텐츠*/
+        .container {
+            position: relative;
+            background-color: #fffcf5;
+            width: 100%;
+            height:500px;
+            padding-top: 13%;
+        }
+        .container h2 {
+            text-align: center;
+            color: #d9232e;
+            font-weight: bold;
+        }
+        .container h2 span {
+            font-weight: bold;
+        }
+        #prodSortWrap {
+            width: 95%;
+            height: 100px;
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+        .prodSort li {
+            width:33.3333%;
+            box-sizing: border-box;
+            float: left;
+        }
+        .prodSort li a{
+            display:block;
+            line-height: 34px;
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 18px;
+            font-size:3.5vw;
+            text-align: center;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            font-family:sans-serif;
+        }
+        .slideWrap {
+            width: 80%;
+            margin: 0 auto;
+            z-index: 90;
+            overflow: hidden;
+            position: relative;
+            margin-top: 8%;
+        }
+        .slidePrev {
+            background-image: url(image/slide_arrow_prev.png);
+            left: 10px;
+            background-color: transparent;
+            display: block;
+        }
+        .slideNext {
+            background-image: url(image/slide_arrow_next.png);
+            right: 10px;
+            background-color: transparent;
+            display: block;
+        }
+        .slideWrap .slick-arrow {
+            position: absolute;
+            width: 21px;
+            height: 37px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-indent: -9999px;
+            top: 32%;
+            margin-top: -10.5px;
+        }
+        .mainSlide {
+            width: 350px;
+            height: 352px;
+            display: block;
+            margin: 0 auto;
+        }
+        .slide-item {
+            width: 350px;
+            height: 350px;
+            box-shadow: inset 0 0 10px #eee;
+            margin-left: 10%;
+            
+        }
+        .slide-item a img {
+            width: 350px;
+            height: 350px;
+            background-size: 100% 100%;
+            background-position: center;
+            /*margin-left: 14%; */
+        }
+    </style>
+    <style>
+    /*con1*/
+        .con1 {
+            width: 100%;
+            height: 550px;
+            margin: 0 auto;
+            background-color: #fee9e4;
+            position:relative;
+            z-index: 99;
+            
+        }
+        .con1 h2 {
+            text-align: center;
+            font-size: 1.7em;
+            padding-top: 7%;
+            font-weight: bold;
+            
+        }
+        .snsList {
+            width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+            margin-bottom: 0px;
+            
+        }
+        .snsList li {
+            position: relative;
+            float: left;
+            width: 40%;
+            padding-right: 20px;
+            margin-bottom:5px; 
+            box-sizing: border-box;
+            padding: 0;
+            margin-top: 35px;
+            margin-left: 15px;
+        }
+       
+       
+        .snsList li a {
+            display: block;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            
+        }
+        .snsList span.img_box {
+            display: block;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        .snsList span.img_box img {
+            width: 100%;
+            
+        } 
+        .iconBox {
+            width: 50px;
+            margin-left: -25px;
+            top: -23.5px;
+            position: absolute;
+            left: 50%;
+            z-index: 90;
+            
+        }
+    </style>
+    <style>
+    /*con2*/
+        .con2 {
+            width: 100%;
+            height: 950px;
+            margin: 0 auto;
+            background-image: url(image/con2bg.png);
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+        .con2 h2 {
+            text-align: center;
+            color: #fcac99;
+        }
+        .eventList {
+            width: 91%;
+            height: 880px;
+            margin: 0 auto;
+            padding-top: 7%;
+        }
+        .eox {
+            height: 300px; margin: 0 auto;
+        }
+        .eBox a img {
+            height: 300px;
+            margin: 0 auto;
+            margin-left: 5%;
+        }
+        .eventBox1, .eventBox2 {
+            margin-bottom: 20px;
+            padding-top: 8%;
+            border: 1px solid #f9f9fb;
+            width: 95%;
+            background-color: #f9f9fb;
+        }
+        .txtBox {
+            background-color: #f9f9fb;
+            position: relative;
+            width: 95%;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+        .txtBox p {
+            padding-top: 2%;
+        }
+        .txtBox p, strong {
+            padding-left: 6%;
+            font-size: 4vw;
+        }
+      
+    </style>
+        <style>
+    /*ft*/
+    
+           .ft {
+               width: 100%;
+               height: 100px;
+               display: block;
+               clear: both;
+                background-color: #f0f0f0;
+           }
+          .fnb {
+              width: 100%;
+              height: 30px;
+          }
+          .fnb li { 
+              float: left;
+              padding: 1%;
+              margin: 0 auto;
+               padding-top: 5%;
+          }
+          .fnb li a {
+              color: #6f6f6f;
+              font-size: 4vw;
+          }
+          .snsLogo {
+              width: 6%;
+              display: block;
+              clear: both;
+              height: 20px;
+               margin: 0 auto;
+          }
+          .snsLogo li {
+              float: left;
+             padding: 3px;
+          }
+          .snsLogo li a img {
+              width: 15px;
+              height: 15px;
+              
+          } 
+          .copyright {
+              clear: both;
+              display: block;
+              text-align: center;
+              height: 20px;
+              
+          }
+          .copyright p {
+              font-size: 0.8em;
+              color: #6f6f6f;
+          }
+    </style>
+  
+    <style>
+         @media screen and (max-width:767px){
+            /*모바일기준*/
+             .desk { display: none;}
+             
+             .visual_d { display: none;}
+             
+        }
+       @media screen and (min-width:768px) and (max-width:959px){
+           /*태블릿기준*/
+           
+           .desk {
+               display: none;
+           }
+           .search { margin-right: -250%;}
+           .visual_d{display: none;}
+           .visual_m {
+               height: 550px;
+           }
+           .imgBox_m {
+               height: 550px;
+           }
+           .imgBox_m li {
+               height: 550px;
+           }
+           .imgBox_m li a img {
+               height: 550px;   
+           }
+            .snsList {
+                padding: 0px 70px;
+            }
+           
+            .prodSort li a {
+                font-size: 2vw;
+                font-family: 'Noto Sans KR', sans-serif;
+            }
+            .eventBox1, .eventBox2 {
+                 width: 44%;
+             }
+            .eventList ul {
+                 float: left;
+                 margin-left: 5%;
+             }
+             .txtBox p, strong{
+                 font-size: 1.7vw;
+             }
+             .txtBox {
+                 width: 84%;
+                 padding-left: 0px;
+                 padding-top: 2px 0;
+             }
+            .con2 {
+                 height: 660px;
+             }
+             .eventList {
+                 height: 660px;
+             }
+           .ft {
+               height: 88px;
+           }
+            .fnb {
+                 width: 51%;
+                 margin: 0 auto;
+             }
+             .fnb li {
+                 padding: 3%;
+             }
+             .fnb li a {
+                 font-size: 1.5vw;
+             }
+        }
+        @media screen and (min-width:1200px){
+            /* 고해상도 데스크탑기준*/
+            .mo {display: none;}
+            .desk {display: block};
+            .hd {position: fixed;}
+            .snsList {
+                padding-top: 7%;
+            }
+            .container h2 span {
+                font-size: 2vw;
+            }
+            .d_menu {
+                margin-top: -4%;
+                 width: 67%;
+                 margin-left: 25%;
+             }
+             .d_menu li a {
+                 font-size: 1.2em;
+             }
+            .d_menu li {
+                padding: 28px;
+            }
+            .container {
+                height: 800px;
+                padding-top: 5%;
+            }
+           
+            .snsList li     {
+                width: 23%; 
+                padding: 0 20px;
+                box-sizing: border-box
+            
+            }
+            .img_box{
+                
+            }
+            .visual_m{display: none;}   
+            .con1 {
+                height: 900px;
+            }
+            .con1 h2 {
+                padding-top: 4%;
+            }
+            .prodSort li {width: 16%; margin: 0 auto;}
+            .prodSort {
+                padding-left: 10%;
+                padding-top: 2%;
+            }
+            .prodSort li a {
+                font-size: 1em;
+                line-height: 60px;
+                border-radius: 30px;
+            }
+            .con1 h2 span {
+                font-size: 2.5vw;
+            }            
+            .con2 h2 span {
+                font-size: 2.5vw;
+            }
+             .eventList {
+                 height: 700px;
+             }
+             .eventBox1, .eventBox2 {
+                 width: 19%;
+             }
+            
+             .eventList ul {
+                 float: left;
+                 margin-left: 20%;
+             }
+             .txtBox p{
+                 font-size: 0.8vw;
+             }
+            .txtBox strong {
+                font-size: 1.3vw;
+            }
+             .txtBox {
+                 width: 100%;
+                 padding-left: 0px;
+                 padding-top: 2px 0;
+             }
+            .ft {
+                height: 145px;
+            }
+            .fnb {
+                 width: 51%;
+                 margin: 0 auto;
+             }
+             .fnb li {
+                 padding: 3%;
+             }
+             .fnb li a {
+                 font-size: 1em;
+             }
+            .copyright p {
+                font-size: 0.8vw;
+            }
+            #pnb {display: none;}
+        }
+        
+         @media screen and (min-width:960px) and (max-width:1199px){
+            /*저해상도 데스크탑기준*/
+            .desk {display: block;}
+            .mo { display: none;}
+            .imgBox_m{display: none;} 
+            .visual_m{display: none;} 
+             .d_menu {
+                margin-top: -8%;
+                 width: 75%;
+                 margin-left: 25%;
+             }
+             .d_menu li a {
+                 font-size: 1em;
+             }
+            .prodSort li {width: 16%; margin: 0 auto;}
+            .prodSort {
+                padding-left: 7%;
+                padding-top: 2%;
+            }
+             .prodSort li a{
+                 font-size: 1.1em;
+             }
+             .visual_d{
+                 height: 400px;
+             }
+             .imgBox_d {
+                 height: 400px;
+             }
+             .imgBox_d li img {
+                height: 400px;
+             }
+              .snsList {
+                padding: 0 85px;
+            }
+             .con2 {
+                 height: 660px;
+             }
+             .eventList {
+                 height: 660px;
+             }
+             .eventBox1, .eventBox2 {
+                 width: 35%;
+             }
+             .eventList ul {
+                 float: left;
+                 margin-left: 11%;
+             }
+             .txtBox p, strong{
+                 font-size: 1.3vw;
+             }
+             .txtBox {
+                 width: 84%;
+                 padding-left: 0px;
+                 padding-top: 2px 0;
+             }
+             .fnb {
+                 width: 51%;
+                 margin: 0 auto;
+             }
+             .fnb li {
+                 padding: 3%;
+                
+             }
+             .fnb li a {
+                 font-size: 1.5vw;
+             }
+             #pnb {display: none;}
+        }
+       
+        
+    </style>
+ 
+  
+    <script>
+    $(document).ready(function(){
+        var wd=parseInt($(".imgBox_m li").width());
+        console.log(wd);
+        function sl(){
+            $(".imgBox_m").not(":animated").animate({"margin-left":wd * -1 +"px"}, 800, function(){
+               $(".imgBox_m li").eq(0).appendTo($(".imgBox_m"));
+                $(".imgBox_m").css("margin-left", "0px");
+            });
+        };
+        var intv= setInterval(function(){sl(); }, 4000);
+    });
+    $(document).ready(function(){
+        var wd=parseInt($(".imgBox_d li").width());
+        console.log(wd);
+        function sl(){
+            $(".imgBox_d").not(":animated").animate({"margin-left":wd * -1 +"px"}, 800, function(){
+               $(".imgBox_d li").eq(0).appendTo($(".imgBox_d"));
+                $(".imgBox_d").css("margin-left", "0px");
+            });
+        };
+        var intv= setInterval(function(){sl(); }, 4000);
+    });
+   
+    </script>
+    
+</head>
+<body>
+    
+    <div class="wrap">
+        <header class="hd">
+        <nav class="mo">
+              <ul class="menu">
+              <li>
+              <a href="#"><img src="image/menu-options.png" alt="모바일_메뉴"></a>
+              </li>
+              </ul>
+             <ul class="logo_m">
+                 <li><a href=""><img src="image/logoF.png" alt="모바일로고"></a></li>
+                <ul class="search">
+                    <li><a href=""><img src="image/search.png" alt="모바일 검색"></a></li>
+                </ul>
+             </ul>
+        </nav>
+        
+ 
+         <nav class="desk">
+          <ul class="logo_d">
+              <li><a href=""><img src="image/logoF.png" alt="데스크탑 로고"></a></li>
+          </ul>
+            <ul class="d_menu">
+             <li><a href="">TV속미니소</a></li>
+             <li><a href="">엑소피규어</a></li>
+             <li><a href="">당신이잠든사이에</a></li>
+             <li><a href="">워너원</a></li>
+             <li><a href="special.html">SPECIAL</a></li>
+             <li><a href="">베스트/신상</a></li>        
+        </ul>
+         </nav>
+     
+         
+      
+        </header>
+        <div class="visual_m">
+            <ul class="imgBox_m">
+                <li><a href=""><img src="image/mvisual1.jpg" alt="비주얼1"></a></li>
+                <li><a href=""><img src="image/mvisual2.jpg" alt="비주얼2"></a></li>
+                <li><a href=""><img src="image/mvisual3.jpg" alt="비주얼3"></a></li>
+                <li><a href=""><img src="image/mvisual4.jpg" alt="비주얼4"></a></li>
+            </ul>
+        </div>
+           <div class="visual_d">
+            <ul class="imgBox_d">
+                <li><a href=""><img src="image/visual1.jpg" alt=""></a></li>
+                <li><a href=""><img src="image/visual2.jpg" alt=""></a></li>
+                <li><a href=""><img src="image/visual3.jpg" alt=""></a></li>
+            </ul>
+           </div>
+        <div class="container">
+           <h2>
+           <span>상품소개</span>
+           </h2>
+           <div id="prodSortWrap">
+               <ul class="prodSort">
+                   <li class="btnPro"><a href="">문구/오피스</a></li>
+                   <li class="btnPro"><a href="">봉제인형</a></li>
+                   <li class="btnPro"><a href="">주방/식기</a></li>
+                   <li class="btnPro"><a href="">생활가전</a></li>
+                   <li class="btnPro"><a href="">리빙/수납</a></li>
+                   <li class="btnPro"><a href="">뷰티용품</a></li>
+               </ul>
+             
+           </div>
+            <div class="slideWrap">
+                <button type="button" role="button" class="slidePrev slick-arrow" style="display: block;"></button>
+                   <ul class="mainSlide">
+                    <li class="slide-item"><a href=""><img src="image/product1.png" alt=""></a></li>
+                   <!-- <li class="slide-item"><a href=""><img src="" alt=""></a></li>
+                    <li class="slide-item"><a href=""><img src="" alt=""></a></li>
+                    <li class="slide-item"><a href=""><img src="" alt=""></a></li>
+                    <li class="slide-item"><a href=""><img src="" alt=""></a></li>
+                    <li class="slide-item"><a href=""><img src="" alt=""></a></li>
+                    <li class="slide-item"><a href=""><img src="" alt=""></a></li>
+                    <li class="slide-item"><a href=""><img src="" alt=""></a></li>
+                    <li class="slide-item"><a href=""><img src="" alt=""></a></li>
+                    <li class="slide-item"><a href=""><img src="" alt=""></a></li> -->
+                <button type="button" role="button" class="slideNext slick-arrow" style="display: block;"></button>
+                </ul>
+            </div>
+        </div>
+        <div class="con1">
+            <h2>
+                <span style="color: white;">미니소</span>
+                <span style="color:#fcac99; ">SNS</span>
+            </h2>
+            <ul class="snsList">
+                <li>
+                   <span class="iconBox">
+                    <img src="image/icon_fb3.png" alt="">
+                    </span>
+                    <a href="https://www.facebook.com/minisomall/">
+                    <span class="img_box" style="background-image: url(image/fimg2.jpg); height: 170px;"></span>
+                    </a>
+                </li>
+                         
+               <li>
+                   <span class="iconBox">
+                    <img src="image/icon_insta3.png" alt="">
+                    </span>
+                    <a href="https://www.instagram.com/minisomall/">
+                    <span class="img_box" style="background-image: url(image/Iimg3.jpg); height: 170px;"></span>
+                    </a>
+                </li>
+                <li>
+                   <span class="iconBox">
+                    <img src="image/icon_ytb3.png" alt="">
+                    </span>
+                    <a href="https://www.facebook.com/minisomall/">
+                    <span class="img_box" style="background-image: url(image/fimg3.jpg); height: 170px;"></span>
+                    </a>
+                </li>     
+                <li>
+                   <span class="iconBox">
+                    <img src="image/icon_blog3.png" alt="">
+                    </span>
+                    <a href="https://www.facebook.com/minisomall/">
+                    <span class="img_box" style="background-image: url(image/bimg.JPG); height: 170px;"></span>
+                    </a>
+                </li>    
+            </ul>
+        </div>
+        <div class="con2">
+            <h2>
+                <span style="color: white;">미니소 소식</span>
+            </h2>
+            <div class="eventList">
+                <ul class="eventBox1">
+                    <li class="eBox" style="height: 300px; margin: 0 auto;">
+                    <a href=""></a>
+                    <img src="image/eventBox1.jpg" alt="" style="height: 280px; margin: 0 auto; margin-left: 5%;">
+                    </li>
+                    <li class="txtBox" >
+                        <strong>얼리버드</strong>
+                        <p>멍냥이 폭신 필로우 삼총사</p>
+                        <p>꾸벅꾸벅 졸음을 물리치는 낮잠쿠션</p>
+                    </li>
+                </ul>
+                <ul class="eventBox2">
+                    <li class="eBox"style="height: 300px; margin: 0 auto; width: 300px;">
+                    <a href="">
+                    <img src="image/eventBox3.png" alt=""style=" height: 280px; margin: 0 auto; margin-left: 5%;"></a>
+                    </li>
+                    <li class="txtBox">
+                        <strong>기획전</strong>
+                        <p>미니소 주방용품 기획전</p>
+                        <p>미니소 키친툴로 요리실력도 UP 재미도 UP</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer class="ft">
+            
+            <nav class="fnb">
+                <li><a href="">로그인</a></li>
+                <li><a href="">공지사항</a></li>
+                <li><a href="">고객센터</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+            </nav>
+            <ul class="snsLogo">
+                <li><a href=""><img src="image/icon_footer_sns_facebook.png" alt="페이스북"></a></li>
+                <li><a href=""><img src="image/icon_footer_sns_insta.png" alt="인스타"></a></li>
+            </ul>
+            <ul class="copyright">
+                <p>COPYRIGHT © MINISOMALL CO., LTD. ALL RIGHTS RESERVED.</p>
+            </ul>
+        </footer>
+    </div>
+  
+</body>
+</html>
