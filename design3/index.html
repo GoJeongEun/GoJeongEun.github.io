@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>시드물에 오신 것을 환영합니다.</title>
+
+<style>
+    *{margin: 0; border: 0;}
+    body, html {width: 100%; height: 100%;}
+    ul {list-style: none;}
+    a {text-decoration: none;}
+    li {list-style: none;}
+    img {border: 0;}
+    .wrap {width: 100%; height: 100%;}
+    .page {width: 100%; height: 100%; position: relative;}
+    .pageWrap{width: 100%; height: 100%;}
+    .hdWrap, .ftWrap {width: 1800px; margin: 0 auto; clear: both; position: relative;}
+    .hd {position: fixed; top: 0; width: 100%; left: 0; z-index: 1000;height: 150px;  }
+    .ft {clear: both; width: 100%;  z-index: 1030; bottom: 0; left: 0; height: auto; transition: 0.5s;}
+    .ckItem {display: none;} 
+    .raItem {display: none;}
+</style>
+<style>
+    .mainMenu {float: right;}
+    .tnb li {float: left; padding: 5px; position: relative; top: 10px; left: 47%; font-size: 1.1em;}
+    .tnb li a { color: #fff;}
+    .gnb{clear: both;}
+    .gnb li { float: left; padding: 10px; position: relative; top: 10px; font-size: 1.1em;}
+    .gnb li a  {color: #fff; float: left;}
+    .mainMenu .tnb li:first-child a:after { content:"|"; padding-left: 25px; }
+    .opener {display: block;width: 70px; height: 70px; background-color: #98bb67; cursor: pointer; float: left; margin-top: 40px; background-image: url(img/line.png); background-repeat: no-repeat; background-position: center center;} 
+    #collapMenu .logo {margin-left: 140px;}
+    .logo {display: block; width: 137px; height: 57px; background-image: url(img/logoplus.png); background-size: 128px auto; float: left; margin-left: 25px; margin-top: 44px; }
+    .logo.w {background-position: center top;}
+    .logo.g {background-position: center bottom;}
+    .hd.active {height: 90px;background: #fff; border-bottom: 1px solid #eee;}
+    .hd.active .opener {margin-top: 20px; width: 48px;height: 48px;}
+    .hd.active .logo { background-position:center bottom; margin-top:-10px; 
+        width:84px; height:76px; background-size:84px auto; }
+    .ft.active { opacity:1; height:223px; }
+    
+    .paging {z-index: 999; position: absolute; display: block; width: 50px;height: 50px;top: 30%; background-repeat: no-repeat; cursor: pointer''}
+    .paging {left: 10%; top:85%; width: 200px;}
+    .paging a, .paging button {display: block; margin: 5px; float: left; text-align: center; width: 19px; height: 19px; line-height: 20px; border: 0; outline: 0; background-color: transparent; background-repeat: no-repeat; background-color: #98bb67; color: #fff;  line-height: 30px; font-size: 14px; cursor: pointer; border-radius: 15px;}
+    .paging a { border:1px solid #fff; width:15px; height:15px; 
+        background-color:transparent; text-indent:-9999px; }
+    .paging a.paging_on { background-color:#98bb67; 
+        border:0; width:15px; height:15px; }
+    
+</style>
+<style>
+    .imgSlide {position: relative; width: 100%; height: 100%; overflow: hidden;}
+    .gallery {position: relative; width: 300%; height: 100%; }
+    .gallery img {display: block; width: 33.3%; height: 100%;position: absolute; }
+    .banImg{width: 100%;height: 100%;}
+    .banCon {position: relative; }
+    .TitleFont {position: relative; /*top: -694px; left: 366px;*/}
+    .prev {background-image: url(img/lB.png); width: 58px; height: 58px; position: absolute; top:100px; display: block; z-index: 999; background-repeat: no-repeat; cursor: pointer; top: 45%; right: 91%; }
+    .next { background-image: url(img/rB.png); width: 58px; height: 58px; position: absolute; display: block; z-index: 999; background-repeat: no-repeat; cursor: pointer; top: 45%; right: 5%;}
+    .imgSlide2 {position: relative; width: 100%; height: 100%; overflow: hidden;}
+    .gallery2 { width: 200%; height: 100%;}
+    .gallery2 img {display: block; width: 50%; height: 100%; position: absolute; }
+    </style>
+    <style>
+        
+     #collapMenu {position: fixed; top: 0;left: -1210px; z-index: 1001; transition: 0.6s; background: #fff; width: 1200px; height: 750px;   }
+     #menu_ck:checked ~ #collapMenu {left: 0;}
+    /*.logo.g {background-image: url(img/glogo.png);background-repeat: no-repeat; display: block; width: 150px; height: 70px; margin-left: 156px; margin-top: 35px;} */   
+    .colMenu li {clear: both; margin-left: 120px; padding-top: 70px; font-size: 1.3em;}
+    .colMenu li a { color: #98bb67;}
+    .colsub {display: none;}    
+    .close {display: block; background-image: url(img/colse.png); background-repeat: no-repeat; width: 50px; height: 50px; position: absolute; top: 54px; left: 82px; cursor: pointer;}
+    </style>
+    
+    <style>
+                
+        .playBtn {background-image: url(img/play.png);background-position: center center;}
+     
+        .dot1 {display: block; position: absolute; background-image: url(img/mainbt.png);width: 11px; height: 11px; margin-top: -22%; margin-left: 48%; background-color:transparent; background-repeat: no-repeat;}
+        .dot2 {display: block; position: absolute; background-image: url(img/mainbt.png);width: 11px; height: 11px; margin-top: -22%; margin-left: 49%; background-color:transparent; background-repeat: no-repeat;}
+    </style>
+    <style>
+        .banFrame {float: left; width: 790px; height: 630px; position: absolute; margin-left: 2%; margin-top: 1.5%;}
+        .banTitleBox .banTit {top: 30%;transition-delay: 0.3s; left: 12%; clear: both; position: relative; overflow: hidden; margin-bottom: -42%; z-index: 50; }
+        .banTitleBox.on .banTit {padding-top: 0; opacity: 1;}
+        .txt_wrap {margin-left: 68%; margin-top: 9%; }
+        .subitem1 {width: 80%; height: 700px; border: 1px solid #046dba; margin-left: 10%; margin-top:10%; }
+        .p_index{font-size: 2em; color: #046dba; padding: 5px; margin-left: -2px; margin-bottom: 25px; }
+        .p_tit {font-size: 3em; text-align: center; margin-right: 30px; padding-bottom: 16%; }
+        .p_text {font-size: 1.1em; margin-left: 10px; margin-bottom: 17%;}
+        .p_text:before { content: " "; border-top: 1px solid #046dba; position: absolute;  width: 110px; left: 56%; margin-top: 0.8em; } 
+        .btn_more2_wrap {margin-left: 10px; }
+        .btn_more2 {color: #046dba; cursor: pointer;}
+        .sub_bt {position: absolute; display: block; width: 20px; height: 20px; background-repeat: no-repeat; margin-left: 19%; margin-top: -9%; }
+    </style>
+    <style>
+    .activities1 {width: 4800px; height: 540px;}
+    .activities2 .thumb {width: 73px;height: 73px;}
+    .activities2 .thumb img {display: block; width: 100%;height: 70px; border: 1px solid #eee; margin-top: 5px; }    
+    .sec_01_img { width: 580px; height: 660px;float: left; overflow: hidden;}
+    .sec_01_img img {display: block; width: 387px;height: auto;}     
+    .fp-tableCell{width: 1200px; margin: 0px auto; padding-top: 220px; height: 500px; overflow: hidden;}
+        
+    .activities_wrap {width: 1200px; margin: 0px auto;}
+    .activities2 {width: 260px;float: left; margin-left: -12px; margin-top: 4%;}
+    .actFrame {width: 850px;height: 480px;float: right; overflow: hidden;}    
+    .slide_sec_01 { float: left; width: 0px; overflow: hidden; transition: 0.5s;}
+    .slide_sec_01.active {width: 850px;}
+    .sec_01_idx {font-size: 29px; color: #98bb67; line-height: 2;}
+    .slide_sec_01.active {width: 850px;}
+    .sec_01_txtarea {width: 411px; height: 440px; float: right; overflow: hidden;margin-top: -74%;}
+    .sec_01_tit {margin-top: 32px; font-weight: 900; font-size: 48px; color: #111; line-height:1.1;  }
+    .sec_01_txt {margin-top: 56px; padding-left: 6px; font-size: 14px; line-height: 1.5; color: #666;}
+    .sec_01_txt:before {content: " "; display: block; position: absolute; border-top: 1px solid #98bb67; width: 310px; margin-left: -320px; margin-top: 12px; display: none; width: 0px;} 
+    .btn_more3 {float: left; margin: 45px 0 0 104px; padding: 0; width: auto; border: 0; border-bottom: 1px solid #111; display: block; color: #111; font-size: 14px; } 
+       /* .activities2 a {position: relative; display: block; margin-bottom: 20px; margin-right: 20px; border-bottom: 1px solid #eee;} */
+    .activities2 .active .femail span {color: #98bb67}
+    .activities2 .active a div span {font-size: 16px;}
+    .activities2  a div span {display: block; margin-top: -69px; font-weight: 700; line-height: 1.3; padding-top: 20px;font-size: 14px; color: #555;}
+    .activities2 .txt {float: right; width: 165px; height: 21px; line-height: 73px; text-align: center;}    
+    .activities2 .txt em {display: none;}
+        
+    </style>
+    
+    <style>
+        .ftFrame{position: relative; border-top: 1px solid #98bb67; border-bottom: 1px solid #98bb67; padding: 15px; }
+        .fnb {clear: both; width: 1800px; margin: 0 auto; height: 20px;}
+        .fnb .left a {padding-left: 40px; }
+        .fnb li {float: left;}
+        .fnb .left {float: left;}
+        .fnb .left a {padding-left: 40px; }
+        .fnb .left a:before {content: " "; display: block; width: 33px; height: 23px; float:left; }
+        .fnb .left a.meet:before {background-position: 0px 0px; }
+        .fnb .left a.letter:before {background-position: 0px -30px; }
+        .fnb .right a {width: 36px; height: 23px; }
+        .fnb .right {float: right;}
+        .fnb a {color: #555; font-size: 0.9em; display: block; background-repeat: no-repeat; font-weight: bold;}
+        .ft .active { opacity:1; height:223px; }
+        .fnb .right a.face {background-image: url(img/facebook-logo.png);}
+        .fnb .right a.insta {background-image: url(img/instagram-logo.png);}
+        .fnb .right a.utube {background-image: url(img/youtube-symbol.png);}
+        .ftlink {clear: both; width: 320px; margin: 17px auto;}
+        .fnb li {float: left;}
+        .menuDivide {width: 40px; text-align: center; line-height: 24px;}
+        .copyright {margin: 0 auto; color: #9d9d9d; clear: both; text-align: center;}
+        .ftLogo {padding-left: 45%;}
+        .ftWrap li {color: #9d9d9d; float: left;}
+        .ftWrap li a {color: #98bb67;}
+        
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="ktslider2.js"></script>
+    <script src="txtslider2.js"></script>
+    <!--<script src="ktsmslider.js"></script>-->
+    <script>
+    $(document).ready(function(){
+        $("#page3 .list").click(function(){
+            var tar = parseInt($(this).attr("data-index"));
+            $("#page3 .list").removeClass("active");
+            $(this).addClass("active");
+            $(".activities1 .slide_sec_01").removeClass("active");
+            $(".activities1 .slide_sec_01").eq(tar).addClass("active");
+        });
+    });
+    </script>
+     <script>
+    $(document).ready(function(){
+        var cnt = 0;
+        $("#page5 .sliderPrev").click(function(){
+           if(cnt>0) {
+                cnt--;  
+               $(".sliderWrap li").removeClass("active");
+               $(".sliderWrap li").eq(cnt).addClass("active");
+           } else {
+               cnt=3;
+               $(".sliderWrap li").removeClass("active");
+               $(".sliderWrap li").eq(cnt).addClass("active");
+           }
+        });
+        $("#page5 .sliderNext").click(function(){
+           if(cnt<3) {
+               cnt++;  
+               $(".sliderWrap li").removeClass("active");
+               $(".sliderWrap li").eq(cnt).addClass("active");
+           } else {
+               cnt=0;
+               $(".sliderWrap li").removeClass("active");
+               $(".sliderWrap li").eq(cnt).addClass("active");
+           }
+        }); 
+    });
+    </script>
+    <script>
+        //한 페이지씩 스크롤
+        $(document).ready(function () {
+        	var sc_pg = parseInt($(window).height());
+			$(window).on('mousewheel', function(e){
+				if(e.originalEvent.wheelDelta < 0) {
+					$('html, body').not(":animated").animate({
+                        scrollTop : '+='+sc_pg+'px'},800);
+				} else {
+					$('html, body').not(":animated").animate({
+                        scrollTop : '-='+sc_pg+'px'},800);
+				}
+				return false;
+			});
+			//$(window).mousewheel
+		});
+    </script>
+   <script>
+    $(document).ready(function(){
+        var ftHt = $(window).height() * 3;
+        var parHt = $(window).height();
+        //$(".ft").css("display", "none");
+        //메뉴의 스크롤 모션
+        $(window).scroll(function(){
+            var sct = $(window).scrollTop();
+            if(sct>=500){
+                $(".hd").addClass("active");
+            } else {
+                 $(".hd").removeClass("active");
+            }
+            
+            if(sct>ftHt){
+                $(".ft").addClass("active");
+            } else {
+                $(".ft").removeClass("active");
+            }
+        });
+    });
+    </script>
+    <script>
+    $(document).ready(function(){
+        $(".pageNation .pageBtn").eq(0).addClass("act");
+        var sc_pg = parseInt($(window).height());
+        $(window).scroll(function(){
+            var sct = $(window).scrollTop();
+            var btnPos = parseInt(sct / sc_pg);
+            $(".pageNation .pageBtn").removeClass("act");
+            $(".pageNation .pageBtn").eq(btnPos).addClass("act");
+        });
+        $(".pageNation .pageBtn").click(function(){
+            var cPage = $(this).attr("data-val");
+            $('html, body').not(":animated").animate({
+                scrollTop: cPage*sc_pg + 'px'
+            }, 1600);
+        });
+    });
+    </script>
+    </head>
+<body>
+  <div class="wrap">
+         <input type="checkbox" id="menu_ck" class="ckItem">
+          <header class="hd">
+              <div class="hdWrap">
+              <label for="menu_ck" class="opener"></label>
+                  <a href="" class="logo w">
+                      <img src="">
+                  </a>
+                   <nav class="mainMenu">
+                  <ul class="tnb">
+                      <li><a href="">한국어</a></li>
+                      <li><a href="">ENGLISH</a></li>
+                  </ul>
+                  <ul class="gnb">
+                      <li><a href="">Commitment</a></li>
+                      <li><a href="">기업 사회공헌</a></li>
+                      <li><a href="">Meet Us</a></li>
+                      </ul>
+                  </nav>
+              </div>
+          </header>
+          <nav id="collapMenu">
+          <label for="menu_ck" class="close"></label>
+              <a href="" class="logo g"></a>             
+              <ul class="colMenu">
+                      <li><a href="">About Us</a>
+                        <ul class="colsub">
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                        </ul>  
+                      </li>
+                      <li><a href="">기업소개</a></li>
+                      <li><a href="">브랜드사회공헌</a></li>
+                      <li><a href="">Beauty Inside</a></li>
+                      <li><a href="">Meet Us</a></li>
+                  </ul>
+            
+              <label for="ck1" class="colseBtn"></label>
+          </nav>
+                   
+          
+          <section class="page" id="page1">
+              <div class="pageWrap">
+                  <div class="imgSlide" id="visual">
+                     <p class="prev"></p>
+                     <p class="next"></p>
+                     <div class="gallery">
+                        <!-- <li class="item1">-->
+                         <img src="img/main.png" alt="배너1" class="banImg">
+                        
+                        <!-- <li class ="item2"> -->
+                         <img src="img/main1.png" alt="배너2" class="banImg">
+                        
+                         <!--<li class ="item3">-->
+                         <img src="img/main3.png" alt="배너3" class="banImg">
+                         
+                         <!--<li class ="item4">-->
+                        
+                         
+                     </div> 
+                     <ul class="banCon">
+                         <li class="banTitleBox">
+                             <h2 class="banTit">
+                            
+                                 <img src="img/font.png">
+                            </h2>
+                         </li>
+                         <li class="banTitleBox">
+                        <h2 class="banTit">
+                           <a class="TitleFont">
+                        <img src="img/font.png" alt=""></a>
+                            
+                        </h2>
+                        <a href="" class="more">더보기</a>
+                    </li>
+                        <li class="banTitleBox">
+                        <h2 class="banTit">
+                            <img src="img/font.png" alt="">
+                        </h2>
+                        <a href="" class="more">더보기</a>
+                    </li>
+                       <li class="banTitleBox">
+                        <h2 class="banTit">
+                            <img src="img/font.png" alt="">
+                        </h2>
+                        <a href="" class="more">더보기</a>
+                    </li>
+                     </ul>
+                     <p class="paging"></p>
+                  </div>
+                  </div>
+                   <div class="smallBan" id="smallBan1">
+                       <div class="imgSlide" id="subBan1">
+                       <p class="prev2"></p>
+                       <p class="next2"></p>
+                       <div class="gallery2">
+                       <img src="img/imdslide.png" alt="작은배너1" class="BanImg">
+                       <img src="" alt="작은배너2" class ="Banimg">
+                       </div>
+                      
+                        <p class="paging2"></p>
+                        </div>
+                   </div>
+                    
+                    
+                    <!-- <ul class="btnBox">
+                    <!--<li class="item1"><label for ="ra11"></label></li>
+                    <li class="item2"><label for ="ra12"></label></li>
+                    <li class="item3"><label for ="ra13"></label></li>-->
+                       <!--</ul>-->
+                        <!--<li class="dot">
+                            <button type="button"></button>
+                        </li>
+                        <li class="dot">
+                            <button type="button"></button>
+                        </li>
+                        <ul class="btnBox2">
+                         <li><button class="dot1"></button></li>
+                         <li><button class="dot2"></button></li>
+                         <li><button class="playBtn"></button></li>
+                         <li> <label for="ra1" class="slBtn item1"></label></li>
+                         <li> <label for="ra1" class="slBtn item1"></label></li>
+                         
+                     </ul>-->
+                     
+                                    
+             
+              <div class="smallBan" id="smallBan1">
+                  <div class="imgslide2" id="subBan1">
+                      <p class="prev2"></p>
+                      <p class="next2"></p>
+                      <div class="gallery2">
+                      <img src="" class="BanImg" alt="">
+                      <img src="" class="BanImg" alt="">
+                      <img src="" class="BanImg" alt="">
+                      
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <section class="page" id="page2">
+              <div class="pageWrap">
+                  <figure class ="vsBn" id="vsBn1">
+                     <input type="vsBn" id="banRa1" 
+                     class="raItem" name ="banRa1" checked>
+                     <input type="radio" id="banRa02" class="raItem" name="banRa1">
+                    <input type="radio" id="banRa03" class="raItem" name="banRa1">
+                    <input type="radio" id="banRa04" class="raItem" name="banRa1">
+                     <ul class="vsBnFrame">
+                      <li class="subitem1">
+                          <div class="banFrame">
+                              <img src="img/sub.png" alt="">
+                          </div>
+                          <div class="txt_wrap">
+                              <p class="p_index">BEST ITEM</p>
+                              <P class ="p_tit">당신의 피부 상태는 괜찮으신가요?</P>
+                              <p class="p_text">괴로운 속건성,<br/>지성/건성 모든 피부를 위한<br/> 산뜻한 수분 로션이 찾아왔습니다. </p>
+                              <a class="sub_bt">
+                              <img src="img/subbt.png">
+                              </a>
+                              <div class="btn_more2_wrap">
+                                  <a href="" class="btn_more2">더보기 &gt;</a>
+                              </div>
+                          </div>
+                        
+                      </li>
+                      </ul>
+                  </figure>
+              </div>
+          </section>
+          <section class="page" id="page3">
+              <div class="pageWrap">
+                  <div class="fp_tableCell">
+                      <div class="activities_wrap">
+					<ul class="activities2">
+                        <li class="list active" data-index="0">
+                            <a data-num="0" class="femail" href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="./img/page3_imgBox.png" alt="동물실험반대">
+                                </div>
+                                <div class="txt">
+                                    <em>동물</em>
+                                    <span>동물실험을 반대합니다</span>
+                                </div>
+                            </a>
+                        </li>
+                         <li class="list" data-index="1">
+                            <a data-num="1" class="femail" href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/page3_subimg2.png" alt="식물성분 안정화 시스템">
+                                </div>
+                                <div class="txt">
+                                    <em>성분</em>
+                                    <span>식물 성분 안정화 시스템 </span>
+                                </div>
+                            </a>
+                        </li>
+                         <li class="list" data-index="2">
+                            <a data-num="2" class="femail" href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/page3_subimg1.png" alt="피부과 테스트 완료">
+                                </div>
+                                <div class="txt">
+                                    <em>피부</em>
+                                    <span>피부과 테스트 완료 </span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="list" data-index="3">
+                            <a data-num="3" class="femail" href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/page3_subimg3.png" alt="국제표준인증">
+                                </div>
+                                <div class="txt">
+                                    <em>국제</em>
+                                    <span>국제표준인증 </span>
+                                </div>
+                            </a>
+                        </li>
+                         <li class="list" data-index="4">
+                            <a data-num="4" class="femail" href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/page3_subimg4.png" alt="반품 무조건 폐기">
+                                </div>
+                                <div class="txt">
+                                    <em>폐기</em>
+                                    <span>반품 무조건 폐기</span>
+                                </div>
+                            </a>
+                        </li>
+                          </ul>
+                  <div class="actFrame">
+                        <ul class="activities1">
+                            <li class="slide_sec_01 active" data-num="0" tabindex="0">
+                                <div class="sec_01_img">
+                                    <img src="img/page3_imgBox.png" alt="">
+                                </div>
+                                <div class="sec_01_txtarea">
+                                    <p class="sec_01_idx">Our Activities</p>
+                                    <p class="sec_01_tit">동물 실험을 반대합니다</p>
+                                    <p class="sec_01_txt">아름다움을 위해 동물의 권리를 희생시키지 말아주세요<br/>동물 실험은 잔인할뿐 아니라 불필요한 희생입니다.</p>
+                                    <a href="#" class="btn_more3" title="동물실험 반대">더 보기 &gt;</a>
+                                </div>
+                            </li>
+                            <li class="slide_sec_01" data-num="1">
+                                <div class="sec_01_img">
+                                    <img src="img/page3_imgBox1.png" alt="">
+                                </div>
+                                <div class="sec_01_txtarea">
+                                    <p class="sec_01_idx">Our Activities</p>
+                                    <p class="sec_01_tit">식물 성분 안전화 시스템 </p>
+                                    <p class="sec_01_txt"></p>
+                                    <a href="#" class="btn_more3" title="성분 안정화 ">더 보기 &gt;</a>
+                                </div>
+                            </li>
+                            <li class="slide_sec_01" data-num="2">
+                                <div class="sec_01_img">
+                                    <img src="img/page3_subimg1.png" alt="">
+                                </div>
+                                <div class="sec_01_txtarea">
+                                    <p class="sec_01_idx">Our Activities</p>
+                                    <p class="sec_01_tit">피부과 테스트 완료</p>
+                                    <p class="sec_01_txt">.</p>
+                                    <a href="#" class="btn_more3" title="피부ㅌ 테스트 완료">더 보기 &gt;</a>
+                                </div>
+                            </li>
+                            <li class="slide_sec_01" data-num="3">
+                                <div class="sec_01_img">
+                                    <img src="img/page3_subimg3.png" alt="">
+                                </div>
+                                <div class="sec_01_txtarea">
+                                    <p class="sec_01_idx">Our Activities</p>
+                                    <p class="sec_01_tit">국제표준인증</p>
+                                    <p class="sec_01_txt">ISO 9001은 국제표준화기구(ISO)에서 제정한 품질경영시스템에 관한 국제규격으로서, 고객에게 제공되는 제품이나 서비스 실현 체계가 규정된 요구사항을 만족하고 있음을 제3자 인증기관에서 객관적으로 평가하여 인증해주는 제도이다.</p>
+                                    <a href="#" class="btn_more3" title="설화수  Beauty from  Your Culture">더 보기 &gt;</a>
+                                </div>
+                            </li>
+                            <li class="slide_sec_01" data-num="4">
+                                <div class="sec_01_img">
+                                    <img src="img/page3_subimg4.png" alt="">
+                                </div>
+                                <div class="sec_01_txtarea">
+                                    <p class="sec_01_idx">Our Activities</p>
+                                    <p class="sec_01_tit">반품 무조건 폐기</p>
+                                    <p class="sec_01_txt"></p>
+                                    <a href="#" class="btn_more3" title="반품폐기">더 보기 &gt;</a>
+                                </div>
+                            </li>
+                        </ul>
+					</div>
+				</div>
+			</div>
+        </div>
+    </section>
+          <footer class="ft">
+             <div class="ftFrame">
+                 <nav class =fnb>
+                 <ul class="left">
+                   <li><a href ="" class ="meet">Meet Us</a></li>
+                    <li><a href ="" class ="letter">뉴스레터 구독</a></li>
+                     </ul>
+                      <ul class="right">
+                          <li><a href="https://www.facebook.com/sidmool1" class ="face"></a></li>
+                           <li><a href="https://www.instagram.com/sidmool/" class="insta"></a></li>
+                            <li><a href="https://www.youtube.com/user/sidmoolytb" class="utube"></a></li>
+                      </ul>
+                     </nav>
+                      </div>
+                       <div class="ftWrap">
+                        <ul class="ftlink">
+                     <li><a href="">개인정보처리방침</a></li>
+                     <li class ="menuDivide">|</li>
+                     <li><a href="" class="port">임직원 포털</a></li>
+                 </ul>
+                 
+                 <p class="copyright">
+                     대전광역시 중구 안영로42 시드물 <br> © 2008 SIDMOOL ALL RIGHTS RESERVED.  
+                 </p>
+                 <P class = "ftLogo">
+                    <a href="#">
+                        <img src="img/ft_logo.png" alt="푸터로고">
+                    </a>                     
+                 </P>
+               
+             </div>
+                     
+          </footer>
+           
+    </div>
+    <div class="pageNation">
+     <a class="pageBtn" data-val="0"></a>
+     <a class="pageBtn" data-val="1"></a>
+     <a class="pageBtn" data-val="2"></a>
+    </div>
+    </body>
+</html>
