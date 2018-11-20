@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>minigold</title>
+    <meta name="viewport" content="width=device-width, initial-scale-1.0, user-scalable=no">
+    <!--폰트-->
+    <link rel="stylesheet" href="">
+    <meta name="application-name" content="minigold">
+    <meta name="author" content="">
+    <meta name="keywords" content="gold">
+    <meta name="description" content="mobile3">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="">
+    <style>
+        *{margin: 0; padding: 0;}
+        body, html {
+            width: 100%;
+            height: 100%;
+            background-image: url(image/main.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+        
+        ul { list-style: none;}
+        a {text-decoration: none;}
+        li { list-style: none;}
+        wrap { width: 100%; height: 100%;}
+        .hd {
+            width: 100%;
+            height: 60px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .logo { 
+            display: block;
+            width: 130px;
+            
+        }
+        
+        .hd a {
+            float: left;
+        }
+        .logo img {
+            height: 40px;
+            width: auto;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        .home {
+            
+            display: block;
+            width: 50px;
+            height: auto;
+            margin-left: 50%;
+            margin-top: 3%;
+        }
+        .home img {
+            float: right;
+            
+        }
+    </style>
+    
+    <style>
+        /*콘텐츠 부분*/
+        .con {
+            width: 100%;
+            height: 576px;
+            margin: 0 auto;
+            display: block;
+            
+        }
+        .con li {
+            float: left;
+        }
+        .gnb {
+            width: 100%;
+            height: 580px;
+            margin: 0 auto;
+            display: block;
+        }
+        .gnb ul {
+            width: 100%;
+            height: auto;
+            margin-left: 20%;
+            margin-top: 10%;
+        }
+        
+        .gnb li {
+            width: 150px;
+            height: auto;
+            margin: 0 auto;
+            margin-top: 5px;
+        }
+        .gnb li a img {
+            width: 100px;
+            height: 90px;
+            
+        }
+    </style>
+    
+    <style>
+        .ft {
+            clear: both;
+            display: block;
+            width: 100%;
+            height: 54px;
+            background-color: #494949;
+            position: relative;
+        }
+        .fnb {
+            width: 300px;
+            height: 25px;
+            margin: 0 auto;
+        }
+        .fnb li {
+            float: left;
+            height: 25px;
+            margin-left: 15px;
+        }
+        
+       
+        .fnb li a {
+            color: white;
+            font-size: 12px;
+            
+        }
+        .copyright {
+            width: 200px;
+            height: 25px;
+            margin: 0 auto;
+        }
+        .copyright li{
+           
+        }    
+        .copyright p {
+            color: white;
+            font-size: 10px;
+            height: 25px;
+          
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="hd">
+            <a href="" class="logo">
+            <img src="image/logo.png" alt=""></a>
+            <a href="" class="home">
+            <img src="image/menu.png" alt="메뉴"></a>
+        </header>
+        <section class="con">
+            <nav class="gnb">
+                <ul>
+                    <li><a href=""><img src="image/menu1.png" alt="미니골드소개"></a></li>
+                    <li><a href=""><img src="image/menu2.png" alt="메뉴소개"></a></li>
+                    <li><a href=""><img src="image/gps.png" alt="매장검색"></a></li>
+                    <li><a href=""><img src="image/news.png" alt="공지사항"></a></li>
+                    <li><a href=""><img src="image/event.png" alt="이벤트"></a></li>
+                  
+                </ul>
+            </nav>
+        </section>
+       <footer class="ft">
+           <nav class="fnb">
+               <li><a href="">pc버전</a></li>
+               <li><a href="">이용약관</a></li>
+               <li><a href="">개인정보취급방침</a></li>
+               
+               <ul class ="sns">
+               <li>
+               <a href=""><img src="image/instagram-logo.png" alt="sns 인스타"></a>
+               </li>
+               </ul>
+           </nav>
+           <ul class="copyright">
+               <p>Copyright 2015 miniGOLD ALL RIGHTS RESERVED.</p>
+           </ul>
+       </footer>
+     </div>
+</body>
+</html>
