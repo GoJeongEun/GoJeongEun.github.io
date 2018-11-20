@@ -1,0 +1,52 @@
+.incremental-counter{
+    margin: 0 auto;
+}
+
+.incremental-counter .num {
+    
+/*    border: 1px solid #fff; */
+    border-radius: 4px;
+   
+    display: inline-block;
+    height: 66px;
+    line-height: 62px;
+    margin: 0 4.5px;
+    position: relative;
+    text-align: center;
+   /* top: 95px; */
+    width: 50px;
+    font-size: 45px;
+    font-size: 4em;
+    font-weight: 700;
+/*    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.45); */
+    font-family: 'Jua', sans-serif;
+    background: linear-gradient(to bottom,#5F67AF,#fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    cursor: default;
+}
+.incremental-counter .num::before {
+/*     background: #00aae6; 가운데 선 */
+     content: "";
+     display: block;
+     height: 1px;
+     left: -1px;
+     margin: -0.5px 0 0;
+     position: absolute;
+     right: -1px;
+     top: 50%;
+     width: auto;
+
+}
+.counterT {
+      background: linear-gradient(to bottom,#5F67AF,#fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    cursor: default;
+    font-size: 4em;
+    font-weight: bold;
+    font-family: 'Nanum Pen Script', cursive;
+    margin-left: 20px;
+    position: absolute;
+    margin-left: 12.5%;
+}

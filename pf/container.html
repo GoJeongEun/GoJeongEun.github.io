@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <link rel="stylesheet" href="style.css" type="text/css">
+      <link rel="stylesheet" href="css/demo.css" type="text/css">
+      
+    <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+      
+    <style>
+    
+        nav.next-demos {
+            text-align: end;
+                
+        }
+     
+    
+    </style>
+    
+     <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery.lineProgressbar.js"></script>
+    
+    <script>
+        /*탭박스*/
+        $(document).ready(function(){
+           $('ul.tabs li').click(function(){
+                var tab_id = $(this).attr('data-tab');
+               
+               $('ul.tabs li').removeClass('current');
+               $('.tab-content').removeClass('current');
+               
+               $(this).addClass('current');
+              
+               
+               
+               $("#"+tab_id).addClass('current');
+               
+           }) ;
+        });
+         $(document).ready(function () {
+        	var sc_pg = parseInt($(window).height());
+			$(window).on('mousewheel', function(e){
+				if(e.originalEvent.wheelDelta < 0) {
+					$('html, body').not(":animated").animate({
+                        scrollTop : '+='+sc_pg+'px'},800);
+				} else {
+					$('html, body').not(":animated").animate({
+                        scrollTop : '-='+sc_pg+'px'},800);
+				}
+				return false;
+			});
+			//$(window).mousewheel
+		});
+    </script>
+</head>
+<body>
+     <section class="container">
+           <div class="frame">
+					<header class="codrops-header">
+					
+					</header>
+    		        
+                	<nav class="demos">
+						<a class="demo " href="index.html"><span>Main</span></a>
+						<a class="demo " href="skill.html"><span>My skill</span></a>
+						<a class="demo demo--current" href="container.html"><span>Portfolio</span></a>
+						<a class="demo" href="contact.html"><span>Contact</span></a>
+					</nav>
+				</div>
+          <h3 class="p_title">PORTFOLIO
+           <div class="p_inner_t"></div>
+               <div class="p_inner_b"></div>
+          </h3>
+           <ul class="tabs">
+               <li class="tab-link current" data-tab="tab-1">all</li>
+               <li class="tab-link" data-tab="tab-2">DeskTop</li>
+               <li class="tab-link" data-tab="tab-3">Mobile</li>
+               <li class="tab-link" data-tab="tab-4">Responsive</li>
+           </ul>
+         
+               <div id="tab-1" class="tab-content current">
+                   <ul class="allBox">
+                       <li class="item1">
+                       <a href="https://gojeongeun.github.io/design4">
+                       <img src="image/desk4.png" alt="">
+                        <ul class="itemOp">
+                            <li class="opText">
+                            <span class="opmain">신원(1920px 최적화)</span><br>
+                            <span class="opsub">기업형<br>Html, Css, Jquery 사용</span>
+                            </li>
+                        </ul>
+                       </a>
+                       </li>
+                       
+                      <li class="item1">
+                       <a href="https://gojeongeun.github.io/mobile3">
+                       <img src="image/mo4.png" alt="모바일4">
+                        <ul class="itemOp">
+                            <li class="opText">
+                            <span class="opmain">BC카드(갤럭시S5 최적화)</span><br>
+                            <span class="opsub">기업형<br>Html, Css, Jquery 사용</span>
+                            </li>
+                        </ul>
+                       </a>
+                       
+                       </li>
+                      <li class="item1">
+                       <a href="https://gojeongeun.github.io/r1">
+                       <img src="image/re.png" alt="">
+                        <ul class="itemOp">
+                            <li class="opText">
+                            <span class="opmain">미니소</span><br>
+                            <span class="opsub">쇼핑몰형<br>Html, Css, Jquery 사용</span>
+                            </li>
+                        </ul>
+                       </a>
+                       </li>
+                   </ul>
+               </div>
+               
+                <div id="tab-2" class="tab-content">
+                 <ul class="deskBox">
+                       <li class="item1">
+                       <a href="https://gojeongeun.github.io/design4">
+                       <img src="image/desk4.png" alt="시드물">
+                        <ul class="itemOp">
+                            <li class="opText">
+                            <span class="opmain">신원(1920px 최적화)</span><br>
+                            <span class="opsub">기업형<br>Html, Css, Jquery 사용</span>
+                            </li>
+                        </ul>
+                       </a>
+                       </li>
+                       
+                      <li class="item1">
+                       <a href="https://gojeongeun.github.io/design3">
+                       <img src="image/desk3.png" alt="시드물">
+                        <ul class="itemOp">
+                            <li class="opText">
+                            <span class="opmain">시드물(1920px 최적화)</span><br>
+                            <span class="opsub">기업형<br>Html, Css, Jquery 사용</span>
+                            </li>
+                        </ul>
+                       </a>
+                       
+                       </li>
+                      <li class="item1">
+                       <a href="https://gojeongeun.github.io/design5">
+                       <img src="image/desk5.png" alt="오렌즈">
+                        <ul class="itemOp">
+                            <li class="opText">
+                            <span class="opmain">오렌즈(1920px 최적화)</span><br>
+                            <span class="opsub">쇼핑몰형<br>Html, Css 사용</span>
+                            </li>
+                        </ul>
+                       </a>
+                       </li>
+                   </ul>
+               </div>
+             <div id="tab-3" class="tab-content">
+                  <ul class="moBox">
+                       <li class="item1">
+                       <a href="https://gojeongeun.github.io/mobile3">
+                       <img src="image/mo4.png" alt="BC카드">
+                        <ul class="itemOp">
+                            <li class="opText">
+                            <span class="opmain">BC카드(갤럭시S5 최적화)</span><br>
+                            <span class="opsub">기업형<br>Html, Css, Jquery 사용</span>
+                            </li>
+                        </ul>
+                       </a>
+                       </li>
+                       
+                      <li class="item1">
+                       <a href="https://gojeongeun.github.io/mobile1">
+                       <img src="image/mo3.png" alt="환경부">
+                        <ul class="itemOp">
+                            <li class="opText">
+                            <span class="opmain">환경부(갤럭시S5 최적화)</span><br>
+                            <span class="opsub">기업형<br>Html, Css, Jquery 사용</span>
+                            </li>
+                        </ul>
+                       </a>
+                       
+                       </li>
+                      <li class="item1">
+                       <a href="https://gojeongeun.github.io/mobile4">
+                       <img src="image/mo6.png" alt="디노데코">
+                        <ul class="itemOp">
+                            <li class="opText">
+                            <span class="opmain">디노데코(갤럭시S5 최적화)</span><br>
+                            <span class="opsub">쇼핑몰형<br>Html, Css 사용</span>
+                            </li>
+                        </ul>
+                       </a>
+                       </li>
+                   </ul>
+               </div>
+             <div id="tab-4" class="tab-content">
+                  <ul class="reBox">
+                        <li class="item1">
+                       <a href="https://gojeongeun.github.io/r1">
+                       <img src="image/re.png" alt="">
+                        <ul class="itemOp">
+                            <li class="opText">
+                            <span class="opmain">미니소</span><br>
+                            <span class="opsub">쇼핑몰형<br>Html, Css, Jquery 사용</span>
+                            </li>
+                        </ul>
+                       </a>
+                       </li>
+                         <li class="item1">
+                       <a href="">
+                       <img src="http://placehold.it/350X350/333/fff" alt="준비중">
+                        <ul class="itemOp">
+                            <li class="opText">
+                            <span class="opmain">준비중</span><br>
+                            <span class="opsub">입니다.</span>
+                            </li>
+                        </ul>
+                       </a>
+                       </li>
+                         <li class="item1">
+                       <a href="">
+                       <img src="http://placehold.it/350X350/333/fff" alt="준비중">
+                        <ul class="itemOp">
+                            <li class="opText">
+                            <span class="opmain">준비중</span><br>
+                            <span class="opsub">입니다.</span>
+                            </li>
+                        </ul>
+                       </a>
+                       </li>
+                  </ul>
+               </div>
+        </section>
+        <!--  <nav class="next-demos">
+						<a class="demo" href="index.html"><span>main</span></a>
+						<a class="demo "><span>About Me</span></a>
+						<a class="demo" href="skill.html"><span>My skill</span></a>
+						<a class="demo demo--current1 " href="container.html"><span>Portfolio</span></a>
+						<a class="demo" href="contact.html"><span>Contact</span></a>
+					</nav> -->
+</body>
+</html>

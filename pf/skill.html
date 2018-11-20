@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+    <style>
+        nav.next-demos {
+            text-align: end;
+                
+        }
+     
+    
+    </style>
+</head>
+  <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery.lineProgressbar.js"></script>
+
+    
+    <script>
+    
+    $(document).ready(function(){
+       $('#jq').LineProgressbar({
+           percentage:70,
+           duration: 1000,
+           radius: '6px',
+           height: '20px',
+           fillBackgroundColor: '#626365'
+       });
+       $('#html').LineProgressbar({
+           percentage:85,
+           radius: '6px',
+           height: '20px',
+           fillBackgroundColor: '#626365'
+       });
+       $('#css').LineProgressbar({
+           percentage:85,
+           radius: '6px',
+           height: '20px',
+           fillBackgroundColor: '#626365'
+       });
+        
+        $('#ps').LineProgressbar({
+           percentage:85,
+           radius: '6px',
+           height: '20px',
+           fillBackgroundColor: '#626365'
+       });
+        $('#ai').LineProgressbar({
+           percentage:90,
+           radius: '6px',
+           height: '20px',
+           fillBackgroundColor: '#626365'
+       });
+});
+    
+    
+    
+</script>
+<body>
+    <section class="skill">
+            <div class="s_Box">
+              <div class="frame">
+					<header class="codrops-header">
+					
+					</header>
+    		        
+                	<nav class="demos">
+						<a class="demo " href="index.html"><span>Main</span></a>
+						<a class="demo demo--current" href="skill.html"><span>My skill</span></a>
+						<a class="demo" href="container.html"><span>Portfolio</span></a>
+						<a class="demo" href="contact.html"><span>Contact</span></a>
+					</nav>
+				</div>
+               <h3 class="s_title">I Like & MY SKILLS
+                <div class="s_inner_t"></div>
+               <div class="s_inner_b"></div>
+               </h3>
+            <ul class="s_left">
+                <div class="iconBox">
+                    <li class="iconItem1">
+                    <a  href=""><img src="image/con1.png" alt="여행 icon"></a>
+                    <p class="iconText">여행가기</p>
+                    </li>
+                    <li  class="iconItem2">
+                    <a href=""><img src="image/con2.png" alt="음악 icon"></a>
+                    <p class="iconText">음악듣기</p>
+                    </li>
+                    <li class="iconItem3">
+                    <a href=""><img src="image/con3.png" alt="볼링 icon"></a>
+                    <p class="iconText">볼링치기</p>
+                    </li>
+                    <li class="iconItem4">
+                    <a href=""><img src="image/con4.png" alt="음악 icon"></a>
+                    <p class="iconText">디즈니 영화보기</p>
+                    </li>
+                </div>
+            </ul>
+            <ul class="s_right">
+                 <div class="jq_container">
+                 <h2 class="jqTxt">Jquery</h2>
+                  <div id="jq"></div>
+                  <h2 class="htmlTxt">Html</h2>
+                  <div id="html"></div>
+                  <h2 class="cssTxt">Css</h2>
+                  <div id="css"></div>
+                  <h2 class="psTxt">Photoshop</h2>
+                  <div id="ps"></div>
+                  <h2 class="aiTxt">Illustrator</h2>
+                  <div id="ai"></div>
+
+                  </div>
+                </div>
+                </ul>
+            
+        </section>
+           <!--  <nav class="next-demos">
+						<a class="demo" href="index.html"><span>main</span></a>
+						<a class="demo "><span>About Me</span></a>
+						<a class="demo demo--current1 " href="skill.html"><span>My skill</span></a>
+						<a class="demo" href="container.html"><span>Portfolio</span></a>
+						<a class="demo" href="contact.html"><span>Contact</span></a>
+					</nav>-->
+</body>
+</html>
