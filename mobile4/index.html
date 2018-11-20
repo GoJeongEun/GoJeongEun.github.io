@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DINO STYLE HOUSE</title>
+     <meta name="viewport" content="width=device-width, initial-scale-1.0, user-scalable=no">
+    <!--폰트-->
+    <link rel="stylesheet" href="">
+    <meta name="application-name" content="Dinodeco">
+    <meta name="author" content="">
+    <meta name="keywords" content="Dino">
+    <meta name="description" content="mobile6">
+    <link rel="icon" href="image/logo_icon.ico">
+    <link rel="stylesheet" href="">
+    <style>
+        *{margin: 0; padding: 0;}
+        ul, li { list-style: none }
+        a{text-decoration: none;}
+        
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+        /*헤더영역*/
+        .container {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .hd {
+            width: 100%;
+            height: 60px;
+            display: block;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            border-bottom: 1px solid #74a7ba;
+        }
+        
+        .hd li {
+            float: left;
+             padding: 5px;
+        }
+        
+        .menu {
+            width: 50px;
+            height: 50px;
+            margin-left: 14px;
+           
+        }
+        .menu a {
+            width: 40px;
+            height: 40px;
+            
+            
+        }
+        .menu img {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+        }
+        .logo {
+            width: 150px;
+            height: 45px;
+            margin-left: 28px;
+        }
+        .logo a {
+            width: 150px;
+            height: 45px;
+            margin: 0 auto;
+            
+        }
+        .logo img {
+            width: 150px;
+            height: 45px;
+        }
+        .house {
+            width: 30px;
+            height: 32px;
+            margin-left: 43px;    
+            margin-top: 8px;
+        }
+        .house a {
+            float: right;
+            
+        }
+        .house img {
+            width: 30px;
+            height: 32px;
+        }
+    </style>
+    <style>
+     /*비주얼*/
+        .visual {
+            width: 100%;
+            height: 250px; 
+            overflow: hidden;
+        }
+        
+        .imgBox {
+            width: 400%;
+            height: 250px;
+            overflow: hidden;
+            padding-top: 5px;
+            
+        }
+        .imgBox li {
+            width: 25%;
+            height: 250px;
+        }
+        .imgBox img {
+            width: 100%;
+            height: 250px;
+        }
+     
+    </style>
+    <style>
+        .new {
+            width: 100%;
+            height: 350px;
+            padding-top: 30px;
+        }
+       
+        .newTitle, .bestTitle, .reviewtitle {
+            text-align: center;
+            line-height: 25px;
+        }
+        .grid {
+            width: 90%;
+            height: 250px;
+            margin: 0 auto;
+        } 
+        .grid li {
+            float: left;
+            padding: 6px;
+            padding-top: 25px;
+        }
+        .item1 {
+            width: 150px;
+            height: auto;
+        }
+        .item2 {
+            width: 150px;
+            height: auto;
+        }
+        .item1 p, .item2 p, .item3 p, .item4 p, .item5 p, .item6 p, .reviewItem1 p {
+            font-size: 11px;
+            text-align: center;
+            line-height: 17px;
+        }
+       
+         .item1 a img, .item2 a img, .item3 a img, .item4 a img, .item5 a img, .item6 a img{
+                width: 150px;
+                 height: 150px;
+        }
+    </style>
+    <style>
+    /*best*/
+        .best { 
+            width: 100%;
+            height: 550px;
+            display: block;
+            padding-top: 20px;
+            background-color: #f2f2f5;
+        }
+        .bestTitle2 {
+            
+            
+        }
+        .review {
+            width: 100%;
+            height: 370px;
+           padding-top: 30px;
+        }
+        .reviewgrid {
+            width: 95%;
+            height: 335px;
+            margin: 0 auto;
+            padding-top: 10px;
+        } 
+        .reviewgrid li {
+            float: left;
+            padding: 4px;
+            padding-top: 25px;
+            height: 136px;
+            border: 1px solid #ccdee4;
+            margin-left: 2px;
+            margin-top: 2px;
+        }
+        .reviewgrid li a img{
+            width: 100px;
+            height: 100px;
+            margin-top: -12px;
+        }
+        .reviewItem1 p, .reviewItem2 p, .reviewItem3 p, .reviewItem4 p, .reviewItem5 p, .reviewItem6 p {
+             font-size: 11px;
+            text-align: center;
+            line-height: 17px;
+        }
+    </style>
+    <style>
+    /*푸터*/
+        .ft { 
+            width: 100%;
+            height: 134px;
+            padding-top: 26px;
+        }
+        .fnb {
+            width: 100%;
+            height: 50px;
+            background-color: #bcced4;
+        }
+        .fnb li {
+            float: left;
+            color: white;
+            padding: 10px;
+            padding-top: 7px;
+            margin-top: 5px;
+            font-size: 14px;
+            
+        }
+        .fnb li a {
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .copyright {
+            width: 95%;
+            height: 70px;
+            margin: 0 auto;
+            background-color: #ccdee4;
+            padding: 9px;
+        }
+        .copyright p {
+            color: #333;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hd">
+            <li class="menu">
+            <a href=""><img src="image/menu.png" alt="메뉴"></a>
+            </li>
+            <li class="logo">
+            <a href=""><img src="image/fulllogo.png" alt="로고"></a>
+            </li>
+            <li class="house">
+            <a href=""><img src="image/architecture-draw-of-a-house-on-a-paper.png" alt="견적상담"></a>
+            </li>
+        </header>       
+          <section class="visual">
+              <ul class="imgBox">
+                  <li><a href=""><img src="image/visual1.jpg" alt=""></a></li>
+                  <li><a href=""><img src="image/visual2.jpg" alt=""></a></li>
+                  <li><a href=""><img src="http://placehold.it/300X150" alt=""></a></li>
+                  <li><a href=""><img src="http://placehold.it/300X150" alt=""></a></li>
+              </ul>
+          </section>
+          
+          <div class="new">
+            
+              <h3 class="newTitle">NEW ARRIVALS</h3>
+              <h5 class="newTitle">끊임없이 생각하며 만든 신제품</h5>
+              
+              <ul class="grid">
+                  <li class="item1">
+                  <a href=""><img src="image/new1.jpg" alt=""></a>
+                  <p>프렌치 젠느 콘솔 화이트</p>
+                  <p>86,800원</p>
+                  </li>
+                  <li class="item2">
+                  <a href=""><img src="image/new2.jpg" alt=""></a>
+                  <p>마룬 원목 슈퍼싱글 침대</p>
+                  <p>299,000원</p>
+                  </li>
+              </ul>
+          </div>
+          
+          <div class="best">
+              <h3 class="bestTitle">BEST ITEM</h3>
+             <h5 class="bestTitle">고객님들께 많은 사랑을 받은 인기 상품입니다.</h5>
+              <ul class="grid">
+                  <li class="item3">
+                  <a href=""><img src="image/best1.jpg" alt=""></a>
+                  <p>모모 원목3인 쇼파_민트</p>
+                  <p>194,000원</p>
+                  </li>
+                  <li class="item4">
+                  <a href=""><img src="image/best2.jpg" alt=""></a>
+                  <p>캐서린 4인 원형 식탁</p>
+                  <p>312,000원</p>
+                  </li>
+                  <li class="item5">
+                  <a href=""><img src="image/best3.jpg" alt=""></a>
+                  <p>폴라 수납장_그레이</p>
+                  <p>294,000원</p>
+                  </li>
+                  <li class="item6">
+                  <a href=""><img src="image/best4.jpg" alt=""></a>
+                  <p>프렌치 키친 콘솔</p>
+                  <p>224,000원</p>
+                  </li>
+              </ul>
+          </div>
+          <div class="review" title="리뷰">
+             <h3 class="reviewtitle">PHOTO REVIEW</h3>
+              <ul class="reviewgrid">
+                  <li class="reviewItem1"><a href=""><img src="image/review1.jpg" alt=""></a>
+                  <p>김은**</p>
+                  <p>2018-05-04</p>
+                  </li>
+                  <li class="reviewItem2">
+                  <a href=""><img src="image/review2.jpg" alt=""></a>
+                  <p>김은**</p>
+                  <p>2018-05-04</p>
+                  </li>
+                  <li class="reviewItem3">
+                  <a href=""><img src="image/review3.jpg" alt=""></a>
+                  <p>김은**</p>
+                  <p>2018-05-04</p>
+                  </li>
+                  <li class="reviewItem4">
+                  <a href=""><img src="image/review4.jpg" alt=""></a>
+                  <p>김은**</p>
+                  <p>2018-05-04</p>
+                  </li>
+                  <li class="reviewItem5">
+                  <a href=""><img src="image/review5.jpg" alt=""></a>
+                  <p>김은**</p>
+                  <p>2018-05-04</p>
+                  </li>
+                  <li class="reviewItem6">
+                  <a href=""><img src="image/review6.jpg" alt=""></a>
+                  <p>김은**</p>
+                  <p>2018-05-04</p>
+                  </li>
+              </ul>
+          </div>
+    
+           <footer class="ft">
+               <nav class="fnb">
+                   <li><a href=""></a>회사소개</li>
+                   <li><a href=""></a>이용약관</li>
+                   <li><a href=""></a>개인정보취급방침</li>
+                   <li><a href=""></a>이용안내</li>
+               </nav>
+               <ul class="copyright">
+                   <p>
+                       상호(주)디노데코 대표이사 : 김지숙 대표전화 : 02-542-0579<br>
+                       사업자등록번호228-87-00195 <br>
+                        주소본사 : 16886 경기도 용인시 처인구 모현면 포은대로 1100-20 (능원리) <br>
+                        <br>
+                        COPYRIGHT © 디노데코 ALL RIGHTS RESERVED.
+                   </p>
+               </ul>
+           </footer>
+             </div>
+</body>
+</html>
