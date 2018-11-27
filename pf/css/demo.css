@@ -6,7 +6,7 @@
 
 body {
 	font-family: 'Nunito', sans-serif;
-	min-height: 100vh;
+	/*min-height: 100vh; */
 	color: #57585c;
 	color: var(--color-text);
 	background-color: #f7f7f7;

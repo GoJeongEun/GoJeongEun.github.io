@@ -52,7 +52,7 @@
 
 .pater__title span:nth-child(2) {
 	letter-spacing: 2px;
-	font-size: 1em;
+	font-size: 0.7em;
 	display: none;
 }
 
@@ -108,7 +108,7 @@
 		padding: 0 37% 2em 0.25em;
 		transition: transform 0.3s, opacity 0.3s;
 		transition-timing-function: ease-in-out;
-        font-family: 'Nanum Pen Script', cursive;
+        
 	}
 	.pater:hover .pater__title {
 		opacity: 0;
@@ -118,20 +118,20 @@
 		display: block;
 		font-weight: bold;
 		text-transform: uppercase;
-		font-size: 1.5em;
+		font-size: 1em;
 		letter-spacing: 1px;
 		padding-right: 1.25em;
 		opacity: 0;
 		transform: translate3d(0,20px,0);
-        font-family: 'Nanum Pen Script', cursive;
+        
 	}
 	.pater:hover .pater__description {
 		opacity: 1;
 		transform: translate3d(0,0,0);
 	}
 	.pater__title span:first-child {
-		margin: 0 0 0.25em;
-		font-size: 1.4em;
+		margin: 0 0 0.35em;
+		font-size: 0.9em;
 	}
 	.pater__title span:nth-child(2) {
 		display: block;
