@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>GoJeongEun Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+   
+<style>
+    
+    * {padding: 0; margin: 0;}
+    
+    ul, li {list-style: none;}
+   
+    a {text-decoration: none;}
+    
+    body, html {
+        width: 100%;
+        height: 800px;
+        margin: 0 auto;
+        border: 0;
+        display: block;
+        background-color:#C4BAD5;
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+    #wrap {
+        width: 100%;
+        height: 800px;
+        
+    }
+    #MB {
+        width: 9500px;
+        height: 800px;
+        margin: auto;
+        position: relative;
+        
+    }
+    .main {
+        width: 1600px;
+        height: 795px;
+        margin: 60px;
+        background-color: white;
+        margin-left: 100px;
+    }
+    .hd {
+        float: right;
+        width: 70px;
+        height: 795px;
+        background: #b19ec8; /* Old browsers */
+        background: -moz-linear-gradient(top, #b19ec8 0%, #2a2773 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #b19ec8 0%,#2a2773 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #b19ec8 0%,#2a2773 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b19ec8', endColorstr='#2a2773',GradientType=0 ); /* IE6-9 */
+    }
+  
+    .icon {
+        display: block;
+        width: 40px;
+        height: 50px;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+    
+    .Ht {
+        display: block;
+        transform: rotate(90deg);
+        width: 71px;
+        height: 25px;
+        bottom: 0px;    
+        
+    }
+    
+    .ver {
+        margin-top: 635px;
+        color: white;
+        
+    }
+    /*TextBox*/
+    .TextBox { 
+        display: block;
+        width: 1000px;
+        padding-top: 170px;
+        padding-left: 70px;
+    }
+    
+    .T1 { 
+        font-size: 100px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .T2 {
+        font-size: 18px;
+        margin-top: 3px;
+        color: #2F2F2F;
+        margin-left: 5px;
+        
+    }
+    
+    .T3 {
+        font-size: 18px;
+        margin-top: 5px;
+        color: #2F2F2F;
+        margin-left: 5px;
+        /*font-weight: bold;*/
+    }
+    .T4, .T5 {
+        color: #2F2F2F;
+        font-size: 18px;
+    }
+    .T5 {
+        margin-top: 4px;
+        
+    }
+    .bottom {
+        height: 150px;
+        display: block;
+        border-left: 1px solid #333;
+        margin-left: 75px;
+        margin-top: 30px;
+        
+    }
+    
+    .SubText {
+        display: block;
+        padding-top: 30px;
+        padding-left: 75px;
+        
+    }
+    .ImageBox {
+        position: absolute;
+        
+    }
+    .image { 
+        position: absolute;
+        width: 625px;
+        height: 400px;
+        float: left;
+        margin-left: 800px;
+        margin-top: -497px;
+        
+    }
+     .image a img {
+        width: 100%;
+        
+    }
+    /*intro*/
+    #intro {
+        width: 1600px;
+        height: 100%;
+        background-color: white;
+        float: left;
+        position: relative;
+        margin-top: -860px;
+        margin-left: 2000px;
+        
+    }
+    .topP {
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-left: 150px;
+    }
+    .introT {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .Ij {
+        width: 1300px;
+        height: 1px;
+        border-bottom: 2px solid #8368ab;
+        margin-top: 2px;
+    }
+    .introD {
+        width: 300px;
+        height: 50px;
+        float: right;
+        margin-right: 150px;
+        text-align: end;
+        margin-top: 5px;
+        font-weight: bolder;
+        font-size: 13px;
+        color: #8368ab;
+    }
+    
+    .itleft {
+        width: 400px;
+        height: 600px;
+        float: left;
+        margin-top: 100px;
+        margin-left: 160px;
+    }
+    
+    .itImg {
+        width: 200px;
+        display: block;
+        border: 1px solid #ececec;
+        height: 280px;
+        box-shadow: 5px 5px 10px #ccc;
+    }
+    
+    .itImg span {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .itImg li {
+        margin-top: 10px; 
+        margin-left: 10px;
+    }
+    .nameBox {
+        width: 200px;
+        height: 40px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .nameBox span {
+        font-size: 19px;
+        font-weight: bold;
+    }
+    .design {
+        width: 330px;
+        text-align: center;
+        margin-left: -60px;
+    }
+    .design span {
+        font-size: 15px;
+        font-weight: bolder;
+        color: #8368ab;
+        line-height: 22px;
+    }
+    .name {
+        width: 175px;
+        height: 50px;
+        text-align: center;
+    }
+    .sns {
+        width: 300px;
+        height: 70px;
+        
+    }
+    .callImg {
+        width: 30px;
+        height: 30px;
+    }
+    .callImg a img {
+        width: 30px;
+        height: 30px;
+    }
+    .sns p {
+        margin-top: 4px;
+    }
+    .name p {
+        margin-top: 5px;
+    }
+    
+    
+    .itcenter {
+        margin-top: 100px;
+        width: 450px;
+        display:block;
+        height: 600px;
+        float: left;
+    }
+    .LIKE {
+        margin-top: 130px;
+    }
+    
+    .itright {
+        width: 400px;
+        height: 600px;
+        float: left;
+        margin-left: 20px;
+        margin-top: 45px;
+    }
+    
+    /*프로필*/
+    .profile {
+        width: 300px;
+        height: 250px;
+        
+    }
+    .profileH3 {
+        border-bottom: 1.5px solid #8368ab;
+        width: 350px;
+        line-height: 32px;
+    }
+    .PfTextBox {
+        width: 290px;
+        height: 180px;
+        line-height: 32px;
+        margin-top: 10px;
+    }
+    /*학력*/
+    .education {
+        width: 400px;
+        height: 250px;
+    }
+    .educationH3 {
+        border-bottom: 1.5px solid #8368ab;
+        width: 350px;
+        line-height: 32px;
+    }
+    .ecTextBox {
+        width: 350px;
+        height: 240px;
+        line-height: 40px;
+        margin-top: 10px;
+    }
+    /*능력*/
+    .sk {
+        width: 380px;
+        height: 250px;
+    }
+     .skH3 {
+        border-bottom: 1.5px solid #8368ab;
+        width: 350px;
+        line-height: 32px;
+    }
+    .progressbar {
+        width: 100%;
+        margin-left: 73px;
+        position: relative;
+        background-color: #fafafa;
+        height: 13px;
+        margin-top: 20px;
+    }
+    .progress{
+        height: 8px;
+        width: 10px; 
+        background-color: #8368ab;
+        
+    }
+    
+    .jq_container {
+        width: 230px;
+        height: 250px;
+        display: block;
+    }
+    .percentCount{
+        position: absolute;
+        margin-left: 243px;
+        margin-top: -15px;
+        font-weight: bold;
+        font-size: 13px;
+        color: #636263;
+    }
+    .jqTxt, .htmlTxt, .cssTxt, .psTxt, .aiTxt {
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: -14px;
+    }
+    /*자격증*/
+    .le {
+        width: 380px;
+        height: 250px;
+    }
+    .leH3{
+        border-bottom: 1.5px solid #8368ab;
+        width: 350px;
+        line-height: 32px;
+    }
+    .leTextBox {
+        width: 350px;
+        height: 240px;
+        line-height: 32px;
+        margin-top: 10px;
+    }
+    /* 3번째 페이지 포트폴리오 */
+    #Portfolio { 
+        width: 1600px;
+        height: 100%;
+        background-color: white;
+        float: left;
+        position: relative;
+        margin-top: -860px;
+        margin-left: 4000px;
+    }
+    .portfolioBox {
+        width: 1200px;
+        height: 600px;
+        margin: 40px auto;
+    }
+    
+    .portfolioBox li {
+        width: 360px;
+        height: 280px;
+        background-color: cornflowerblue;
+        position: absolute;
+        border: 1px solid #ececec;
+        box-shadow: 5px 5px 5px #ececec;
+        background-color: #fcfcfc;
+    }
+    .portfolioBox li a img {
+        width: 350px;
+        height: 230px;
+        margin-left: 5px;
+        margin-top: 25px;
+    }
+    .two {
+        margin-left: 400px;
+    }
+    .three{
+        margin-left: 800px;
+    }
+    .four {
+        margin-top: 320px;
+    }
+    .five {
+        margin-top: 320px;
+        margin-left: 400px;
+    }
+    /*포트폴리오 팝업창부분*/
+    .popWrap {
+        width: 1200px;
+        height: 600px;
+        margin: -620px auto;
+        background-color: #f2f2f2;
+        position: absolute;
+        margin-left: 180px;
+        
+    }
+    .P_Wrap1_L {
+        width: 500px;
+        height: 550px;
+        margin-top: 25px;
+        margin-left: 70px;
+        float: left;
+    }
+    .P_Wrap1_L li a img { 
+        width: 400px;
+        height: 480px;
+        margin-top: 30px;
+    }
+    .P_Wrap1_R { 
+        width: 500px;
+        height: 450px;
+        margin-top: 75px;
+        float: right;
+        margin-right: 100px;
+        background-color: aquamarine;
+    }
+    .close {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        margin-left: 1136px;
+        margin-top: 20px;
+    }
+</style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery.lineProgressbar.js"></script>
+    <script>
+        
+     $(document).ready(function(){
+       $('#jq').LineProgressbar({
+           percentage:70,
+           duration: 1000,
+           radius: '10px',
+           height: '13px',
+           fillBackgroundColor: '#8368ab'
+       });
+       $('#html').LineProgressbar({
+           percentage:85,
+           radius: '10px',
+           height: '13px',
+           fillBackgroundColor: '#8368ab'
+       });
+       $('#css').LineProgressbar({
+           percentage:85,
+           radius: '10px',
+           height: '13px',
+           fillBackgroundColor: '#8368ab'
+       });
+        
+        $('#ps').LineProgressbar({
+           percentage:85,
+           radius: '10px',
+           height: '13px',
+           fillBackgroundColor: '#8368ab'
+       });
+        $('#ai').LineProgressbar({
+           percentage:90,
+           radius: '10px',
+           height: '13px',
+           fillBackgroundColor: '#8368ab'
+       });
+});
+    
+    $(document).ready(function () {
+        	var sc_pg = parseInt($(window).width());
+			$(window).on('mousewheel', function(e){
+				if(e.originalEvent.wheelDelta < 0) {
+					$('html, body').not(":animated").animate({
+                        scrollTop : '+='+sc_pg+'px'},800);
+				} else {
+					$('html, body').not(":animated").animate({
+                        scrollTop : '-='+sc_pg+'px'},800);
+				}
+				return false;
+			});
+			//$(window).mousewheel
+		});
+    //가로 스크롤
+        $(document).ready(function(){
+            $("html").onmousewheel(function(event,dalta){
+                this.scrollLeft -= (dalta * 30);
+                event.preventDefault();
+            });
+        });
+    
+    //팝업창 닫고 열기 
+        $(document).ready(function(){
+            $(".close li a").removeAttr("href");
+            $(".one").click(function(){
+                $(".popWrap").fadeIn(500);
+            });
+            $(".popWrap .close").click(function(){
+                $(".popWrap").fadeOut(500);
+            })
+        });
+    </script>
+</head>
+<body>
+   <div id="wrap">
+      <section id="MB">
+       <div class="main">
+           <header class="hd">
+               <ul class="icon">
+                   <li>
+                       <a href="#">
+                        <img src="http://placehold.it/40X40" alt="메뉴바">
+                       </a>
+                   </li>
+               </ul>
+               <ul class="Ht">
+                   <li class="ver">
+                       <p>2019 ver.</p>
+                   </li>
+               </ul>
+           </header>
+           <ul class="TextBox">
+               <li class="T1">
+                   <p>PORTFOLIO</p>
+               </li>
+               <li class="T2">
+                   <h2>VISUAL DESIGN</h2>
+               </li>
+               <li class="T3">
+                   <h2>DESIGNER GO JEONGEUN</h2>
+               </li>
+           </ul>
+           <ul class="bottom">
+               <li class="jul"></li>
+           </ul>
+           <ul class="SubText">
+               <li class="T4">
+                   <h3>UI / UX</h3>
+               </li>
+               <li class="T5">
+                   <h3>DESIGNER</h3>
+               </li>
+           </ul>
+           <ul class="ImageBox">
+               <li class="image">
+                   <a href="">
+                       <img src="image/main_Image.png" alt="메인추가이미지"></a>
+                </li>
+           </ul>
+       </div>
+        <div id="intro">
+           <ul class="topP">
+               <p class="introT">INTRO</p>
+               <li class="Ij"></li>
+           </ul>
+           <ul class="introD">
+               <!--<p>보편적인 디자인이지만 임팩트가 있는</p>
+               <p>모두가 인정하는 디자이너가 되겠습니다.</p>-->
+               <p>어떠한 일이든 90%의 확신과</p>
+               <p>10%의 자신감을 가지고 한다면 성공 할 것이다.</p>
+           </ul>
+        <div class="itleft">
+           <ul class="itImg">
+               
+               <li class="profileImg">
+                   <a href="#">
+                       <img src="http://placehold.it/180X200" alt="프로필사진">
+                    </a>
+               </li>
+               <li class="name">
+                   <p style="font-weight: bold;font-size:18px;">GO JEONG EUN</p>
+                   <p style="color: #636263; font-weight: bold; font-size:15px;">UI/UX DESIGNER</p>
+               </li>
+           </ul>
+           <ul class="nameBox">
+               <span>고정은</span>
+               <span style="font-size: 15px;">(高正恩)</span>
+           </ul>
+           <ul class="design">
+               <span>" 다시 보고싶은 디자인, 영감을 주는 디자이너를<br>꿈꾸는 고정은입니다. "</span>
+           </ul>
+           <ul class="leftJu">
+               <li class="leftJ"></li>
+           </ul>
+        </div>
+        <div class="itcenter">
+            <ul class="profile">
+                <h3 class="profileH3">PROFILE</h3>
+                <li class="PfTextBox">
+                 <span style="font-weight: bold; font-size: 15px; color: #8368ab;">생년월일</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <span style="color: #636263; font-weight: bold; font-size:15px;">1997.03.19</span><br>
+                 <span style="font-weight: bold; font-size: 15px; color: #8368ab;">연락처</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <span style="color: #636263; font-weight: 600; font-size: 15px;">010-9613-XXXX</span><br>
+                 <span style="font-weight: bold; font-size: 15px; color: #8368ab;">이메일</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <span style="color: #636263; font-weight: 600; font-size: 15px;">kone31964@gmail.com</span><br>
+                 <span style="font-weight: bold; font-size: 15px; color: #8368ab;">깃허브</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <span style="color: #636263; font-weight: 600; font-size: 15px;">https://gojeongeun.github.io</span><br>
+               </li>
+               
+            </ul>
+            <ul class="education"> 
+                <h3 class="educationH3">EDUCATION</h3>
+                <li class="ecTextBox">
+                  <span style="font-weight: bold; font-size: 15px; color: #8368ab;">13.03</span>&nbsp;&nbsp;
+                  <span style="color: #636263; font-weight: bold; font-size:15px;">대전여자상업고등학교 입학</span><br>
+                  <span style="font-weight: bold; font-size: 15px; color: #8368ab;">16.02</span>&nbsp;&nbsp;
+                  <span style="color: #636263; font-weight: bold; font-size:15px;">대전여자상업고등학교 회계정보과 졸업</span><br>
+                  <span style="font-weight: bold; font-size: 15px; color: #8368ab;">18.05</span>&nbsp;&nbsp;
+                  <span style="color: #636263; font-weight: bold; font-size:15px;">그린컴퓨터아트학원 UI/UX 디자인전문가 공부</span><br>
+                  <span style="font-weight: bold; font-size: 15px; color: #8368ab;">18.11</span>&nbsp;&nbsp;
+                  <span style="color: #636263; font-weight: bold; font-size:15px;">그린컴퓨터아트학원 UI/UX 디자인전문가 수료</span><br>
+            
+                </li>
+            </ul>
+        </div>
+        <div class="itright">
+            <ul class="sk">
+                <h3 class="skH3">SKILL</h3>
+                     <div class="jq_container">
+                        
+                      <div id="jq" ></div>
+                      <p class="jqTxt">JQUERY</p>
+                      <div id="html"></div>
+                      <p class="htmlTxt">HTML</p>
+                      <div id="css"></div>
+                       <p class="cssTxt">CSS</p>
+                      <div id="ps"></div>
+                      <p class="psTxt">PS</p>
+                      <div id="ai"></div>
+                        <p class="aiTxt">AI</p>
+                    
+                  </div>
+            </ul>
+            <ul class="le">
+                <h3 class="leH3">LICENSE</h3>
+                <li class="leTextBox">
+                  <span style="font-weight: bold; font-size: 15px; color: #8368ab;">14.10</span>&nbsp;&nbsp;
+                  <span style="color: #636263; font-weight: bold; font-size:15px;">전산회계 2급</span><br>
+                  <span style="font-weight: bold; font-size: 15px; color: #8368ab;">16.01</span>&nbsp;&nbsp;
+                  <span style="color: #636263; font-weight: bold; font-size:15px;">ITQ 한글파워포인트</span><br>
+                  <span style="font-weight: bold; font-size: 15px; color: #8368ab;">16.01</span>&nbsp;&nbsp;
+                  <span style="color: #636263; font-weight: bold; font-size:15px;">ITQ 아래한글</span><br>
+                  <span style="font-weight: bold; font-size: 15px; color: #8368ab;">17.01</span>&nbsp;&nbsp;
+                  <span style="color: #636263; font-weight: bold; font-size:15px;">미용기능사</span><br>
+                  <span style="font-weight: bold; font-size: 15px; color: #8368ab;">18.12</span>&nbsp;&nbsp;
+                  <span style="color: #636263; font-weight: bold; font-size:15px;">웹디자인기능사</span><br>
+                </li>
+            </ul>
+            
+        </div>
+       </div>
+       <div id="Portfolio">
+           <ul class="topP">
+               <p class="introT">PORTFOLIO</p>
+               <li class="Ij"></li>
+           </ul>
+           <ul class="portfolioBox">
+               <li class="one">
+                   <a href="#">
+                       <img src="image/IMax_01.png" alt="">
+                    </a>
+                </li>
+                 <li class="two">
+                   <a href="#">
+                       <img src="image/IMax_01.png" alt="">
+                    </a>
+                </li>
+             <li class="three">
+                   <a href="#">
+                       <img src="image/IMax_01.png" alt="">
+                    </a>
+                </li>
+            <li class="four">
+                   <a href="#">
+                       <img src="image/IMax_01.png" alt="">
+                    </a>
+                </li>
+               <li class="five">
+                   <a href="#">
+                       <img src="image/IMax_01.png" alt="">
+                    </a>
+                </li>
+                
+           </ul>
+           <div class="popWrap">
+               <ul class="P_Wrap1_L">
+                   <li>
+                       <a href="#">
+                           <img src="image/popWrap1-2.png" alt="시안1">
+                        </a>
+                    </li>
+               </ul>
+               <ul class="P_Wrap1_R">
+                   
+               </ul>
+               <ul class="close">
+                   <li>
+                       <a href="#">
+                           <img src="image/popclose.png" alt="닫기">
+                       </a>
+                   </li>
+               </ul>
+           </div>
+       </div>
+     </section>
+    </div>
+   
+</body>
+</html>
