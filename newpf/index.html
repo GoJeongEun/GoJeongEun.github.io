@@ -441,6 +441,13 @@
         position: absolute;
         margin-left: 1136px;
         margin-top: 20px;
+        background-image: url(image/popclose.png);
+        outline: 0;
+        border: 0;
+        display: block;
+        cursor: pointer;
+        text-indent: -9999px;
+        background-color: transparent;
     }
 </style>
     <script src="jquery-3.3.1.min.js"></script>
@@ -501,7 +508,7 @@
    
     //팝업창 닫고 열기 
         $(document).ready(function(){
-            $(".close li a").removeAttr("href");
+            $(".portfolioBox li a").removeAttr("href");
             $(".one").click(function(){
                 $(".popWrap").fadeIn(500);
             });
@@ -705,13 +712,14 @@
                <ul class="P_Wrap1_R">
                    
                </ul>
-               <ul class="close">
+             <!--  <ul class="close">
                    <li>
                        <a href="#">
                            <img src="image/popclose.png" alt="닫기">
                        </a>
                    </li>
-               </ul>
+               </ul>-->
+               <button class="close">닫기</button>
            </div>
        </div>
      
