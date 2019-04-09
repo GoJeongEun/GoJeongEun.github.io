@@ -14,26 +14,20 @@
     a {text-decoration: none;}
     
     body, html {
-        width: 100%;
-        height: 800px;
+        width: 1800px;
+        height: 2750px;
         margin: 0 auto;
         border: 0;
         display: block;
         background-color:#C4BAD5;
         font-family: 'Nanum Gothic', sans-serif;
     }
-    #wrap {
+    #fullpage {
         width: 100%;
-        height: 800px;
-        
+        height: 2750px;
+        overflow: hidden; 
     }
-    #MB {
-        width: 9500px;
-        height: 800px;
-        margin: auto;
-        position: relative;
-        
-    }
+    
     .main {
         width: 1600px;
         height: 795px;
@@ -146,23 +140,22 @@
     /*intro*/
     #intro {
         width: 1600px;
-        height: 100%;
+        height: 795px;
         background-color: white;
-        float: left;
-        position: relative;
-        margin-top: -860px;
-        margin-left: 2000px;
+        margin-left: 100px;
+
         
     }
     .topP {
         display: block;
         margin: 0 auto;
-        margin-top: 50px;
+        margin-top: 130px;
         margin-left: 150px;
     }
     .introT {
         font-size: 20px;
         font-weight: bold;
+        padding-top: 40px;
     }
     .Ij {
         width: 1300px;
@@ -204,8 +197,8 @@
     }
     
     .itImg li {
-        margin-top: 10px; 
-        margin-left: 10px;
+        margin-top: 11px; 
+        margin-left: 20px;
     }
     .nameBox {
         width: 200px;
@@ -223,10 +216,10 @@
         margin-left: -60px;
     }
     .design span {
-        font-size: 15px;
+        font-size: 16px;
         font-weight: bolder;
         color: #8368ab;
-        line-height: 22px;
+        line-height: 23px;
     }
     .name {
         width: 175px;
@@ -250,7 +243,8 @@
         margin-top: 4px;
     }
     .name p {
-        margin-top: 5px;
+        margin-top: 3px;
+        margin-left: -17px;
     }
     
     
@@ -276,7 +270,7 @@
     /*프로필*/
     .profile {
         width: 300px;
-        height: 250px;
+        height: 280px;
         
     }
     .profileH3 {
@@ -287,8 +281,12 @@
     .PfTextBox {
         width: 290px;
         height: 180px;
-        line-height: 32px;
+        line-height: 38px;
         margin-top: 10px;
+    }
+    .profileImg a img {
+        width: 160px;
+        height: 200px;
     }
     /*학력*/
     .education {
@@ -309,7 +307,7 @@
     /*능력*/
     .sk {
         width: 380px;
-        height: 250px;
+        height: 280px;
     }
      .skH3 {
         border-bottom: 1.5px solid #8368ab;
@@ -368,12 +366,9 @@
     /* 3번째 페이지 포트폴리오 */
     #Portfolio { 
         width: 1600px;
-        height: 100%;
+        height: 795px;
         background-color: white;
-        float: left;
-        position: relative;
-        margin-top: -860px;
-        margin-left: 4000px;
+        margin-left: 100px;
     }
     .portfolioBox {
         width: 1200px;
@@ -417,6 +412,7 @@
         background-color: #f2f2f2;
         position: absolute;
         margin-left: 180px;
+        display: none;
         
     }
     .P_Wrap1_L {
@@ -449,7 +445,23 @@
 </style>
     <script src="jquery-3.3.1.min.js"></script>
     <script src="jquery.lineProgressbar.js"></script>
+    <script src="jquery.fullpage.min.js"></script>
     <script>
+        
+        $(document).ready(function () {
+        	var sc_pg = parseInt($(window).height());
+			$(window).on('mousewheel', function(e){
+				if(e.originalEvent.wheelDelta < 0) {
+					$('html, body').not(":animated").animate({
+                        scrollTop : '+='+sc_pg+'px'},800);
+				} else {
+					$('html, body').not(":animated").animate({
+                        scrollTop : '-='+sc_pg+'px'},800);
+				}
+				return false;
+			});
+			//$(window).mousewheel
+		});
         
      $(document).ready(function(){
        $('#jq').LineProgressbar({
@@ -486,28 +498,7 @@
        });
 });
     
-    $(document).ready(function () {
-        	var sc_pg = parseInt($(window).width());
-			$(window).on('mousewheel', function(e){
-				if(e.originalEvent.wheelDelta < 0) {
-					$('html, body').not(":animated").animate({
-                        scrollTop : '+='+sc_pg+'px'},800);
-				} else {
-					$('html, body').not(":animated").animate({
-                        scrollTop : '-='+sc_pg+'px'},800);
-				}
-				return false;
-			});
-			//$(window).mousewheel
-		});
-    //가로 스크롤
-        $(document).ready(function(){
-            $("html").onmousewheel(function(event,dalta){
-                this.scrollLeft -= (dalta * 30);
-                event.preventDefault();
-            });
-        });
-    
+   
     //팝업창 닫고 열기 
         $(document).ready(function(){
             $(".close li a").removeAttr("href");
@@ -516,13 +507,15 @@
             });
             $(".popWrap .close").click(function(){
                 $(".popWrap").fadeOut(500);
-            })
+            });
         });
+       
+        
     </script>
 </head>
 <body>
-   <div id="wrap">
-      <section id="MB">
+   <div id="fullpage">
+     
        <div class="main">
            <header class="hd">
                <ul class="icon">
@@ -583,7 +576,7 @@
                
                <li class="profileImg">
                    <a href="#">
-                       <img src="http://placehold.it/180X200" alt="프로필사진">
+                       <img src="image/photo_p.png" alt="프로필사진">
                     </a>
                </li>
                <li class="name">
@@ -721,7 +714,7 @@
                </ul>
            </div>
        </div>
-     </section>
+     
     </div>
    
 </body>
