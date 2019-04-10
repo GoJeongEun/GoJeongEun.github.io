@@ -176,11 +176,11 @@
     }
     
     .itleft {
-        width: 400px;
+        width: 350px;
         height: 600px;
         float: left;
         margin-top: 100px;
-        margin-left: 160px;
+        margin-left: 210px;
     }
     
     .itImg {
@@ -189,6 +189,7 @@
         border: 1px solid #ececec;
         height: 280px;
         box-shadow: 5px 5px 10px #ccc;
+        margin-top: 20px;
     }
     
     .itImg span {
@@ -263,7 +264,7 @@
         width: 400px;
         height: 600px;
         float: left;
-        margin-left: 20px;
+        margin-left: 40px;
         margin-top: 45px;
     }
     
@@ -346,6 +347,12 @@
         font-size: 15px;
         font-weight: bold;
         margin-top: -14px;
+    }
+    #jq, #html, #css, #ai, #ps {
+        width: 100%;
+        height: 10px;
+        margin: 0 auto;
+            
     }
     /*자격증*/
     .le {
@@ -450,9 +457,9 @@
         background-color: transparent;
     }
 </style>
+    
     <script src="jquery-3.3.1.min.js"></script>
     <script src="jquery.lineProgressbar.js"></script>
-    <script src="jquery.fullpage.min.js"></script>
     <script>
         
         $(document).ready(function () {
@@ -470,7 +477,7 @@
 			//$(window).mousewheel
 		});
         
-     $(document).ready(function(){
+     $(window).scroll(function(){
        $('#jq').LineProgressbar({
            percentage:70,
            duration: 1000,
@@ -528,7 +535,7 @@
                <ul class="icon">
                    <li>
                        <a href="#">
-                        <img src="http://placehold.it/40X40" alt="메뉴바">
+                        <img src="http://placehold.it/40X40/c4bad5/fff" alt="메뉴바">
                        </a>
                    </li>
                </ul>
@@ -637,7 +644,7 @@
                 <h3 class="skH3">SKILL</h3>
                      <div class="jq_container">
                         
-                      <div id="jq" ></div>
+                      <div id="jq"></div>
                       <p class="jqTxt">JQUERY</p>
                       <div id="html"></div>
                       <p class="htmlTxt">HTML</p>
@@ -712,13 +719,7 @@
                <ul class="P_Wrap1_R">
                    
                </ul>
-             <!--  <ul class="close">
-                   <li>
-                       <a href="#">
-                           <img src="image/popclose.png" alt="닫기">
-                       </a>
-                   </li>
-               </ul>-->
+            
                <button class="close">닫기</button>
            </div>
        </div>
