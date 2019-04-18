@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>GoJeongEun Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
-   
+   <link rel="icon" href="icon1_M8C_icon.ico">
 <style>
     
     * {padding: 0; margin: 0;}
@@ -450,12 +450,13 @@
     .popWrap {
         width: 1200px;
         height: 600px;
-        margin: -620px auto;
-        background-color: #f2f2f2;
+        margin: -641px auto;
+        background-color: white;
         position: absolute;
         margin-left: 180px;
         display: none;
-        
+        border: 3px solid #f1f1f1;
+        box-shadow: 5px 5px 5px #ececec;
     }
     .P_Wrap1_L {
         width: 500px;
@@ -475,7 +476,19 @@
         margin-top: 75px;
         float: right;
         margin-right: 100px;
-        background-color: aquamarine;
+        
+    }
+    .P_W1_intro{
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: -3px;
+    }
+    
+    .P_Wrap1_J {
+        width: 500px;
+        height: 1px;
+        border-bottom: 2px solid #8368ab;
+        margin-top: 2px;
     }
     .close {
         width: 30px;
@@ -490,6 +503,150 @@
         cursor: pointer;
         text-indent: -9999px;
         background-color: transparent;
+    }
+    .popWrap {
+        width: 1200px;
+        height: 600px;
+        margin: -641px auto;
+        background-color: white;
+        position: absolute;
+        margin-left: 180px;
+        display: none;
+        border: 3px solid #f1f1f1;
+        box-shadow: 5px 5px 5px #ececec;
+    }
+    /*2번째 팝업창*/
+     .popWrap2 {
+        width: 1200px;
+        height: 600px;
+        margin: -641px auto;
+        background-color: white;
+        position: absolute;
+        margin-left: 180px;
+        display: none;
+        border: 3px solid #f1f1f1;
+        box-shadow: 5px 5px 5px #ececec;
+    }
+    .P_Wrap2_L {
+        width: 500px;
+        height: 550px;
+        margin-top: 25px;
+        margin-left: 70px;
+        float: left;
+    }
+    .P_Wrap2_L li a img { 
+        width: 400px;
+        height: 480px;
+        margin-top: 30px;
+    }
+    .P_Wrap2_R { 
+        width: 500px;
+        height: 450px;
+        margin-top: 75px;
+        float: right;
+        margin-right: 100px;
+        
+    }
+    .P_W2_intro{
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: -3px;
+    }
+    
+    .P_Wrap2_J {
+        width: 500px;
+        height: 1px;
+        border-bottom: 2px solid #8368ab;
+        margin-top: 2px;
+    }
+    
+    /*3번째 팝업창*/
+     .popWrap3 {
+        width: 1200px;
+        height: 600px;
+        margin: -641px auto;
+        background-color: white;
+        position: absolute;
+        margin-left: 180px;
+        display: none;
+        border: 3px solid #f1f1f1;
+        box-shadow: 5px 5px 5px #ececec;
+    }
+    .P_Wrap3_L {
+        width: 500px;
+        height: 550px;
+        margin-top: 25px;
+        margin-left: 70px;
+        float: left;
+    }
+    .P_Wrap3_L li a img { 
+        width: 400px;
+        height: 480px;
+        margin-top: 30px;
+    }
+    .P_Wrap3_R { 
+        width: 500px;
+        height: 450px;
+        margin-top: 75px;
+        float: right;
+        margin-right: 100px;
+        
+    }
+    .P_W3_intro{
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: -3px;
+    }
+    
+    .P_Wrap3_J {
+        width: 500px;
+        height: 1px;
+        border-bottom: 2px solid #8368ab;
+        margin-top: 2px;
+    }
+    /*4번째 팝업창*/
+     .popWrap4 {
+        width: 1200px;
+        height: 600px;
+        margin: -641px auto;
+        background-color: white;
+        position: absolute;
+        margin-left: 180px;
+        display: none;
+        border: 3px solid #f1f1f1;
+        box-shadow: 5px 5px 5px #ececec;
+    }
+    .P_Wrap4_L {
+        width: 500px;
+        height: 550px;
+        margin-top: 25px;
+        margin-left: 70px;
+        float: left;
+    }
+    .P_Wrap4_L li a img { 
+        width: 400px;
+        height: 480px;
+        margin-top: 30px;
+    }
+    .P_Wrap4_R { 
+        width: 500px;
+        height: 450px;
+        margin-top: 75px;
+        float: right;
+        margin-right: 100px;
+        
+    }
+    .P_W4_intro{
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: -3px;
+    }
+    
+    .P_Wrap4_J {
+        width: 500px;
+        height: 1px;
+        border-bottom: 2px solid #8368ab;
+        margin-top: 2px;
     }
 </style>
     
@@ -558,7 +715,36 @@
                 $(".popWrap").fadeOut(500);
             });
         });
-       
+       //2번째 팝업
+         $(document).ready(function(){
+            $(".portfolioBox li a").removeAttr("href");
+            $(".two").click(function(){
+                $(".popWrap2").fadeIn(500);
+            });
+            $(".popWrap2 .close").click(function(){
+                $(".popWrap2").fadeOut(500);
+            });
+        });
+       //3번째 팝업
+         $(document).ready(function(){
+            $(".portfolioBox li a").removeAttr("href");
+            $(".three").click(function(){
+                $(".popWrap3").fadeIn(500);
+            });
+            $(".popWrap3 .close").click(function(){
+                $(".popWrap3").fadeOut(500);
+            });
+        });
+       //4번째 팝업
+         $(document).ready(function(){
+            $(".portfolioBox li a").removeAttr("href");
+            $(".four").click(function(){
+                $(".popWrap4").fadeIn(500);
+            });
+            $(".popWrap4 .close").click(function(){
+                $(".popWrap4").fadeOut(500);
+            });
+        });
         
     </script>
 </head>
@@ -757,7 +943,64 @@
                     </li>
                </ul>
                <ul class="P_Wrap1_R">
-                   
+                  <li class="P_W1_intro">
+                      <p>SHINWON</p>
+                  </li>
+                   <li class="P_Wrap1_J"></li>
+               </ul>
+            
+               <button class="close">닫기</button>
+           </div>
+            
+             <div class="popWrap2">
+               <ul class="P_Wrap2_L">
+                   <li>
+                       <a href="#">
+                           <img src="image/popWrap1-2.png" alt="시안1">
+                        </a>
+                    </li>
+               </ul>
+               <ul class="P_Wrap2_R">
+                  <li class="P_W2_intro">
+                      <p>BC카드</p>
+                  </li>
+                   <li class="P_Wrap2_J"></li>
+               </ul>
+            
+               <button class="close">닫기</button>
+           </div>
+                 
+            <div class="popWrap3">
+               <ul class="P_Wrap3_L">
+                   <li>
+                       <a href="#">
+                           <img src="image/popWrap1-2.png" alt="시안1">
+                        </a>
+                    </li>
+               </ul>
+               <ul class="P_Wrap3_R">
+                  <li class="P_W3_intro">
+                      <p>미정</p>
+                  </li>
+                   <li class="P_Wrap3_J"></li>
+               </ul>
+            
+               <button class="close">닫기</button>
+           </div>
+           
+           <div class="popWrap4">
+               <ul class="P_Wrap4_L">
+                   <li>
+                       <a href="#">
+                           <img src="image/popWrap4.png" alt="시안4">
+                        </a>
+                    </li>
+               </ul>
+               <ul class="P_Wrap4_R">
+                  <li class="P_W4_intro">
+                      <p>환경부</p>
+                  </li>
+                   <li class="P_Wrap4_J"></li>
                </ul>
             
                <button class="close">닫기</button>
