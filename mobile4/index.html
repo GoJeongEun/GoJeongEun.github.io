@@ -11,7 +11,7 @@
     <meta name="keywords" content="Dino">
     <meta name="description" content="mobile6">
     <link rel="icon" href="image/logo_icon.ico">
-    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <style>
         *{margin: 0; padding: 0;}
         ul, li { list-style: none }
@@ -20,6 +20,7 @@
         body, html {
             width: 100%;
             height: 100%;
+            font-family: 'Nanum Gothic', sans-serif;
         }
         /*헤더영역*/
         .container {
@@ -34,7 +35,7 @@
             z-index: 100;
             left: 0;
             top: 0;
-            border-bottom: 1px solid #74a7ba;
+            border-bottom: 2px solid #74a7ba;
         }
         
         .hd li {
@@ -101,7 +102,6 @@
             width: 400%;
             height: 250px;
             overflow: hidden;
-            padding-top: 5px;
             
         }
         .imgBox li {
@@ -236,6 +236,36 @@
             font-size: 10px;
         }
     </style>
+    <style>
+    
+    /*펼침메뉴부분*/    
+        #aside {
+            width: 60%;
+            height: 100%;
+            display: none;
+            background-color: #74a7ba;
+        }
+        .gnb {
+            
+        }
+        
+        
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function(){   //사용자 효과14
+        var wd=parseInt($(".imgBox li").width());
+       console.log(wd);
+    function sl() {
+        $(".imgBox").not(":animated").animate({"margin-left":wd * -1 + "px"}, 800, function(){
+            $(".imgBox li").eq(0).appendTo($(".imgBox"));
+            $(".imgBox").css("margin-left", "0px");
+        });
+    };
+    var intv = setInterval(function(){ sl(); }, 4000);
+});
+</script>
+
 </head>
 <body>
     <div class="container">
@@ -249,13 +279,57 @@
             <li class="house">
             <a href=""><img src="image/architecture-draw-of-a-house-on-a-paper.png" alt="견적상담"></a>
             </li>
-        </header>       
+        </header> 
+         <aside id="aside" class="brand">
+             <ul class="gnb">
+                 <li><a href="">침실가구</a>
+                 <ul class="">
+                     <li><a href="#">퀸침대(Q)</a></li>
+                     <li><a href="#">슈퍼싱글침대(SS)</a></li>
+                     <li><a href="#">킹침대(K)</a></li>
+                    <li> <a href="#">화장대/서랍장</a></li>
+                     <li><a href="#">옷장</a></li>
+                     
+                 </ul>
+                 </li>
+                  <li><a href="">거실가구</a>
+                 <ul class="">
+                     <li><a href="#">소파</a></li>
+                     <li><a href="#">패브릭소파</a></li>
+                     <li><a href="#">원목소파</a></li>
+                    <li> <a href="#">좌식소파</a></li>
+                     <li><a href="#">기능성소파</a></li>
+                     
+                 </ul>
+                 </li>
+                  <li><a href="">서재&#38;오피스</a>
+                 <ul class="">
+                     <li><a href="#">책상/테이블</a></li>
+                     <li><a href="#">의자</a></li>
+                     <li><a href="#">책장</a></li>
+                   
+                     
+                 </ul>
+                 </li>
+                  <li><a href="">패블릭</a>
+                 <ul class="">
+                     <li><a href="#">침구</a></li>
+                     <li><a href="#">커튼</a></li>
+                     <li><a href="#">매트/러그</a></li>
+                    <li> <a href="#">화장대/서랍장</a></li>
+                     <li><a href="#">옷장</a></li>
+                     
+                 </ul>
+                 </li>
+                 
+             </ul>
+         </aside>    
           <section class="visual">
               <ul class="imgBox">
                   <li><a href=""><img src="image/visual1.jpg" alt=""></a></li>
                   <li><a href=""><img src="image/visual2.jpg" alt=""></a></li>
-                  <li><a href=""><img src="http://placehold.it/300X150" alt=""></a></li>
-                  <li><a href=""><img src="http://placehold.it/300X150" alt=""></a></li>
+                  <li><a href=""><img src="image/visual3.jpg" alt=""></a></li>
+                  <li><a href=""><img src="image/visual4.jpg" alt=""></a></li>
               </ul>
           </section>
           
