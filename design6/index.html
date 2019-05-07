@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <title>투썸플레이스</title>
+    
+    <style>
+        * {margin: 0; padding: 0;}
+        a {text-decoration: none;}
+        ul, li {list-style: none;}
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            display: block;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        #Wrap { 
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        .hd {
+            width: 100%;
+            height: 80px;
+            margin: 0 auto;
+            background-color: #333;
+            
+        }
+        .hdlogo {
+            width: 150px;    
+            height: 80px;
+            display: block;
+        }
+        .hdlogo li {
+            width: 100px;
+            height: 40px;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .topmenu {
+            width: 300px;
+            float: right;
+            height: 30px;
+            padding-top: 13px;
+        }
+        .topmenu li {
+            float: left;
+            margin-left: 16px;
+            
+        }
+        .topmenu li a {
+            color: #a09d9f;
+            font-size: 13px;
+            
+        }
+        .gnb {
+            width: 700px;
+            height: 45px;
+            display: block;
+            margin: -46px auto;
+        }
+        .gnb li {
+            float: left;
+            margin-left: 50px;
+        }
+        .gnb li a {
+            color: white
+        }
+        /*비주얼부분*/
+        
+        .visual {
+            width: 100%;
+            height: 700px;
+            display: block;
+            overflow: hidden;
+            
+        }
+        .imgBox {
+            width: 300%;
+            height: 700px;
+        }
+        .imgBox li {
+            widows: 100%;
+            float:left;
+            height: 700px;
+            
+        }
+        /*new상품*/
+        .New_Menu {
+            width: 100%;
+            height: 700px;
+            display: block;
+        }
+        .New_Menu h2 {
+            text-align: center;
+            margin-top: 150px;
+        }
+        .New_menu_Img {
+            width: 80%;
+            height: 670px;
+            margin: 30px auto;
+        }
+        .New_menu_Img li {
+            float: left;
+            margin-left: 65px;
+            margin-top: 85px;
+        }
+        /*그리드부분*/
+        .grid {
+            width: 100%;
+            height: 1000px;
+            display: block;
+            margin-top: 50px;
+        }
+        .gridBox {
+            width: 60%;
+            height: 1000px;
+            margin: 0 auto;
+        }
+        .event1 {
+            width: 600px;
+            height: 600px;
+            display: block;
+        }
+        .event2 {
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            margin-left: 550px;
+            margin-top: -400px;
+        }
+        /*그리드2*/
+        .grid2 {
+            width: 70%;
+            height: 500px;
+            display: block;
+            margin: 100px auto;
+        }
+        .grid2 ul {
+            float: left;
+            margin-left: 30px;
+        }
+        .Franchise {
+            width: 350px;
+            height: 350px;
+        }
+        .Franchise_F {
+            position: absolute;
+        }
+        .Store {
+            width: 350px;
+            height: 350px;
+        }
+        .Store_F {
+            position: absolute;
+        }
+        .New {
+            width: 350px;
+            height: 300px;
+            display: block;
+        }
+        .News {
+            margin-top: 40px;
+            border-bottom: 2px solid #333;
+            line-height: 30px;
+        }
+        
+        table {
+            width: 350px;
+            margin: 10px auto;
+        }
+        tr {
+            line-height: 30px;
+        }
+        th {
+            line-height: 24px;
+        }
+        .plus {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            margin-top: -40px;
+            margin-left: 300px;
+        }
+        .plus a p {
+            font-size: 37px;
+            color: #333;
+        }
+        /*인스타*/
+        .insta {
+            width: 90%;
+            height: 600px;
+            margin: 0 auto;
+        }
+        .insta h2 {
+            text-align: center;
+        }
+        .snsBox {
+            width: 90%;
+            height: 500px;
+            margin: 80px auto;
+        }
+        .snsBox li {
+            float: left;
+            margin-left: 65px;
+        }
+        /*푸터*/
+        .ft {
+            width: 100%;
+            height: 120px;
+            background-color: #333;
+        }
+        .fnb {
+            width: 650px;
+            height: 20px;
+            padding-top: 10px;
+            margin: 0 auto;
+        }
+        .fnb ul {
+            width: 650px;
+            height: 20px;
+            margin: 0 auto;
+        }
+        .fnb ul li {
+            float: left;
+            margin-left: 20px; 
+        }
+        .fnb ul li a {
+            color: white;
+        }
+        .left {
+            float: left;
+            font-size: 12px;
+            line-height: 17px;
+            margin-top: 12px;
+            margin-left: 510px;
+            color: #595553;
+        }
+        .copyright {
+            margin-left: 722px;
+            margin-top: 58px;
+            font-size: 14px;
+            color: white;
+            position: absolute;
+        }
+    </style>
+    <script></script>
+
+</head>
+<body>
+    <div id="Wrap">
+        <header class="hd">
+            <ul class="topmenu">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">뉴스및공지</a></li>
+                </ul>
+                <ul class="hdlogo">
+                    <li>
+                        <a href="#">
+                            <img src="http://placehold.it/100X40" alt="헤더로고">
+                        </a>
+                    </li>
+                </ul>
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="">브랜드스토리</a>
+                        </li>
+                        <li>
+                            <a href="">메뉴</a>
+                        </li>
+                        <li>
+                            <a href="">매장정보</a>
+                        </li>
+                        <li>
+                            <a href="">이벤트</a>
+                        </li>
+                        <li>
+                            <a href="">가맹정보</a>
+                        </li>
+                        <li>
+                            <a href="">창업설명회</a>
+                        </li>
+                    </ul>
+                </nav>
+        </header>
+        <div class="visual">
+            <ul class="imgBox">
+            <li>
+                <a href="">
+                    <img src="http://placehold.it/1904X700" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="http://placehold.it/1904X700/333/fff" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="http://placehold.it/1904X700/ff0000/fff" alt="">
+                </a>
+            </li>
+            </ul>            
+        </div>
+        <div class="New_Menu">
+            <h2 class="N_title">NEW MENU</h2>
+                <ul class="New_menu_Img">
+                    <li>
+                        <a href="">
+                            <img src="http://placehold.it/300X300" alt="상품1">
+                        </a>
+                        <p class="product1">상품이름</p>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="http://placehold.it/300X300" alt="상품2">
+                        </a>
+                        <p class="product1">상품이름</p>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="http://placehold.it/300X300" alt="상품3">
+                        </a>
+                        <p class="product1">상품이름</p>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="http://placehold.it/300X300" alt="상품4">
+                        </a>
+                        <p class="product1">상품이름</p>
+                    </li>
+                </ul>
+        </div>
+        <div class="grid">
+            <ul class="gridBox">
+                <li class="event1">
+                    <a href="">
+                        <img src="http://placehold.it/600X600/333/fff" alt="이벤트1">
+                    </a>
+                </li>
+            
+                <li class="event2">
+                    <a href="">
+                        <img src="http://placehold.it/600X600" alt="이벤트2">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="grid2">
+            <ul class="Franchise">
+               <h3 class="Franchise_F">가맹점</h3>
+                <li>
+                    <a href="#">
+                        <img src="http://placehold.it/300X300" alt="가맹점">
+                    </a>
+                </li>
+            </ul>
+            <ul class="Store">
+               <h3 class="Store_F">매장찾기</h3>
+                <li>
+                    <a href="#">
+                        <img src="http://placehold.it/300X300/333/fff" alt="매장찾기">
+                    </a>
+                </li>
+            </ul>
+            <ul class="New">
+                <table>
+                   <h3 class="News">News & Notice</h3>
+                   <li class="plus">
+                           <a href="">
+                               <p>&#43;</p>
+                            </a>
+                    </li>
+                        <tr>
+                            <td>포장재 유상 제공 안내</td>
+                            <td>2019.04.15</td>
+                        </tr>
+                        <tr>
+                            <td>투썸플레이스 제1기 결산공고</td>
+                            <td>2019.03.19</td>
+                        </tr>
+                        <tr>
+                            <td>합병종료보고 공고</td>
+                            <td>2019.01.07</td>
+                        </tr>
+                </table>
+            </ul>
+        </div>
+        <div class="insta">
+           <h2>A TWOSOME PLACE SNS</h2>
+            <ul class="snsBox">
+                <li class="sns1">
+                    <a href="">
+                        <img src="http://placehold.it/300X300" alt="">
+                    </a>
+                </li>
+                <li class="sns2">
+                    <a href="">
+                        <img src="http://placehold.it/300X300/333/fff" alt="">
+                    </a>
+                </li>
+                <li class="sns3">
+                    <a href="">
+                        <img src="http://placehold.it/300X300" alt="">
+                    </a>
+                </li>
+                <li class="sns4">
+                    <a href="">
+                        <img src="http://placehold.it/300X300/333/fff" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <footer class="ft">
+
+            <nav class="fnb">
+                <ul>
+                    <li>
+                        <a href="">사이트맵</a>
+                    </li>
+                    <li>
+                        <a href="">리쿠르트</a>
+                    </li>
+                    <li>
+                        <a href="">이용약관</a>
+                    </li>
+                    <li>
+                        <a href="">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="">이메일 무단수집거부</a>
+                    </li>
+                    <li>
+                        <a href="">법적고지</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="left">
+                <span>서울시 중구 마른내로34(초동 106-9번지) KT & G을지로타워 6층 투썸플레이스(주)&#124;&nbsp;</span>
+                <span>대표이사 : 구창근&#124;&nbsp;</span>
+                <span>개인정보관리책임자 : 박상욱&#124;&nbsp;</span>
+                <span>대표이메일 : twosomemaster@cj.net</span>
+                <br>
+                <span>사업자등록번호 :404-86-01054&#124;&nbsp;</span>
+                <span>통신판매업종신고증 : 제 2018-서울중구-0353호&#124;&nbsp;</span>
+                <span>고객센터 : 1577-4410&#124;&nbsp;</span>
+                <span>팩스 02-6740-4949</span>
+            </ul>
+           
+            <ul class="copyright">
+                <span>COPYRIGHT 2018 A TWOSOME PLACE ALL RIGHT RESERVED.</span>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
