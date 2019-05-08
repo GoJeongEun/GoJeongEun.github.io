@@ -27,7 +27,7 @@
             width: 100%;
             height: 80px;
             margin: 0 auto;
-            border-bottom: 2px solid #db1e32;
+         
             
         }
         .tophd { 
@@ -58,7 +58,7 @@
             
         }
         .topmenu li a {
-            color: #c9c5c8;
+            color: #fff;
             font-size: 13px;
             
         }
@@ -115,6 +115,10 @@
             margin-left: 65px;
             margin-top: 85px;
         }
+        .New_menu_Img li a img {
+            width: 300px;
+            height: 300px;
+        }
         /*그리드부분*/
         .grid {
             width: 100%;
@@ -131,13 +135,92 @@
             width: 600px;
             height: 600px;
             display: block;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
+        .event1 img {
+            transform: scale(1);
+            -webkit- transform: scale(1);
+            -moz- transform: scale(1);
+            -ms- transform: scale(1);
+            -o-transform: scale(1);
+            transition: .3s;
+            -webkit-transition: .3s;
+            -moz-transition: .3s;
+            -ms-transition: .3s;
+            -o-transition: .3s;
+            transition: all 0.3s ease-in-out;
+        }
+    
+        .event1:hover img {
+            transform: scale(1.1);
+            -webkit- transform: scale(1.1);
+            -moz- transform: scale(1.1);
+            -ms- transform: scale(1.1);
+            -o- transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .P3_logo {
+            position: absolute;
+            margin-top: -153px;
+            margin-left: 102px;
+            
         }
         .event2 {
             width: 600px;
             height: 600px;
-            position: absolute;
             margin-left: 550px;
             margin-top: -400px;
+            overflow: hidden;
+            
+        }
+          .event2 img {
+            transform: scale(1);
+            -webkit- transform: scale(1);
+            -moz- transform: scale(1);
+            -ms- transform: scale(1);
+            -o-transform: scale(1);
+            transition: .3s;
+            -webkit-transition: .3s;
+            -moz-transition: .3s;
+            -ms-transition: .3s;
+            -o-transition: .3s;
+            transition: all 0.3s ease-in-out;
+        }
+    
+        .event2:hover img {
+            transform: scale(1.1);
+            -webkit- transform: scale(1.1);
+            -moz- transform: scale(1.1);
+            -ms- transform: scale(1.1);
+            -o- transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .EV_P2 {
+           position: absolute;
+            margin-top: -135px;
+            margin-left: 176px;
+            font-size: 32px;
+            color: #fff;
+            font-weight: bold;
+        }
+        .EV_P2_2 {
+            position: absolute;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 257px;
+            color: white;
+            margin-top: -99px;
+        }
+        .EV_P1 {
+           
+            margin-top: -111px;
+            margin-left: 176px;
+            font-size: 32px;
+            color: #fff;
+            font-weight: bold;
+            position: absolute;
         }
         /*그리드2*/
         .grid2 {
@@ -145,10 +228,11 @@
             height: 500px;
             display: block;
             margin: 100px auto;
+            margin-left: 300px;
         }
         .grid2 ul {
             float: left;
-            margin-left: 30px;
+            margin-left: 20px;
         }
         .Franchise {
             width: 350px;
@@ -164,23 +248,53 @@
         .Store_F {
             position: absolute;
         }
+        .search {
+            position: absolute;
+            margin-top: -100px;
+            margin-left: 18px;
+        }
+        form {
+            width: 250px;
+            height: 44px;   
+        }
+        #search {
+            border: 3px solid #fff;
+            background: #600001;
+            width: 250px;
+            height: 39px;
+            font-weight: bold;
+            font-size: 14px;
+            color: white;
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+        .search a img {
+            position: absolute;
+            margin-top: -42px;
+            margin-left: 200px;
+        }
         .New {
-            width: 350px;
-            height: 300px;
+            width: 400px;
+            height: 155px;
             display: block;
         }
         .News {
-            margin-top: 40px;
+           
             border-bottom: 2px solid #333;
             line-height: 30px;
+            padding-left: 5px;
         }
         
         table {
-            width: 350px;
+            width: 428px;
             margin: 10px auto;
         }
         tr {
             line-height: 30px;
+            
+        }
+        tr:hover {
+            color: #333;
         }
         th {
             line-height: 24px;
@@ -193,11 +307,27 @@
             height: 40px;
             position: absolute;
             margin-top: -40px;
-            margin-left: 300px;
+            margin-left: 350px;
         }
         .plus a p {
             font-size: 37px;
             color: #333;
+        }
+        .Event { 
+            width: 400px;
+            height: 150px;
+          
+        }
+        .Event h3 {
+            border-bottom: 2px solid #333;
+            line-height: 30px;
+            padding-left: 5px;
+        }
+        .EventImg a img {
+            width: 386px;
+            height: 130px;
+            margin-top: 10px;
+            margin-left: 7px;
         }
         /*인스타*/
         .insta {
@@ -221,11 +351,115 @@
             width: 300px;
             height: 300px;
         }
+        .sns1 {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+        .sns1 img {
+             transform: scale(1);
+            -webkit- transform: scale(1);
+            -moz- transform: scale(1);
+            -ms- transform: scale(1);
+            -o-transform: scale(1);
+            transition: .3s;
+            -webkit-transition: .3s;
+            -moz-transition: .3s;
+            -ms-transition: .3s;
+            -o-transition: .3s;
+            transition: all 0.3s ease-in-out;
+        }
+        .sns1:hover img {
+             transform: scale(1.1);
+            -webkit- transform: scale(1.1);
+            -moz- transform: scale(1.1);
+            -ms- transform: scale(1.1);
+            -o- transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .sns2 {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+         .sns2 img {
+             transform: scale(1);
+            -webkit- transform: scale(1);
+            -moz- transform: scale(1);
+            -ms- transform: scale(1);
+            -o-transform: scale(1);
+            transition: .3s;
+            -webkit-transition: .3s;
+            -moz-transition: .3s;
+            -ms-transition: .3s;
+            -o-transition: .3s;
+            transition: all 0.3s ease-in-out;
+        }
+        .sns2:hover img {
+             transform: scale(1.1);
+            -webkit- transform: scale(1.1);
+            -moz- transform: scale(1.1);
+            -ms- transform: scale(1.1);
+            -o- transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .sns3 {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+         .sns3 img {
+             transform: scale(1);
+            -webkit- transform: scale(1);
+            -moz- transform: scale(1);
+            -ms- transform: scale(1);
+            -o-transform: scale(1);
+            transition: .3s;
+            -webkit-transition: .3s;
+            -moz-transition: .3s;
+            -ms-transition: .3s;
+            -o-transition: .3s;
+            transition: all 0.3s ease-in-out;
+        }
+        .sns3:hover img {
+             transform: scale(1.1);
+            -webkit- transform: scale(1.1);
+            -moz- transform: scale(1.1);
+            -ms- transform: scale(1.1);
+            -o- transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .sns4 {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+         .sns4 img {
+             transform: scale(1);
+            -webkit- transform: scale(1);
+            -moz- transform: scale(1);
+            -ms- transform: scale(1);
+            -o-transform: scale(1);
+            transition: .3s;
+            -webkit-transition: .3s;
+            -moz-transition: .3s;
+            -ms-transition: .3s;
+            -o-transition: .3s;
+            transition: all 0.3s ease-in-out;
+        }
+        .sns4:hover img {
+             transform: scale(1.1);
+            -webkit- transform: scale(1.1);
+            -moz- transform: scale(1.1);
+            -ms- transform: scale(1.1);
+            -o- transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
         /*푸터*/
         .ft {
             width: 100%;
             height: 120px;
-            background-color: #333;
+            background-color: #565658;
         }
         .fnb {
             width: 650px;
@@ -309,17 +543,17 @@
             <ul class="imgBox">
             <li>
                 <a href="">
-                    <img src="image/banner1-1.png" alt="">
+                    <img src="image/bener3.jpg" alt="배너1" width="1920" height="770">
                 </a>
             </li>
             <li>
                 <a href="">
-                    <img src="http://placehold.it/1904X770/333/fff" alt="">
+                    <img src="image/bener1-1.png" alt="배너2" width="1920" height="770">
                 </a>
             </li>
             <li>
                 <a href="">
-                    <img src="http://placehold.it/1904X770/ff0000/fff" alt="">
+                    <img src="image/bener4.jpg" alt="배너3" width="1920" height="770">
                 </a>
             </li>
             </ul>            
@@ -329,25 +563,25 @@
                 <ul class="New_menu_Img">
                     <li>
                         <a href="">
-                            <img src="http://placehold.it/300X300" alt="상품1">
+                            <img src="image/newM_5.png" alt="상품1">
                         </a>
                         <p class="product1">상품이름</p>
                     </li>
                     <li>
                         <a href="">
-                            <img src="http://placehold.it/300X300" alt="상품2">
+                            <img src="image/newM_2.png" alt="상품2">
                         </a>
                         <p class="product1">상품이름</p>
                     </li>
                     <li>
                         <a href="">
-                            <img src="http://placehold.it/300X300" alt="상품3">
+                            <img src="image/newM_3.png" alt="상품3">
                         </a>
                         <p class="product1">상품이름</p>
                     </li>
                     <li>
                         <a href="">
-                            <img src="http://placehold.it/300X300" alt="상품4">
+                            <img src="image/newM_4.png" alt="상품4">
                         </a>
                         <p class="product1">상품이름</p>
                     </li>
@@ -356,34 +590,50 @@
         <div class="grid">
             <ul class="gridBox">
                 <li class="event1">
-                    <a href="">
-                        <img src="http://placehold.it/600X600/333/fff" alt="이벤트1">
+                    <a href="#">
+                        <img src="image/P3_5.png" alt="이벤트1">
                     </a>
+                    <li class="P3_logo">
+                        <a href="">
+                            <img src="image/P3_logo1.png" alt="로고">
+                        </a>
+                    </li>
+                    <p class="EV_P1">ROASTERY CAFE</p>
                 </li>
             
                 <li class="event2">
                     <a href="">
-                        <img src="http://placehold.it/600X600" alt="이벤트2">
+                        <img src="image/P3_7.png" alt="이벤트2">
                     </a>
+                    <P class="EV_P2">ROASTERY CAFE</P>
+                    <p class="EV_P2_2">MENU</p>
                 </li>
             </ul>
         </div>
         <div class="grid2">
             <ul class="Franchise">
-               <h3 class="Franchise_F">가맹점</h3>
+              <!-- <h3 class="Franchise_F">가맹점</h3>-->
                 <li>
                     <a href="#">
-                        <img src="http://placehold.it/300X300" alt="가맹점">
+                        <img src="image/Franchise.png" alt="가맹점">
                     </a>
                 </li>
             </ul>
             <ul class="Store">
-               <h3 class="Store_F">매장찾기</h3>
+               <!--<h3 class="Store_F">매장찾기</h3>-->
                 <li>
                     <a href="#">
-                        <img src="http://placehold.it/300X300/333/fff" alt="매장찾기">
+                        <img src="image/store1-1.png" alt="매장찾기">
                     </a>
                 </li>
+                <div class="search">
+                    <form action="" name="findstore">
+                        <input id="search" name="main_search" title="매장검색" placeholder="FIND A STORE">
+                        <a href="#">
+                            <img src="image/main_store_btn.png" alt="검색" width="44" height="44">
+                        </a>
+                    </form>
+                </div>
             </ul>
             <ul class="New">
                 <table>
@@ -406,6 +656,19 @@
                             <td>2019.01.07</td>
                         </tr>
                 </table>
+            </ul>
+            <ul class="Event">
+                <h3>Twosome Event</h3>
+                <li class="plus">
+                     <a href="">
+                        <p>&#43;</p>
+                     </a>
+                </li>
+                <li class="EventImg"> 
+                    <a href="#">
+                        <img src="image/event1.png" alt="이벤트">
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="insta">
