@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>카이스트</title>
+	<link rel="stylesheet" href="../static/css/m.style.css">
+	<link rel="stylesheet" href="../static/css/pages/register_step2.css">
+	<link rel="stylesheet" href="../static/css/fundamental/fonts.css">
+	<script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+	<header class="hd--white">
+		<ul class="menu">
+			<li class="menu--black"></li>
+			<li class="menu--black"></li>
+			<li class="menu--black"></li>
+		</ul>
+		<ul class="logo">
+			<li>
+				<a href="#">
+					<img src="../static/image/rectangle-9.jpg" srcset="../static/image/rectangle-9@2x.jpg, ../static/image/rectangle-9@3x.jpg"alt="로고">
+				</a>
+			</li>
+		</ul>
+		<ul class="search">
+			<li>
+				<a href="#">
+					<img src="../static/image/search.svg" alt="검색">
+				</a>
+			</li>
+		</ul>
+		</header>
+	<div class="contents-container">
+		<div class="register-container">
+			<div class="title">
+				<h1 class="h1primary--left">회원가입</h1>
+			</div>
+			<div class="number-box">
+				<div class="step1">
+					<li class="num--white">
+						<h2 class="h2subtle--center">1</h2>
+					</li>
+					<h2 class="h2subtle--left">기본정보 작성</h2>
+				</div>
+		  		<div class="step2">
+		  			<li class="num--ablue">
+		  				<h2 class="h2white--center">2</h2>
+		  			</li>
+		  			<h2 class="h2primary--left">선택정보 작성</h2>
+		  		</div>
+		  	</div>
+		  	
+		  	<div class="item">
+				<div class="item-wrapper">
+					<div class="itemtext-box">
+					<p class="psmall">직업/직종</p>
+					<label  class="checkbox">
+						구직중
+						<input type="checkbox" value="">
+						<span class="checkmark"></span>
+					</label>
+					</div>
+					<select class="job" name="cp1">
+						<option value="선택">선택</option>
+					</select>
+				 </div>
+			</div>	
+			<div class="item-year">
+				<div class="item-wrapper"> 
+				  <div class="itemtext-box">
+				  	<p class="psmall">근무연도</p>
+					<label  class="checkbox">
+						재직중
+						<input type="checkbox" value="">
+						<span class="checkmark"></span>
+					</label>
+				  </div>
+				  <div class="selectbox">
+				  	<select name="cp1" class="year">
+				  		<option value="연도">연도</option>
+				 	</select>	  
+				  	<select name="cp1" class="month">
+				  		<option value="월 부터">월 부터</option>
+				  	</select>
+				  </div>
+				  <div class="selectbox">
+				  	 <select name="cp1" class="year">
+				  		<option value="연도">연도</option>
+				 	 </select>	  
+				 	<select name="cp1" class="month">
+				  		<option value="월 부터">월 부터</option>
+				  	</select>
+				  </div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-wrapper">
+					<p class="psmall">기업명</p>
+					<input class="input">
+				</div>
+			</div>
+			<div class="item" style="height:126px;">
+			  <div class="item-wrapper">
+				 <p class="psmall">직함</p>
+				  <input class="input">
+				  <div class="itemtext-box">
+				  <li class="plus">
+				  	<a href="#">
+				  		<img src="../static/image/primary.svg" alt="플러스">
+				  	</a>
+				  </li>
+				  	<p class="linkprimary--left">경력 추가하기</p>
+				  	
+				  </div>
+			  </div>
+			</div>
+			<div class="item" style="height: 115px;">
+				<div class="item-wrapper">
+					<div class="itemtext-box">
+						<p class="psmall">전문분야(선택)</p>
+					</div>
+				  	<input class="input" placeholder="전문분야를 , 로 구분하여 입력해주세요">
+			      	<p class="psmall--grey">(예: Java, Python, Growth Hacking, UX Design)</p>
+				</div> 
+			</div>
+			<div class="item">
+				<div class="item-wrapper">
+					<p class="psmall">동아리(선택)</p>
+					<input class="input">
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-wrapper">
+					<p class="psmall">연구실명(선택)</p>
+					<input class="input">
+				</div>
+			</div>
+			<div class="profile">
+				<div class="item-wrapper">
+					<p class="psmall">프로필</p>
+				    <div class="profilebox">
+				    	<div class="dim"></div>
+						<li class="profile-photo">
+							<a href="#">
+								<img src="../static/image/photo-1.jpg" alt="프로필">
+							</a>
+						</li>
+						<img src="../static/image/profile.svg" alt="카메라" class="camera">
+						<textarea class="input" placeholder="한 줄 프로필을 작성하시어 동문들에게 자신을 소개하세요"></textarea>
+					</div>
+				</div>
+			</div>
+		
+			<div class="buttonbox--center">
+				<input type="button" value="나중에 할래요" class="button--lightgrey">
+				<input type="button" value="저장" class="button--blue">
+	       </div>
+		</div>
+	</div>
+		
+	</body>	
+
+</html>

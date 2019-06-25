@@ -1,0 +1,16 @@
+* {margin: 0; padding: 0;}
+		ul, li { list-style: none;}
+		a {text-decoration: none;}
+		input, button, label, a {outline: 0; border: 0;}
+
+		body, html {
+			width: 100%;
+			height: 100%;
+		}
+		.wrap {
+			width: 100%;
+			height: 100%;
+		}
+chexkbox {
+	display: none;
+}

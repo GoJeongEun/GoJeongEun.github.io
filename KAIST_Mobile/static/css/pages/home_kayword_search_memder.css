@@ -1,0 +1,51 @@
+.container-wrap .header-itembox input{
+	background: url("../../image/search--blue.svg") no-repeat 20px 13px;
+	padding-left: 40px;
+}
+.container-wrap .header-itembox input::placeholder {
+	font-size: 14px;
+	color: #14171a;
+	
+}
+.container-wrap .header-itembox {
+	position: absolute;
+	background: white;
+	width: 100%;
+	z-index: 999;
+	
+}
+.container-wrap .header-itembox .search-box {
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 2px;
+}
+.container-wrap .header-itembox input {
+	border: 1px solid #0065ff;
+}
+.container-wrap .header-itembox .search-list {
+	margin-left: 20px;
+}
+.container-wrap .header-itembox .search-list .item {
+	margin-top: 26px;
+}
+.container-wrap .header-itembox .search-list .item:nth-child(1) {
+	margin-top: 0px;
+} 
+.container-wrap .header-itembox .search-list .item .title {
+	margin-top: 26px;
+	margin-bottom: 9px;
+}
+.container-wrap .header-itembox .search-list .search-more {
+	margin-top: 26px;
+	margin-bottom: 16px;
+	background: url("../../image/icon-caret.svg") no-repeat 113px;
+}
+.container-wrap .header-itembox .search-list  .item .handle {
+	background: #e1e2e6;
+	width: 8px;
+	height: 137px;
+	border-radius: 11px;
+	float: right;
+	margin-top: -110px;
+	margin-right: 2px;
+}

@@ -1,0 +1,17 @@
+		/* 공통적인 form스타일 */
+		.input--center {
+			width: 100%;
+  			height: 46px;
+  			border-radius: 3px;
+  			border: solid 1px var(--light-grey-blue);
+  			background-color: var(--white);
+
+		}
+		.formbox--center {
+			width: 100%;
+			height: 94px;
+
+		}
+		.formheader {
+			margin-bottom: 8px;	
+		}

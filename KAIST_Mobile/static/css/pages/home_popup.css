@@ -1,0 +1,102 @@
+.popup-header {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #e1e8ed;
+}
+.popup-header > h2 {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+}
+.popup-wrapper {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.popup-wrapper .footer-bleft {
+	margin-top: 26px;
+	margin-bottom: 16px;
+}
+.popup-wrapper .search-list .item {
+	width: 75%;
+	height: 372px;
+	border: 1px solid #aab8c2;
+	margin-left: 42px;
+}
+.popup-wrapper .search-list .item .textbox {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	margin-top: 18px;
+}
+.popup-wrapper .search-list .item .student-img {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+}
+.popup-wrapper .search-list .item .student-img .h4--center {
+	margin-top: 7px;
+}
+.popup-wrapper .search-list .item .student-img .psubtle-basic--center {
+	margin-top: 11px;
+}
+.popup-wrapper .search-list  {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+.popup-wrapper .search-list .item .textbox {
+	display: flex;
+	justify-content: center;
+	margin-top: 18px;
+}
+.popup-wrapper .search-list .item .textbox .emailprimary--left {
+	border-bottom: 3px solid #004eeb;
+	padding-bottom: 15.5px;
+}
+.popup-wrapper .search-student .h4--center {
+	margin-top: 7px;
+	margin-bottom: 11px;
+}
+.popup-wrapper .radio-buttonbox {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	margin-top: 17px;
+}
+.popup-wrapper .radio-buttonbox input[type=radio] {
+	display: none;
+	margin: 10px;
+}
+.popup-wrapper .radio-buttonbox input[type=radio] + label {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	margin-right: 10px;
+	background: #d8d8d8;
+}
+.popup-wrapper .radio-buttonbox input[type=radio] + label:nth-of-type(1) {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	margin-right: 10px;
+	background: #14171a;
+}
+.popup-wrapper .radio-buttonbox input[type=radio]:radio + label {
+	background-image: none;
+	background-color: #4286f4;
+	color: #fff;
+}
+.popup-wrapper .buttonbox--center .button--lightgrey {
+	margin-right: 16px;
+}
+.popup-wrapper .buttonbox--center .button-border--blue {
+	border: 1px solid #0747a6;
+	color: #0747a6;
+}

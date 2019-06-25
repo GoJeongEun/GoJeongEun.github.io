@@ -1,0 +1,27 @@
+.register-container .buttonbox--center {
+	margin-top: 134px;
+}
+.register-container .item .no-info .pmedium--left {
+	margin-top: 56px;
+}
+.register-container .item .no-info .psubtle-small--left {
+	margin-top: 37px;
+}
+.register-container .item .no-info .icon-box {
+	margin-top: 16px;
+}
+.register-container .item .no-info .icon-box .icon-call {
+	margin-bottom: 12px;
+
+}
+.register-container .item .no-info .icon-box .icon-call > img {
+	margin-right: 7px;
+}
+.register-container .item .no-info .icon-box .icon-email > img {
+	margin-right: 7px;
+}
+.register-container .item .no-info .icon-box span {
+	font-size: 14px;
+	line-height: 23px;
+	color: #657786;
+}

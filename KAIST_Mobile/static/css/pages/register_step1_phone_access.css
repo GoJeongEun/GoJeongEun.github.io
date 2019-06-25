@@ -1,0 +1,7 @@
+.register-container .col .col-wrapper {
+	border-bottom: none;
+}
+.register-container .item-phone {
+	width: 100%;
+	height: 148px;
+}

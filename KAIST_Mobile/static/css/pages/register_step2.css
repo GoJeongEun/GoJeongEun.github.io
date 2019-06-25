@@ -1,0 +1,10 @@
+.register-container .item-year {
+	width: 100%;
+	height: 148px;
+}
+.item  .item-wrapper .itemtext-box {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	margin-top: 9px;
+}

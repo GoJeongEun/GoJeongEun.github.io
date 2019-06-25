@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>카이스트</title>
+	<link rel="stylesheet" href="../static/css/m.style.css">
+	<link rel="stylesheet" href="../static/css/pages/register_step1_phone_access.css">
+	<link rel="stylesheet" href="../static/css/fundamental/fonts.css">
+	<script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+	<header class="hd--white">
+		<ul class="menu">
+			<li class="menu--black"></li>
+			<li class="menu--black"></li>
+			<li class="menu--black"></li>
+		</ul>
+		<ul class="logo">
+			<li>
+				<a href="#">
+					<img src="../static/image/rectangle-9.jpg" srcset="../static/image/rectangle-9@2x.jpg, ../static/image/rectangle-9@3x.jpg"alt="로고">
+				</a>
+			</li>
+		</ul>
+		<ul class="search">
+			<li>
+				<a href="#">
+					<img src="../static/image/search.svg" alt="검색">
+				</a>
+			</li>
+		</ul>
+		</header>
+	<div class="contents-container">
+		<div class="register-container">
+			<div class="title">
+				<h1 class="h1primary--left">회원가입</h1>
+			</div>
+			<div class="number-box">
+				<div class="step1">
+					<li class="num--ablue">
+						<h2 class="h2white--center">1</h2>
+					</li>
+					<h2 class="h2primary--left">기본정보 작성</h2>
+				</div>
+		  		<div class="step2">
+		  			<li class="num--white">
+		  				<h2 class="h2subtle--center">2</h2>
+		  			</li>
+		  			<h2 class="h2subtle--left">선택정보 작성</h2>
+		  		</div>
+		  	</div>
+		  	<div class="item">
+				<div class="item-wrapper">
+				  <form action="">
+					<p class="psmall">이메일 아이디</p>
+					<input class="input" placeholder="hong@gmail.com" >
+				  </form>
+				</div>
+			</div>	
+			<div class="item">
+				<div class="item-wrapper">
+				  <div class="itemtext-box">
+					<p class="psmall">비밀번호*</p>
+					<span class="footer--left">영문과 숫자를 혼합하여 8자리 이상</span>
+				  </div>
+					<input class="input" placeholder="비밀번호를 입력해주세요." type="password">
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-wrapper">
+					<p class="psmall">비밀번호 확인*</p>
+					<input class="input" placeholder="비밀번호를 재입력해주세요." type="password">
+				</div>
+			</div>
+			<div class="item">
+			  <div class="item-wrapper">
+			  	<form action="">
+					<p class="psmall">이름</p>
+					<input class="input" placeholder="홍길동" type="text">
+				 </form>
+				</div>
+			</div>
+			<div class="item-phone">
+				<div class="item-wrapper">
+				 <div class="itemtext-box">
+					<p class="psmall">본인 인증</p>
+					<span class="formheader-btnable">재요청하기</span>
+				  </div>
+				  <div class="phone-number">
+				 	 <select name="cp1" class="select-phone" title="010">
+						<option value="010">010</option>
+					 </select>
+					 <input class="input" type="number" placeholder="01055465565">
+				  </div>
+			      <div class="phoneaccess">
+				  	 <input type="number" class="item-phone" placeholder="456 963">
+				     <input class="button--grey" value="인증완료" type="button">
+				  </div> 
+				</div>
+			</div>
+			<div class="col">
+				<div class="col-wrapper">
+				<div class="itemtext-box">
+					<p class="psmall">학력*</p>
+					<span class="formheader-btnable">타학력 추가하기</span>
+				 </div>
+				 <div class="item">
+					<div class="item-wrapper">
+						<input class="input" placeholder="학사">
+					</div>
+				 </div> 
+				 <div class="item">
+					<div class="item-wrapper">
+						<input class="input" placeholder="산업디자인학과" >
+					</div>
+				 </div>
+				  <div class="item">
+					<div class="item-wrapper">
+						<input class="input-medium" placeholder="2015년">
+						<p class="pbig">~</p>
+						<input class="input-medium" placeholder="2018년">
+					</div>
+				 </div>
+				</div>
+			</div>		
+			<div class="buttonbox--center">
+				<input type="button" value="취소" class="button--lightgrey">
+				<input type="button" value="다음" class="button--blue">
+			</div>
+		</div>
+	</div>

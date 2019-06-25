@@ -1,0 +1,15 @@
+.buttonbox--center .button--light {
+	background-color: #aab8c2;
+	color: white;
+	font-size: 16px;
+	
+}
+.buttonbox--center {
+	margin-top: 230px;
+}
+.register-container .h1primary--left {
+	width: 100%;
+}
+.register-container .item {
+	margin-top: 15px;
+}

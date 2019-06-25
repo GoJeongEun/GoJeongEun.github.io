@@ -1,0 +1,277 @@
+/*
+		.pmaintleicon {
+			width: 32px;
+			height: 32px;
+			object-fit: contain;
+			transform: rotate(15deg);
+			margin-left: 177px;
+			margin-top: -34px;
+		}
+		
+		.textbox--left {
+			width: 210px;
+			height: 35px;
+			display: block;
+			margin-top: 53px;
+		}
+	
+		.--char32x32 {
+			width: 32px;
+			height: 32px;
+			margin-right: 119px;
+		}
+		.descript {
+			margin-top: 10px;
+			width: 268px;
+			height: 18px;
+		}
+		.kakaologin {
+			background: url(../../image/kakao-login.svg) no-repeat 16px 7px;
+			text-align: center;
+			font-size: 15px;
+			font-weight: 500;
+			font-style: normal;
+			line-height: normal;
+			font-stretch: normal;
+			color: var(--dark);
+			background-color: #ffeb00;
+			width: 100%;
+			height: 56px;
+			border-radius: 8px;
+			background-size: 40px 40px;
+		}
+		.naverlogin {
+			background: url(../../image/naver-login.svg) no-repeat 16px 7px;
+			text-align: center;
+			font-size: 15px;
+			font-weight: 500;
+			font-style: normal;
+			line-height: normal;
+			font-stretch: normal;
+			color: var(--dark);
+			background-color:  #1ec800;
+			width: 100%;
+			height: 56px;
+			border-radius: 8px;
+			color: white;
+			margin-top: 12px;
+			background-size: 40px 40px;
+		}
+		.facelogin {
+			background: url(../../image/facebook.svg) no-repeat 16px 7px;
+			text-align: center;
+			font-size: 15px;
+			font-weight: 500;
+			font-style: normal;
+			line-height: normal;
+			font-stretch: normal;
+			color: var(--dark);
+			background-color: #415993;
+			width: 100%;
+			height: 56px;
+			border-radius: 8px;
+			color: white;
+			margin-top: 12px;
+			background-size: 40px 40px;
+		}
+		
+		.linklogin {
+			background: url(../../image/linkedin.jpg) no-repeat 16px 7px;
+			text-align: center;
+			font-size: 15px;
+			font-weight: 500;
+			font-style: normal;
+			line-height: normal;
+			font-stretch: normal;
+			color: var(--dark);
+			background-color: #0b73ae;
+			width: 100%;
+			height: 56px;
+			border-radius: 8px;
+			color: white;
+			margin-top: 12px;
+			background-size: 40px 40px;
+		}
+		
+
+		.box {
+			width: 233px;
+			height: 20px;
+			margin-top: 44px;
+			float: right;
+		}
+		.box ul {
+			float: left;
+		}
+		.email--left {
+			width: 105px;
+			height: 20px;
+		}
+		.emaillogin--left {
+			width: 20px;
+			height: 20px;
+			position: absolute;
+		}
+		.psmall--center {
+			position: absolute;
+			width: 26px;
+			height: 23px;
+			margin-left: 109px;
+		}
+		.join--right {
+			width: 78px;
+			height: 20px;
+		}
+		.joinicon--right {
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			margin-left: 38px;
+			margin-top: 0px;
+		}
+*/
+/*신버전*/
+
+.contents-container .login-container {
+	padding-left: 32px;
+	padding-right: 32px;
+	
+}
+.contents-container .textbox--left {
+	margin-top: 53px;
+	display: flex;
+	flex: 1;
+	align-items: center;
+	width: 209px;
+	height: 35px;
+}
+.contents-container .textbox--left .pmaintle-icon {
+	padding-left: 8px;
+}
+.contents-container .descript {
+	margin-top: 10px;
+}
+.contents-container .sns-button--center .kakao-button--center{
+	  background-color: #ffeb00;
+  font-family: NotoSansKR;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark);
+  background-size: 40px 40px;
+  width: 100%;
+  height: 56px;
+	border-radius: 8px; 
+
+}
+
+.contents-container .sns-button--center .kakao-login {
+  background: url("../../image/kakao-login.svg") no-repeat 16px 7px;
+  background-size: 40px 40px;
+  width: 100%;
+  height: 56px;
+}
+.contents-container .sns-button--center .naver-button--center{
+  background-color: #1ec800;
+  font-family: NotoSansKR;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: white;
+  background-size: 40px 40px;
+  width: 100%;
+  height: 56px;
+	border-radius: 8px; 
+	margin-top: 12px;
+}
+.contents-container .sns-button--center .naver-login {
+
+background: url("../../image/naver-login.svg") no-repeat 16px 7px;
+ width: 100%;
+ height: 56px;
+ 
+background-size: 40px 40px;
+
+}
+.contents-container .sns-button--center .face-button--center{
+	  background-color: #415993;
+  color: white;
+  font-family: NotoSansKR;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  	width: 100%;
+	height: 56px;
+	border-radius: 8px;
+	
+	margin-top: 12px;
+	
+}
+.contents-container .sns-button--center .face-login {
+background: url("../../image/facebook.svg") no-repeat 16px;
+ width: 100%;
+ height: 56px;
+ 
+	background-size: 40px 40px;
+
+}
+.contents-container .sns-button--center .link-button--center {
+  background-color:  #0b73ae;
+  color: white;
+  font-family: NotoSansKR;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  margin-top: 12px;
+	
+	
+}
+.contents-container .sns-button--center .link-login {
+ background: url("../../image/linkedin.jpg") no-repeat 16px;
+ width: 100%;
+ height: 56px;
+ background-size: 40px 40px;
+}
+.contents-container .register-info {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	padding-top: 44px;
+}
+.contents-container .email--left {
+	display: flex;
+	align-items: center;
+}
+.contents-container .emaillogin--left {
+	padding-right: 4px;
+}
+.contents-container .join--right {
+	display: flex;
+	
+}
+.contents-container .join--right .h5-subtle--left {
+	padding-left: 4px;
+}
+.contents-container .register-info .psmall--center{
+	padding-left: 12px;
+	padding-right: 12px;
+}

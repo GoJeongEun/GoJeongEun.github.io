@@ -1,0 +1,11 @@
+	/*라디오셀렉션, 채크박스*/
+		.radioSelect { 
+			width: 114px;
+			height: 24px;
+		}
+		
+		.--checked {
+			width: 24px;
+			height: 24px;
+			object-fit: contain;
+		}

@@ -1,0 +1,39 @@
+.register-container .item {
+	width: 100%;
+	height: auto;
+}
+.register-container tr {
+	height: 50px;
+}
+.register-container .item:nth-child() {
+	border-top: 1px solid #4a4a4a;
+	border-bottom: 1px solid rgba(74,74,74,0.5);
+}
+.register-container td {
+	font-size: 14px;
+	line-height: 23px;
+	color: #657786;
+}
+.register-container .item .no-info .h5-text {
+	margin-top: 24px;
+	font-size: 16px;
+	color: #14171a;
+	margin-bottom: 8px;
+}
+.register-container .item .no-info .p-text {
+	font-size: 14px;
+	line-height: 23px;
+	color: #657786;
+	width: 75%;
+	
+}
+.register-container .item .no-info .icon-box {
+	margin-top: 17px;
+	margin-bottom: 40px;
+}
+.register-container .item .no-info .icon-box >img {
+	margin-right: 7px;
+}
+.register-container .item .no-info .icon-box .no-info1 {
+	margin-right: 32px;
+}

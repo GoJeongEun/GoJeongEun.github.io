@@ -1,0 +1,21 @@
+.gnb-loginbox {
+	display: flex;
+	border-bottom: 1px solid #e1e8ed;
+	padding-bottom: 16px;
+}
+.gnb-loginbox .img-item {
+	width: 42px;
+	height: 42px;
+	margin-left: 20px;
+}
+.gnb-loginbox .img-item img {
+	width: 42px;
+	height: 42px;
+}
+.gnb-loginbox .gnb-textbox {
+	margin-left: 12px;
+}
+.gnb-loginbox .gnb-textbox .pbig--left {
+	font-size: 16px;
+	color: black;
+}
